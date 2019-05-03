@@ -9,10 +9,17 @@ html {
 
 body {
     max-width: 1000px;
+    height: 100%;
     margin: 0 auto;
     display: block;
-    padding: 10px 20px;
+    padding: 5em 10em;
     background-color: white;
+}
+
+header {
+    width: 100%;
+    display: block;
+    background-color: gray;
 }
 
 footer {
@@ -22,6 +29,8 @@ footer {
     float: bottom;
     text-align: center;
     background-color: red;
+    color: white;
     left: 0;
     bottom: 0;
+    padding: 2em;
 }
