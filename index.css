@@ -21,7 +21,7 @@ html {
 
 body {
     height: 100%;
-    padding: 0 10em;
+    max-width: 1200px;
     background-color: white;
 }
 
