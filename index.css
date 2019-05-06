@@ -8,17 +8,18 @@ html {
     height: 100%;
 }
 
-.navigation {
+.navigation, body {
     max-width: 1000px;
     margin: 0 auto;
     display: block;
 }
 
+.navigation {
+    padding: 2em 0;
+}
+
 body {
-    max-width: 1000px;
     height: 100%;
-    margin: 0 auto;
-    display: block;
     padding: 0 10em;
     background-color: white;
 }
