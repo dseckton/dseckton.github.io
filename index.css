@@ -16,6 +16,7 @@ html {
 
 .navigation {
     padding: 2em 0;
+    background-color: gray;
 }
 
 body {
@@ -27,7 +28,6 @@ body {
 header {
     width: 100%;
     display: block;
-    background-color: gray;
 }
 
 footer {
