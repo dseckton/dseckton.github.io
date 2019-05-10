@@ -1,4 +1,5 @@
-$head-color;
+$head-back-color: ;
+$head-text-color: ;
 
 * {
     margin: 0;
@@ -6,5 +7,10 @@ $head-color;
 }
 
 header {
-
+    background-color: $head-back-color;
+    color: $head-text-color;
+    h1 {
+        text-alignment: center;
+    }
 }
+
