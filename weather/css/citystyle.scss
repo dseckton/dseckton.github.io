@@ -1,0 +1,24 @@
+/* ******************************
+*  Stylesheet for Screened Devices
+*  Created by: Put your name here
+*  
+*  1.  Includes (fonts and supplementary stylesheets)
+*  1.1 Normalize
+*  1.2 Google fonts
+*
+*  2.  General Styles (for all pages and devices)
+*
+*  3.  Mobile First (styles specific to small screens)
+*
+*  4.  Large Screen Styles (Media Queries begin here)
+*
+* ****************************** */
+
+/* Imports */
+
+/* Inclusion of Normalize CSS file, available at https://necolas.github.io/normalize.css/ */
+@import "normalize.css";
+
+/* Inclusion of Google Font Sansita */
+@import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+
