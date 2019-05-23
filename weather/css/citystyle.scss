@@ -73,7 +73,7 @@ header {
     figure {
         padding: 0;
         margin: 0;
-        width: 2em;
+        width: 1em;
         display: inline-block;
         img {
             width: 100%;
@@ -129,7 +129,7 @@ section {
 }
 
 #actual {
-    font-size: 3em;
+    font-size: 4em;
 }
 
 #low {
@@ -143,6 +143,7 @@ section {
 #summary {
     img {
         max-width: 70%;
+        object-fit: cover;
     }
 }
 
@@ -168,11 +169,12 @@ nav ul {
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
+    float: bottom;
     li{
         list-style-type: none;
         a {
             display: block;
-            padding: .2em;
+            padding: .5em;
             text-decoration: none;
             color: $color-secondary;
         }

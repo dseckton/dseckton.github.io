@@ -60,7 +60,7 @@ header, footer, nav {
 header figure {
   padding: 0;
   margin: 0;
-  width: 2em;
+  width: 1em;
   display: inline-block;
 }
 header figure img {
@@ -115,7 +115,7 @@ section {
 }
 
 #actual {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 #low {
@@ -128,6 +128,7 @@ section {
 
 #summary img {
   max-width: 70%;
+  object-fit: cover;
 }
 
 #forecast dt {
@@ -150,13 +151,14 @@ nav ul {
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
+  float: bottom;
 }
 nav ul li {
   list-style-type: none;
 }
 nav ul li a {
   display: block;
-  padding: 0.2em;
+  padding: 0.5em;
   text-decoration: none;
   color: #fff;
 }
