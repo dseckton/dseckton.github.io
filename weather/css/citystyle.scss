@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-header;
 }
 
-h1, #title {
+h1, header {
     font-size: 2em;
     font-weight: bolder;
 }
@@ -85,6 +85,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin: 0;
     li{
         list-style-type: none;
         a {
@@ -162,13 +163,14 @@ section {
 
 nav ul {
     display: flex;
-    li a{
-        display: block;
-        flex-direction: row;
-        justify-content: space-between;
-        text-decoration: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    li{
         list-style-type: none;
-        text-align: center;
-        color: $color-secondary;
+        a {
+            display: block;
+            padding: .2em;
+        }
     }
 }

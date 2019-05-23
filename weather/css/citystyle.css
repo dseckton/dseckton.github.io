@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Sansita, sans-serif;
 }
 
-h1, #title {
+h1, header {
   font-size: 2em;
   font-weight: bolder;
 }
@@ -71,6 +71,7 @@ header figure img {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 0;
 }
 #mynav li {
   list-style-type: none;
@@ -144,15 +145,16 @@ section {
 
 nav ul {
   display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+nav ul li {
+  list-style-type: none;
 }
 nav ul li a {
   display: block;
-  flex-direction: row;
-  justify-content: space-between;
-  text-decoration: none;
-  list-style-type: none;
-  text-align: center;
-  color: #fff;
+  padding: 0.2em;
 }
 
 /*# sourceMappingURL=citystyle.css.map */
