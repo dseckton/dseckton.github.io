@@ -137,5 +137,16 @@ section {
 }
 
 .temp::after {
-    content: '&#xB0;F';
+    content: '°F';
+}
+
+nav ul {
+    display: flex;
+    li a{
+        display: block;
+        text-decoration: none;
+        list-style-type: none;
+        text-align: center;
+        color: $color-secondary;
+    }
 }

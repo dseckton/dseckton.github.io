@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! ******************************
 *  Stylesheet for Screened Devices
 *  Created by: Put your name here
@@ -120,7 +121,18 @@ section {
 }
 
 .temp::after {
-  content: "&#xB0;F";
+  content: "°F";
+}
+
+nav ul {
+  display: flex;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  color: #fff;
 }
 
 /*# sourceMappingURL=citystyle.css.map */
