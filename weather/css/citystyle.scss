@@ -144,6 +144,8 @@ nav ul {
     display: flex;
     li a{
         display: block;
+        flex-direction: row;
+        justify-content: space-between;
         text-decoration: none;
         list-style-type: none;
         text-align: center;
