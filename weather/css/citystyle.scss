@@ -22,3 +22,55 @@
 /*! Inclusion of Google Font Sansita */
 @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
 
+$color-primary: #0e89d5;
+$color-secondary: #fff;
+$color-accent1: #6c4ddb;
+$color-accent2: #d8f;
+
+$font-header: Sansita, sans-serif;
+$font-copy: Helvetica, sans-serif;
+
+/* TO DO
+* * * * * * * * * * * * * * * *
+* Blue Background for header
+* Change fonts
+* re-write city info to be part of a descriptive list
+* Resize Logo
+* background color, border and shape of individual sections
+* text align center for sections
+* color-code high/low
+* resize/rotate wind direction, put text inside
+* re-write wind info to be part of a descriptive list
+* make summary image background/resize
+* make hourly forecast info inline
+* footer background
+* nav styles, background and orientation
+*/
+body {
+    font-family: $font-copy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-header;
+}
+
+header, footer, nav{
+    background-color: $color-primary;
+}
+
+#mynav {
+    display: flex;
+    flex-direction: row;
+    a {
+        display: block;
+        list-style-type: none;
+    }
+}
+
+section {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+

@@ -1,4 +1,4 @@
-/* ******************************
+/*! ******************************
 *  Stylesheet for Screened Devices
 *  Created by: Put your name here
 *  
@@ -13,10 +13,53 @@
 *  4.  Large Screen Styles (Media Queries begin here)
 *
 * ****************************** */
-/* Imports */
-/* Inclusion of Normalize CSS file, available at https://necolas.github.io/normalize.css/ */
+/*! Imports */
+/*! Inclusion of Normalize CSS file, available at https://necolas.github.io/normalize.css/ */
 @import "normalize.css";
-/* Inclusion of Google Font Sansita */
+/*! Inclusion of Google Font Sansita */
 @import url("https://fonts.googleapis.com/css?family=Sansita&display=swap");
+/* TO DO
+* * * * * * * * * * * * * * * *
+* Blue Background for header
+* Change fonts
+* re-write city info to be part of a descriptive list
+* Resize Logo
+* background color, border and shape of individual sections
+* text align center for sections
+* color-code high/low
+* resize/rotate wind direction, put text inside
+* re-write wind info to be part of a descriptive list
+* make summary image background/resize
+* make hourly forecast info inline
+* footer background
+* nav styles, background and orientation
+*/
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Sansita, sans-serif;
+}
+
+header, footer, nav {
+  background-color: #0e89d5;
+}
+
+#mynav {
+  display: flex;
+  flex-direction: row;
+}
+#mynav a {
+  display: block;
+  list-style-type: none;
+}
+
+section {
+  background-color: rgba(200, 200, 200, 0.6);
+  margin: 0.2em auto;
+  border: 1px solid;
+  border-radius: 15px;
+}
 
 /*# sourceMappingURL=citystyle.css.map */
