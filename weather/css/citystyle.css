@@ -120,6 +120,16 @@ section {
   max-width: 70%;
 }
 
+#forecast dt {
+  font-weight: normal;
+}
+#forecast dt::before {
+  content: "|";
+}
+#forecast dt:first-child::before {
+  content: "";
+}
+
 .temp::after {
   content: "°F";
 }

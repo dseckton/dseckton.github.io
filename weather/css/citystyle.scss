@@ -136,6 +136,18 @@ section {
     }
 }
 
+#forecast {
+    dt {
+        font-weight: normal;
+        &::before {
+            content: '|';
+        }
+        &:first-child::before {
+            content: '';
+        }
+    }
+}
+
 .temp::after {
     content: '°F';
 }
