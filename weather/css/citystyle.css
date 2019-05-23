@@ -72,6 +72,7 @@ header figure img {
   flex-direction: row;
   justify-content: space-evenly;
   margin: 0;
+  padding: 0;
 }
 #mynav li {
   list-style-type: none;
@@ -148,6 +149,7 @@ nav ul {
   flex-direction: row;
   justify-content: space-evenly;
   margin: 0;
+  padding: 0;
 }
 nav ul li {
   list-style-type: none;
@@ -157,6 +159,16 @@ nav ul li a {
   padding: 0.2em;
   text-decoration: none;
   color: #fff;
+}
+
+#windfig {
+  position: relative;
+}
+#windfig #windspeed {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*# sourceMappingURL=citystyle.css.map */
