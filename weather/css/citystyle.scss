@@ -54,8 +54,26 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $font-header;
 }
 
-header, footer, nav{
+h1, #title {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+
+header, footer, nav {
     background-color: $color-primary;
+}
+
+header {
+    img {
+        height: 2em;
+        display: inline-block;
+    }
 }
 
 #mynav {
@@ -67,10 +85,20 @@ header, footer, nav{
     }
 }
 
+dt, dd {
+    display: inline;
+}
+
+dd:not(dd:last-child)::after {
+    content: '|'
+}
+
 section {
     background-color: rgba(200,200,200,.6);
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
+    text-align: center;
 }
+
 

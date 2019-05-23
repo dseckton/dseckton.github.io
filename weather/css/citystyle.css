@@ -42,8 +42,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Sansita, sans-serif;
 }
 
+h1, #title {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
 header, footer, nav {
   background-color: #0e89d5;
+}
+
+header img {
+  height: 2em;
+  display: inline-block;
 }
 
 #mynav {
@@ -55,11 +70,20 @@ header, footer, nav {
   list-style-type: none;
 }
 
+dt, dd {
+  display: inline;
+}
+
+dd:not(dd:last-child)::after {
+  content: "|";
+}
+
 section {
   background-color: rgba(200, 200, 200, 0.6);
   margin: 0.2em auto;
   border: 1px solid;
   border-radius: 15px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=citystyle.css.map */
