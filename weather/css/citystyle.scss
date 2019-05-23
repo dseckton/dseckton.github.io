@@ -88,6 +88,7 @@ header {
 dt, dd {
     display: inline;
     padding: 0;
+    margin: 0;
 }
 
 dt {
@@ -117,3 +118,24 @@ section {
     background-size: cover;
 }
 
+#actual {
+    font-size: 3em;
+}
+
+#low {
+    color: blue;
+}
+
+#high {
+    color: red;
+}
+
+#summary {
+    img {
+        max-width: 70%;
+    }
+}
+
+.temp::after {
+    content: '&#xB0;F';
+}
