@@ -72,10 +72,19 @@ header img {
 
 dt, dd {
   display: inline;
+  padding: 0;
 }
 
-dd:not(dd:last-child)::after {
+dt {
+  font-weight: bold;
+}
+
+dd::after {
   content: "|";
+}
+
+dd:last-child::after {
+  content: "";
 }
 
 section {
