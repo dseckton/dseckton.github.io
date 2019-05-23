@@ -70,19 +70,27 @@ header, footer, nav {
 }
 
 header {
-    img {
+    figure {
+        padding: 0;
+        margin: 0;
         height: 2em;
         display: inline-block;
+        img {
+            height: 100%;
+        }
     }
 }
 
 #mynav {
     display: flex;
     flex-direction: row;
-    a {
-        display: block;
+    justify-content: space-evenly;
+    li{
         list-style-type: none;
-    }
+        a {
+            display: block;
+        }
+    }   
 }
 
 dt, dd {

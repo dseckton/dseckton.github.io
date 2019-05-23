@@ -57,18 +57,26 @@ header, footer, nav {
   background-color: #0e89d5;
 }
 
-header img {
+header figure {
+  padding: 0;
+  margin: 0;
   height: 2em;
   display: inline-block;
+}
+header figure img {
+  height: 100%;
 }
 
 #mynav {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
-#mynav a {
-  display: block;
+#mynav li {
   list-style-type: none;
+}
+#mynav li a {
+  display: block;
 }
 
 dt, dd {
