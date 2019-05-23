@@ -60,11 +60,8 @@ header, footer, nav {
 header figure {
   padding: 0;
   margin: 0;
-  height: 1em;
-  display: inline-block;
-}
-header figure img {
   height: 100%;
+  display: inline-block;
 }
 
 #mynav {
