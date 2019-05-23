@@ -73,7 +73,7 @@ header {
     figure {
         padding: 0;
         margin: 0;
-        height: 2em;
+        height: 1em;
         display: inline-block;
         img {
             height: 100%;
@@ -171,6 +171,8 @@ nav ul {
         a {
             display: block;
             padding: .2em;
+            text-decoration: none;
+            color: $color-secondary;
         }
     }
 }

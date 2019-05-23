@@ -60,7 +60,7 @@ header, footer, nav {
 header figure {
   padding: 0;
   margin: 0;
-  height: 2em;
+  height: 1em;
   display: inline-block;
 }
 header figure img {
@@ -155,6 +155,8 @@ nav ul li {
 nav ul li a {
   display: block;
   padding: 0.2em;
+  text-decoration: none;
+  color: #fff;
 }
 
 /*# sourceMappingURL=citystyle.css.map */
