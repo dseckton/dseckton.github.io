@@ -52,7 +52,7 @@ h2 {
     font-weight: bolder;
 }
 
-p, dl{
+p {
    margin: 16px 0;
 }
 
@@ -65,7 +65,7 @@ header {
     figure {
         padding: 0;
         margin: 0;
-        width: 45px;
+        width: 1em;
         display: inline-block;
         img {
             width: 100%;
@@ -103,7 +103,7 @@ dd::after {
     content: '|';
 }
 
-dd:last-child::after, #wind dd:last-child::after {
+dd:last-child::after, #wind dd::after {
     content: '';
 }
 
@@ -113,7 +113,7 @@ section {
     border: 1px solid;
     border-radius: 15px;
     text-align: center;
-    padding-top: 1em;
+    padding-top: 1.3em;
 }
 
 #bckimg {
@@ -190,6 +190,9 @@ nav {
 
 #windfig {
     position: relative;
+    img {
+        width: 40%;
+    }
     #windspeed {
         position: absolute;
         top: 50%;
