@@ -46,12 +46,14 @@ $font-copy: Helvetica, sans-serif;
 * footer background
 * nav styles, background and orientation
 */
+
 body {
     font-family: $font-copy;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-header;
+    padding: 0;
 }
 
 h1, header {
@@ -62,6 +64,10 @@ h1, header {
 h2 {
     font-size: 1.5em;
     font-weight: bolder;
+}
+
+p {
+    padding: 16px 0;
 }
 
 
@@ -169,7 +175,8 @@ nav ul {
     justify-content: space-evenly;
     margin: 0;
     padding: 0;
-    float: bottom;
+    bottom: 0;
+    position: fixed;
     li{
         list-style-type: none;
         a {
