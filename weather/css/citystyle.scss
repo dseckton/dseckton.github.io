@@ -34,6 +34,7 @@ $font-copy: Helvetica, sans-serif;
 body {
     font-family: $font-copy;
     position: relative;
+    padding-bottom: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,7 +65,7 @@ header {
     figure {
         padding: 0;
         margin: 0;
-        width: 1.2em;
+        width: 45px;
         display: inline-block;
         img {
             width: 100%;
@@ -102,7 +103,7 @@ dd::after {
     content: '|';
 }
 
-dd:last-child::after {
+dd:last-child::after, #wind dd:last-child::after {
     content: '';
 }
 
@@ -112,6 +113,7 @@ section {
     border: 1px solid;
     border-radius: 15px;
     text-align: center;
+    padding-top: 1em;
 }
 
 #bckimg {
@@ -136,7 +138,9 @@ section {
 #summary {
     img {
         min-width: 200px;
+        max-width: 75%;
         min-height: 200px;
+        max-height: 75%;
         object-fit: cover;
     }
 }
@@ -178,6 +182,10 @@ nav {
             }
         }
     }
+}
+
+#wind {
+    padding: 5px;
 }
 
 #windfig {
