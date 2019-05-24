@@ -30,30 +30,14 @@ $color-accent2: #d8f;
 $font-header: Sansita, sans-serif;
 $font-copy: Helvetica, sans-serif;
 
-/* TO DO
-* * * * * * * * * * * * * * * *
-* Blue Background for header
-* Change fonts
-* re-write city info to be part of a descriptive list
-* Resize Logo
-* background color, border and shape of individual sections
-* text align center for sections
-* color-code high/low
-* resize/rotate wind direction, put text inside
-* re-write wind info to be part of a descriptive list
-* make summary image background/resize
-* make hourly forecast info inline
-* footer background
-* nav styles, background and orientation
-*/
-
+/*! General Styles */
 body {
     font-family: $font-copy;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-header;
-    padding: 0;
+    margin: 0;
 }
 
 h1, header {
@@ -67,7 +51,7 @@ h2 {
 }
 
 p {
-    padding: 16px 0;
+   margin: 16px 0;
 }
 
 
@@ -79,7 +63,7 @@ header {
     figure {
         padding: 0;
         margin: 0;
-        width: 1em;
+        width: 1.2em;
         display: inline-block;
         img {
             width: 100%;
@@ -90,13 +74,14 @@ header {
 #mynav {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0;
-    padding: 0;
+    padding: 1em;
     li{
         list-style-type: none;
         a {
             display: block;
+            text-decoration: none;
         }
     }   
 }
@@ -148,7 +133,7 @@ section {
 
 #summary {
     img {
-        max-width: 70%;
+        max-width: 50%;
         object-fit: cover;
     }
 }
@@ -176,7 +161,6 @@ nav ul {
     margin: 0;
     padding: 0;
     bottom: 0;
-    position: fixed;
     li{
         list-style-type: none;
         a {
