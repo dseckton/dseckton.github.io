@@ -22,6 +22,7 @@
 /*! General Styles */
 body {
   font-family: Helvetica, sans-serif;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -39,7 +40,7 @@ h2 {
   font-weight: bolder;
 }
 
-p {
+p, dl {
   margin: 16px 0;
 }
 
@@ -70,6 +71,7 @@ header figure img {
 #mynav li a {
   display: block;
   text-decoration: none;
+  padding: 0 1em;
 }
 
 dt, dd {
@@ -118,7 +120,8 @@ section {
 }
 
 #summary img {
-  max-width: 50%;
+  min-width: 200px;
+  min-height: 200px;
   object-fit: cover;
 }
 
@@ -136,6 +139,11 @@ section {
   content: "°F";
 }
 
+nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 nav ul {
   display: flex;
   flex-direction: row;

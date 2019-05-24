@@ -33,6 +33,7 @@ $font-copy: Helvetica, sans-serif;
 /*! General Styles */
 body {
     font-family: $font-copy;
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,7 +51,7 @@ h2 {
     font-weight: bolder;
 }
 
-p {
+p, dl{
    margin: 16px 0;
 }
 
@@ -82,6 +83,7 @@ header {
         a {
             display: block;
             text-decoration: none;
+            padding: 0 1em;
         }
     }   
 }
@@ -133,7 +135,8 @@ section {
 
 #summary {
     img {
-        max-width: 50%;
+        min-width: 200px;
+        min-height: 200px;
         object-fit: cover;
     }
 }
@@ -154,20 +157,25 @@ section {
     content: '°F';
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+nav {
+    position: absolute;
     bottom: 0;
-    li{
-        list-style-type: none;
-        a {
-            display: block;
-            padding: .5em;
-            text-decoration: none;
-            color: $color-secondary;
+    width: 100%;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        bottom: 0;
+        li{
+            list-style-type: none;
+            a {
+                display: block;
+                padding: .5em;
+                text-decoration: none;
+                color: $color-secondary;
+            }
         }
     }
 }
