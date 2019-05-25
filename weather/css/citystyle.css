@@ -1,16 +1,24 @@
 @charset "UTF-8";
 /*! ******************************
 *  Stylesheet for Screened Devices
-*  Created by: Put your name here
+*  Created by: Daniel Eckton
 *  
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
 *  1.2 Google fonts
 *
 *  2.  General Styles (for all pages and devices)
+*  2.1 Descriptive list styles
 *
 *  3.  Mobile First (styles specific to small screens)
-*
+*  3.1 dseckton.github.io navegation styles
+*  3.2 Header and Nav styles
+*  3.3 General section styles
+*  3.4 Temperature section styles
+*  3.5 Wind section styles
+*  3.6 Summary section styles
+*  3.7 Forecast section styles
+* 
 *  4.  Large Screen Styles (Media Queries begin here)
 *
 * ****************************** */
@@ -57,6 +65,30 @@ header, footer, nav {
   content: "°F";
 }
 
+/*! Descriptive list styles */
+dl {
+  margin: 0.3em;
+}
+
+dt, dd {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd::after {
+  content: "|";
+}
+
+dd:last-child::after, #wind dd::after {
+  content: "";
+}
+
+/*! dseckton.github.io navegation styles */
 #mynav {
   display: flex;
   flex-direction: row;
@@ -73,6 +105,7 @@ header, footer, nav {
   padding: 0 1em;
 }
 
+/*! Header and Nav styles */
 header figure {
   padding: 0;
   margin: 0;
@@ -106,28 +139,7 @@ nav ul li a {
   color: #fff;
 }
 
-dl {
-  margin: 0.3em;
-}
-
-dt, dd {
-  display: inline;
-  padding: 0;
-  margin: 0;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd::after {
-  content: "|";
-}
-
-dd:last-child::after, #wind dd::after {
-  content: "";
-}
-
+/*! General section styles */
 section {
   background-color: rgba(200, 200, 200, 0.6);
   margin: 0.2em auto;
@@ -144,6 +156,7 @@ section {
   background-size: cover;
 }
 
+/*! Temperature section styles */
 #actual {
   font-size: 4em;
 }
@@ -156,6 +169,7 @@ section {
   color: red;
 }
 
+/*! Wind section styles */
 #wind {
   padding: 5px;
 }
@@ -173,6 +187,7 @@ section {
   transform: translate(-50%, -50%);
 }
 
+/*! Summary section styles */
 #summary img {
   min-width: 200px;
   max-width: 75%;
@@ -181,6 +196,7 @@ section {
   object-fit: cover;
 }
 
+/*! Forecast section styles */
 #forecast dl {
   overflow: auto;
   white-space: nowrap;

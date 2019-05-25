@@ -12,9 +12,11 @@
 *  3.  Mobile First (styles specific to small screens)
 *  3.1 dseckton.github.io navegation styles
 *  3.2 Header and Nav styles
-*  3.3 
-*  3.4
-*  3.5
+*  3.3 General section styles
+*  3.4 Temperature section styles
+*  3.5 Wind section styles
+*  3.6 Summary section styles
+*  3.7 Forecast section styles
 * 
 *  4.  Large Screen Styles (Media Queries begin here)
 *
@@ -74,7 +76,7 @@ header, footer, nav {
     content: '°F';
 }
 
-// Descriptive list styles
+/*! Descriptive list styles */
 dl {
     margin: .3em;
 }
@@ -97,7 +99,7 @@ dd:last-child::after, #wind dd::after {
     content: '';
 }
 
-// dseckton.github.io navegation styles
+/*! dseckton.github.io navegation styles */
 #mynav {
     display: flex;
     flex-direction: row;
@@ -114,7 +116,7 @@ dd:last-child::after, #wind dd::after {
     }   
 }
 
-// Header and Nav styles
+/*! Header and Nav styles */
 header {
     figure {
         padding: 0;
@@ -152,7 +154,7 @@ nav {
 
 
 
-// General section styles
+/*! General section styles */
 section {
     background-color: rgba(200,200,200,.6);
     margin: .2em auto;
@@ -169,7 +171,7 @@ section {
     background-size: cover;
 }
 
-// Temperature section styles
+/*! Temperature section styles */
 #actual {
     font-size: 4em;
 }
@@ -182,7 +184,7 @@ section {
     color: red;
 }
 
-// Wind section styles
+/*! Wind section styles */
 #wind {
     padding: 5px;
 }
@@ -200,7 +202,7 @@ section {
     }
 }
 
-// Summary section styles
+/*! Summary section styles */
 #summary {
     img {
         min-width: 200px;
@@ -211,7 +213,7 @@ section {
     }
 }
 
-// Forecast section styles
+/*! Forecast section styles */
 #forecast {
     dl {
         overflow: auto;
