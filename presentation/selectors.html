@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Simple test page for CSS Selectors">
+        <title>CSS Selectors</title>
+        <link rel="stylesheet" href="selectors.css">
+    </head>
+    <body>
+        <header>
+            <h1>CSS Selectors</h1>
+        </header>
+
+        <nav>
+            <li><a href="../index.html" title="Return to dseckton.github.io">Home</a></li>
+            <li><a href="../test.html" title="Test page my dude">Test</a></li>
+            <li><a href="#" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li>
+        </nav>
+
+        <main>
+            <section>
+                <!-- <img src="family.png" alt="THIS IS A TEST"> -->
+                <h2>Sibling Selectors</h2>
+                <p>Maybe it's pretty obvious, but the Sibling Selector selects a sibling. Duh..</p>
+                <p>All the elements in a webpage are part of a family. Sibling Selectors allow you to be more specific with your element selection, and makes it so you don't need to use .class or #id selectors.</p>
+                <img src="family-lg.png" alt="Uh oh! That's embarrassing...">
+                <p>We utilize sibling selectors in two ways:</p>
+                <div id="columns">
+                    <div>
+                        <h3>General Sibling Selector</h3>
+                        <p>To use this selector, we'll use the <span class="code">~</span> character.</p>
+                        <p>Example:<br><span class="code">h2 ~ p {color: red;}</span></p>
+                    </div>
+                    <div>
+                        <h3>Adjacent Sibling Selector</h3>
+                        <p>To use this selector, we'll use the <span class="code">+</span> character.</p>
+                        <p>Example:<br><span class="code">li + li {background-color: blue;}</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Pseudo Classes</h2>
+                <p>W3Schools definition: <q>A pseudo-class is used to define a special state of an element.</q></p>
+                <p>These are commonly used when designing links. We often use <span class="code">a:hover</span>, <span class="code">a:visited</span>, and <span class="code">a:active</span>.</p>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <p>Also available, are selectors like <span class="code">:first-of-type</span>, or <span class="code">:last-child</span>.</p>
+                <p>For a list of Pseudo-classes, and explainations for how to use them, visit <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">w3schools.com</a></p>
+            </section>
+
+            <section>
+                <h2>Pseudo Elements</h2>
+                <p>W3Schools definition: <q>A CSS pseudo-element is used to style specified parts of an element.</q></p>
+                <p>One such example is <span class="code">::first-line</span></p>
+                <p id="f-line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel risus odio. Phasellus ultricies, purus a ultrices facilisis, lacus enim vestibulum enim, porttitor iaculis justo lectus eget quam. Nunc eu mauris ac lacus sodales luctus sed id magna. Nullam rhoncus, erat id mattis vestibulum, turpis justo feugiat elit, ac viverra lorem nisi ac metus. Nunc dictum vehicula semper. Aenean tempus felis id nulla ultricies, quis varius sem maximus. Phasellus laoreet pharetra sapien ut rhoncus. Quisque id lectus ut massa porttitor imperdiet vulputate vulputate ligula.</p>
+                <p>Another example is <span class="code">::first-letter</span></p>
+                <p id="f-letter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel risus odio. Phasellus ultricies, purus a ultrices facilisis, lacus enim vestibulum enim, porttitor iaculis justo lectus eget quam. Nunc eu mauris ac lacus sodales luctus sed id magna. Nullam rhoncus, erat id mattis vestibulum, turpis justo feugiat elit, ac viverra lorem nisi ac metus. Nunc dictum vehicula semper. Aenean tempus felis id nulla ultricies, quis varius sem maximus. Phasellus laoreet pharetra sapien ut rhoncus. Quisque id lectus ut massa porttitor imperdiet vulputate vulputate ligula.</p>
+                <p>For a list of Pseudo-elements, and explainations for how to use them, visit <a href="https://www.w3schools.com/css/css_pseudo_elements.asp">w3schools.com</a></p>
+            </section>
+        
+        </main>
+
+        <footer>
+            &COPY; Daniel Eckton
+        </footer>
+    </body>
+</html>

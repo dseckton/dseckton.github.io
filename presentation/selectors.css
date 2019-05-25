@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Meddon|Poppins|Ubuntu+Mono&display=swap');
+body {
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 1.8em;
+    font-family: Poppins, sans-serif;
+}
+
+/** SIBLING SELECTORS **/
+h2 ~ img {
+    border: 5px solid black;
+    display: block;
+    padding: 1em;
+    margin: 0 auto;
+    width: 50%;
+}
+
+img + p {
+    text-align: center;
+}
+/** END OF RELEVANT CODE **/
+
+ #columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+ #columns div {
+     width: 49%;
+ }
+ .code {
+     font-family: 'Ubuntu Mono', monospace;
+     background-color: #C3C2C2;
+     font-size: .9em;
+ }
+
+/** PSEUDO ELEMENTS **/
+ #f-line::first-line {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #800080;
+ }
+
+ #f-letter::first-letter {
+     font-family: Meddon, cursive;
+     color: #800080;
+     float: left;
+     font-size: 2.2em;
+     line-height: 1;
+     margin-right: .6em;
+ }
+
+ q::before {
+    content: '"';
+ }
+
+ q::after {
+   content: '"';
+ }
+/** END OF RELEVANT CODE **/
+
+ section {
+     border: 2px solid black;
+     border-radius: 30px;
+     margin: .5em 0;
+     padding: .5em .5em;
+     box-shadow: 8px 5px 10px black;
+ }
+ ul {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     background-color: #ff66ff;
+     padding: 0;
+ }
+ li{
+    list-style-type: none;
+    width: 20%;
+    text-align: center;
+ }
+ li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: .2em 0;
+ }
+ q {
+    text-decoration: underline;
+}
+
+/** PSEUDO CLASSES **/
+ li a:hover {
+    background-color: #800080;
+    color: white;
+    transition: all .5s ease-in;
+ }
+
+ li a:active {
+     text-decoration: underline;
+ }
+
+ section > p:first-of-type {
+    font-size: .8em;
+    font-style: italic;
+    font-weight: 600;
+ }
+/** END OF RELEVANT CODE **/
+
+footer {
+    text-align: center;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        width: 95%;
+    }
+
+    #columns {
+        flex-direction: column;
+     }
+     #columns div {
+        width: 100%;
+    }
+    ul {
+        flex-direction: column;
+    }
+    li{
+        width: 100%;
+     }
+}
