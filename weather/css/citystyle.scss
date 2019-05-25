@@ -1,15 +1,21 @@
 /*! ******************************
 *  Stylesheet for Screened Devices
-*  Created by: Put your name here
+*  Created by: Daniel Eckton
 *  
 *  1.  Includes (fonts and supplementary stylesheets)
 *  1.1 Normalize
 *  1.2 Google fonts
 *
 *  2.  General Styles (for all pages and devices)
+*  2.1 Descriptive list styles
 *
 *  3.  Mobile First (styles specific to small screens)
-*
+*  3.1 dseckton.github.io navegation styles
+*  3.2 Header and Nav styles
+*  3.3 
+*  3.4
+*  3.5
+* 
 *  4.  Large Screen Styles (Media Queries begin here)
 *
 * ****************************** */
@@ -60,39 +66,15 @@ p {
    margin: 16px 0;
 }
 
-
 header, footer, nav {
     background-color: $color-primary;
 }
 
-header {
-    figure {
-        padding: 0;
-        margin: 0;
-        width: 38px;
-        display: inline-block;
-        img {
-            width: 100%;
-        }
-    }
+.temp::after {
+    content: '°F';
 }
 
-#mynav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0;
-    padding: 1em;
-    li{
-        list-style-type: none;
-        a {
-            display: block;
-            text-decoration: none;
-            padding: 0 1em;
-        }
-    }   
-}
-
+// Descriptive list styles
 dl {
     margin: .3em;
 }
@@ -115,62 +97,34 @@ dd:last-child::after, #wind dd::after {
     content: '';
 }
 
-section {
-    background-color: rgba(200,200,200,.6);
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    text-align: center;
-    padding-top: 1.3em;
-}
-
-#bckimg {
-    background-image: url("../images/rain.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#actual {
-    font-size: 4em;
-}
-
-#low {
-    color: blue;
-}
-
-#high {
-    color: red;
-}
-
-#summary {
-    img {
-        min-width: 200px;
-        max-width: 75%;
-        min-height: 200px;
-        max-height: 75%;
-        object-fit: cover;
-    }
-}
-
-#forecast {
-    dl {
-        overflow: auto;
-        white-space: nowrap;
-    }
-    dt {
-        font-weight: normal;
-        &::before {
-            content: '|';
+// dseckton.github.io navegation styles
+#mynav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 1em;
+    li{
+        list-style-type: none;
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 0 1em;
         }
-        &:first-child::before {
-            content: '';
+    }   
+}
+
+// Header and Nav styles
+header {
+    figure {
+        padding: 0;
+        margin: 0;
+        width: 38px;
+        display: inline-block;
+        img {
+            width: 100%;
         }
     }
-}
-
-.temp::after {
-    content: '°F';
 }
 
 nav {
@@ -196,6 +150,39 @@ nav {
     }
 }
 
+
+
+// General section styles
+section {
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 1.3em;
+}
+
+#bckimg {
+    background-image: url("../images/rain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+// Temperature section styles
+#actual {
+    font-size: 4em;
+}
+
+#low {
+    color: blue;
+}
+
+#high {
+    color: red;
+}
+
+// Wind section styles
 #wind {
     padding: 5px;
 }
@@ -210,5 +197,33 @@ nav {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+// Summary section styles
+#summary {
+    img {
+        min-width: 200px;
+        max-width: 75%;
+        min-height: 200px;
+        max-height: 75%;
+        object-fit: cover;
+    }
+}
+
+// Forecast section styles
+#forecast {
+    dl {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    dt {
+        font-weight: normal;
+        &::before {
+            content: '|';
+        }
+        &:first-child::before {
+            content: '';
+        }
     }
 }
