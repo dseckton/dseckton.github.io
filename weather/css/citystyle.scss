@@ -34,7 +34,7 @@ $font-copy: Helvetica, sans-serif;
 body {
     font-family: $font-copy;
     position: relative;
-    padding-bottom: 2em;
+    padding-bottom: 2.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
 h1, header {
     font-size: 2em;
     font-weight: bolder;
+}
+
+h1 {
+    padding-top: .5em;
 }
 
 h2 {
@@ -65,7 +69,7 @@ header {
     figure {
         padding: 0;
         margin: 0;
-        width: 1em;
+        width: 38px;
         display: inline-block;
         img {
             width: 100%;
@@ -87,6 +91,10 @@ header {
             padding: 0 1em;
         }
     }   
+}
+
+dl {
+    margin: 0;
 }
 
 dt, dd {
@@ -117,7 +125,7 @@ section {
 }
 
 #bckimg {
-    background-image: url("../images/clear.jpg");
+    background-image: url("../images/rain.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,6 +154,10 @@ section {
 }
 
 #forecast {
+    dl {
+        overflow: auto;
+        white-space: nowrap;
+    }
     dt {
         font-weight: normal;
         &::before {

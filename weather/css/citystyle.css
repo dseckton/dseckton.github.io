@@ -23,7 +23,7 @@
 body {
   font-family: Helvetica, sans-serif;
   position: relative;
-  padding-bottom: 2em;
+  padding-bottom: 2.5em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
 h1, header {
   font-size: 2em;
   font-weight: bolder;
+}
+
+h1 {
+  padding-top: 0.5em;
 }
 
 h2 {
@@ -52,7 +56,7 @@ header, footer, nav {
 header figure {
   padding: 0;
   margin: 0;
-  width: 1em;
+  width: 38px;
   display: inline-block;
 }
 header figure img {
@@ -73,6 +77,10 @@ header figure img {
   display: block;
   text-decoration: none;
   padding: 0 1em;
+}
+
+dl {
+  margin: 0;
 }
 
 dt, dd {
@@ -103,7 +111,7 @@ section {
 }
 
 #bckimg {
-  background-image: url("../images/clear.jpg");
+  background-image: url("../images/rain.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,6 +137,10 @@ section {
   object-fit: cover;
 }
 
+#forecast dl {
+  overflow: auto;
+  white-space: nowrap;
+}
 #forecast dt {
   font-weight: normal;
 }
