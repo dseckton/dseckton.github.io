@@ -181,6 +181,7 @@ section {
 }
 #windfig img {
   width: 40%;
+  max-width: 200px;
 }
 #windfig #windspeed {
   position: absolute;
@@ -217,10 +218,10 @@ section {
 @media only screen and (min-width: 960px) {
   #bckimg {
     flex-direction: row;
-    padding: 1em 0;
+    padding: 0.5em 0;
   }
   #bckimg section {
-    width: 33%;
+    width: 33.33%;
   }
 
   nav {

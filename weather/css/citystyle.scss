@@ -195,6 +195,7 @@ section {
     position: relative;
     img {
         width: 40%;
+        max-width: 200px;
     }
     #windspeed {
         position: absolute;
@@ -237,9 +238,9 @@ section {
 @media only screen and (min-width: 960px) {
     #bckimg {
         flex-direction: row;
-        padding: 1em 0;
+        padding: .5em 0;
         section {
-            width: 33%;
+            width: 33.33%;
         }
     }
     nav {
