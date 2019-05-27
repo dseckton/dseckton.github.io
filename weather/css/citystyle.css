@@ -214,10 +214,17 @@ section {
 }
 
 /* Media Queries */
-@media only screen and (min-width: 960px) {
+@media only screen and (max-width: 960px) {
   #bckimg {
     flex-direction: row;
     padding: 1em 0;
+  }
+  #bckimg section {
+    width: 33%;
+  }
+
+  nav {
+    position: relative;
   }
 }
 
