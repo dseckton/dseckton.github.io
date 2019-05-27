@@ -142,7 +142,7 @@ nav ul li a {
 /*! General section styles */
 section {
   background-color: rgba(200, 200, 200, 0.6);
-  margin: 0.2em auto;
+  margin: 0.2em;
   border: 1px solid;
   border-radius: 15px;
   text-align: center;
