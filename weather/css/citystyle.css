@@ -154,6 +154,8 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
 
 /*! Temperature section styles */
@@ -209,6 +211,14 @@ section {
 }
 #forecast dt:first-child::before {
   content: "";
+}
+
+/* Media Queries */
+@media only screen and (min-width: 960px) {
+  #bckimg {
+    flex-direction: row;
+    padding: 1em 0;
+  }
 }
 
 /*# sourceMappingURL=citystyle.css.map */
