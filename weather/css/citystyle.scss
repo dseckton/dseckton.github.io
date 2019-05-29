@@ -108,10 +108,12 @@ dd:last-child::after, #wind dd::after {
     padding: 1em;
     li{
         list-style-type: none;
+        width: 33%;
         a {
             display: block;
             text-decoration: none;
             padding: 0 1em;
+            text-align: center;
         }
     }   
 }
