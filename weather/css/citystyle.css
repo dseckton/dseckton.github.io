@@ -98,11 +98,13 @@ dd:last-child::after, #wind dd::after {
 }
 #mynav li {
   list-style-type: none;
+  width: 33%;
 }
 #mynav li a {
   display: block;
   text-decoration: none;
   padding: 0 1em;
+  text-align: center;
 }
 
 /*! Header and Nav styles */
