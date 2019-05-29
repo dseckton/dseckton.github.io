@@ -99,6 +99,7 @@ dd:last-child::after, #wind dd::after {
 #mynav li {
   list-style-type: none;
   width: 33%;
+  padding: auto 0;
 }
 #mynav li a {
   display: block;
