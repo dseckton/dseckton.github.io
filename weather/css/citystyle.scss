@@ -91,11 +91,11 @@ dt {
     font-weight: bold;
 }
 
-dd::after {
+dt::before {
     content: '|';
 }
 
-dd:last-child::after, #wind dd::after {
+dt:first-child::before, #wind dd::after {
     content: '';
 }
 
