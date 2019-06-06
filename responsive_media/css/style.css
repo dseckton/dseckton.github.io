@@ -50,8 +50,9 @@ h1 {
 /*	Background Images - use with Small screens */
 
 .page-header {
-	background-image: url("../images/opt_banner_400.jpg"), url("../images/opt_logo_50.png");
-	background-position: left, right;
+	background-image: url("../images/opt_logo_50.png"), url("../images/opt_banner_400.jpg");
+	background-position: right, left;
+	background-repeat: no-repeat;
 }
 
 
@@ -221,7 +222,7 @@ h1 {
 	}
 	/*	Background Images - Use with large screens */
 	.page-header {
-		background-image: url("../images/opt_banner_1200.jpg"), url("../images/opt_logo_150.png");
+		background-image: url("../images/opt_logo_150.png"), url("../images/opt_banner_1200.jpg");
 	}
 	.page-nav li {
 		flex: 0 1 10%;
