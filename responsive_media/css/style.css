@@ -53,7 +53,7 @@ h1 {
 	background-image: url("../images/opt_logo_50.png"), url("../images/opt_banner_400.jpg");
 	background-position: right, left;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: auto, 100%;
 }
 
 
