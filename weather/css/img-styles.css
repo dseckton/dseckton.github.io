@@ -3,12 +3,12 @@
   flex-flow: column;
   align-content: center;
   width: 100%;
-  padding: 0 5%;
+  padding: 0;
 }
 
 section {
   border: solid black 1px;
-  border-radius: 5%;
+  border-radius: 10px;
   padding: 20px;
   margin: 10px;
   width: 100%;
@@ -62,7 +62,7 @@ section {
   .flex-container {
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
+    width: 45%;
   }
 
   .dim::after {
