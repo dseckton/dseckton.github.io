@@ -1,3 +1,109 @@
+.flex-container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0 5%;
+}
 
+section {
+  border: solid black 1px;
+  border-radius: 5%;
+  padding: 5px;
+}
+
+.dim::after {
+  content: "400 x 400";
+}
+
+#cle-name::after {
+  content: "clear-400w-o.jpg";
+}
+
+#cle-weight::after {
+  content: "29.7 KB";
+}
+
+#clo-name::after {
+  content: "clouds-400w-o.jpg";
+}
+
+#clo-weight::after {
+  content: "28.7 KB";
+}
+
+#fog-name::after {
+  content: "fog-400w-o.jpg";
+}
+
+#fog-weight::after {
+  content: "3.41 KB";
+}
+
+#rain-name::after {
+  content: "rain-400w-o.jpg";
+}
+
+#rain-weight::after {
+  content: "8.54 KB";
+}
+
+#sn-name::after {
+  content: "snow-400w-o.jpg";
+}
+
+#sn-weight::after {
+  content: "25.3 KB";
+}
+
+@media screen and (min-width: 960px) {
+  .flex-container {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .dim::after {
+    content: "600 x 600";
+  }
+
+  #cle-name::after {
+    content: "clear-600w-o.jpg";
+  }
+
+  #cle-weight::after {
+    content: "61.4 KB";
+  }
+
+  #clo-name::after {
+    content: "clouds-600w-o.jpg";
+  }
+
+  #clo-weight::after {
+    content: "36.2 KB";
+  }
+
+  #fog-name::after {
+    content: "fog-600w-o.jpg";
+  }
+
+  #fog-weight::after {
+    content: "11.9 KB";
+  }
+
+  #rain-name::after {
+    content: "rain-600w-o.jpg";
+  }
+
+  #rain-weight::after {
+    content: "16.5 KB";
+  }
+
+  #sn-name::after {
+    content: "snow-600w-o.jpg";
+  }
+
+  #sn-weight::after {
+    content: "49.5 KB";
+  }
+}
 
 /*# sourceMappingURL=img-styles.css.map */
