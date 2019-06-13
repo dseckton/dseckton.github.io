@@ -38,9 +38,9 @@
         <dl>
             <dt>Zip: </dt>
             <dd>83237 </dd>
-            <dt>Elevation: </dt>
+            <dt> Elevation: </dt>
             <dd>1514.246m </dd>
-            <dt>Location: </dt>
+            <dt> Location: </dt>
             <dd>42.07N, 111.79W </dd>
         </dl>
 
@@ -49,18 +49,18 @@
                 <h2>Temperature</h2>
                 <p class="temp" id="actual">40</p>
                 <p><span class="temp" id="high">64</span>   <span class="temp" id="low">41</span></p>
-                <p>Feels Like <span class="temp"></span></p>
+                <p>Feels Like <span id="tempFeel" class="temp"></span></p>
             </section>
 
             <section id="wind">
                 <h2>Wind</h2>
                 <figure id="windfig">
-                    <img src="images/wind-pointer.png" alt="Wind pointer graphic">
-                    <figcaption id="windspeed">5 mph</figcaption>
+                    <img id="dial" class="ne" src="images/wind-pointer.png" alt="Wind pointer graphic">
+                    <figcaption class="windspeed"><span id="windspeed">5</span> mph</figcaption>
                 </figure>
                 <dl>
-                    <dt>Direction:</dt> <dd>SW<br></dd>
-                    <dt>Gusts:</dt> <dd>10-12mph</dd>
+                    <dt>Direction:</dt> <dd><span id="direction">SW</span><br></dd>
+                    <dt>Gusts:</dt> <dd><span id="gustspeed">10-12</span>mph</dd>
                 </dl>
             </section>
                 
@@ -92,5 +92,7 @@
     <footer>
         &copy;2019 - The Weather Site
     </footer>
+
+    <script src="/weather/js/functions.js"></script>
 </body>
 </html>

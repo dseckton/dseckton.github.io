@@ -9,6 +9,7 @@
 *
 *  2.  General Styles (for all pages and devices)
 *  2.1 Descriptive list styles
+*  2.2 Wind pointer rotations
 *
 *  3.  Mobile First (styles specific to small screens)
 *  3.1 dseckton.github.io navegation styles
@@ -86,6 +87,39 @@ dt::before {
 
 dt:first-child::before, #wind dd::after {
   content: "";
+}
+
+/*! 2.2 Wind pointer rotations */
+.n {
+  transform: rotate(0deg);
+}
+
+.ne {
+  transform: rotate(45deg);
+}
+
+.e {
+  transform: rotate(90deg);
+}
+
+.se {
+  transform: rotate(135deg);
+}
+
+.s {
+  transform: rotate(180deg);
+}
+
+.sw {
+  transform: rotate(225deg);
+}
+
+.w {
+  transform: rotate(270deg);
+}
+
+.nw {
+  transform: rotate(315deg);
 }
 
 /*! dseckton.github.io navegation styles */
@@ -168,7 +202,7 @@ section {
   width: 40%;
   max-width: 200px;
 }
-#windfig #windspeed {
+#windfig .windspeed {
   position: absolute;
   top: 50%;
   left: 50%;
