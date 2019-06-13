@@ -93,10 +93,11 @@ dt {
 }
 
 dt::before {
+    font-weight: normal;
     content: '|';
 }
 
-dt:first-child::before, #wind dd::after {
+dt:first-child::before, #wind dt::before {
     content: '';
 }
 
