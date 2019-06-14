@@ -63,6 +63,9 @@ convertMeters(meters);
  function buildWC(speed, temp) {
     const tempFeel = document.getElementById('tempFeel');
 
+    console.log("speed is " + speed);
+    console.log("temp is " + temp);
+
     // compute windchill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
 
@@ -121,11 +124,14 @@ convertMeters(meters);
      dial.setAttribute("class", "w");
      break;
    }
+
+   console.log("wind direction is " + direction);
  }
 
 // get weather condition function
  function getCondition(condition) {
     let weather;
+    console.log("weather condition is " + condition);
 
    switch (condition) {
       case "Clear":
@@ -151,6 +157,7 @@ convertMeters(meters);
       break;
    }
 
+   console.log("weather is " + weather);
    return weather;
  }
 
@@ -176,23 +183,25 @@ convertMeters(meters);
       weatherImg.setAttribute("class", "snow");
       break;
    }
+
  }
 
  // convert meters to feet function
  function convertMeters(meters) {
+   console.log("elevation in meters is " + meters);
+
    const elevation = document.getElementById('elevation');
 
    const feet = Math.floor(meters*3.28084);
 
    elevation.innerHTML = feet;
-
+   
+   console.log("elevation in feet is " + feet);
    return feet;
  }
+ 
+ 
+ 
+ 
 
- console.log("speed is " + speed);
- console.log("temp is " + temp);
- console.log("wind direction is " + direction);
- console.log("weather condition is " + condition);
- console.log("weather is " + weather);
- console.log("elevation in meters is " + meters);
- console.log("elevation in feet is " + feet);
+ 
