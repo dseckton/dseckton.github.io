@@ -36,7 +36,7 @@
 
  const condition = document.getElementById('condition').innerHTML;
 
- const meters = 1514.246; /*document.getElementById('elevation').innerHTML;*/
+ const meters = 1514.246;
  const feet = convertMeters(meters);
 
  /* * * * CALL FUNCTIONS * * * */
@@ -195,7 +195,7 @@ convertMeters(meters);
    const feet = Math.floor(meters*3.28084);
 
    elevation.innerHTML = feet;
-   
+
    console.log("elevation in feet is " + feet);
    return feet;
  }
