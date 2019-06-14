@@ -180,7 +180,7 @@ convertMeters(meters);
 
  // convert meters to feet function
  function convertMeters(meters) {
-   const elevation = docoument.getElementById('elevation');
+   const elevation = document.getElementById('elevation');
 
    const feet = Math.floor(meters*3.28084);
 
