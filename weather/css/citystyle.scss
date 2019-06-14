@@ -77,6 +77,10 @@ header, footer, nav {
     content: '°F';
 }
 
+.elevation::after {
+    content: 'ft';
+}
+
 /*! Descriptive list styles */
 dl {
     margin: .3em;
