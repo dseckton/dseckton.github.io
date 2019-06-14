@@ -1,14 +1,63 @@
-/* * * * * * * * * *
+/* * * * * * * * * * * * * * * * * * * *
  * Weather Site JavaScript Functions
- * * * * * * * * * */
+ * * * * * * * * * * * * * * * * * * * */
+
+/* * * * * * * * * * * * * * * * * * * *
+ * 1 - Variable Declarations
+ * 
+ * 2 - Calls
+ *   - wind chill call
+ *   - wind dial call
+ *   - get condition call
+ *   - change image call
+ *   - convert meters call
+ * 
+ * 3 - Functions
+ *   - wind chill calculation function
+ *   - wind dial rotation function
+ *   - get condition function
+ *   - change summary image function
+ *   - convert meters function
+ * 
+ * * * * * * * * * * * * * * * * * * * */
 
  console.log('my js worketh');
+ 
+
+
+
+ /* * * * VARIABLES * * * */
 
 // declaration of variables to be used in functions
  const speed = document.getElementById('windspeed').innerHTML;
  const temp = document.getElementById('actual').innerHTML;
 
  const direction = document.getElementById('direction').innerHTML;
+
+ const condition = document.getElementById('condition').innerHTML;
+
+ const meters = document.getElementById('elevation').innerHTML;
+ const feet = convertMeters(meters);
+
+ /* * * * CALL FUNCTIONS * * * */
+
+// call wind chill function
+buildWC(speed, temp);
+
+// call wind dial function
+windDial(direction);
+
+// call get condition function
+const weather = getCondition(condition);
+
+//call change img class function
+changeSummaryImage(weather);
+
+//call meters to feet function
+convertMeters(meters);
+
+
+ /* * * * FUNCTIONS * * * */
 
  // Calculate Wind Chill function
  function buildWC(speed, temp) {
@@ -27,9 +76,6 @@
     console.log(wc);
     tempFeel.innerHTML = wc;
  }
-
- // use wind chill function
- buildWC(speed, temp);
 
  //Rotate wind pointer function
  function windDial(direction) {
@@ -77,5 +123,71 @@
    }
  }
 
- // use wind dial function
- windDial(direction);
+// get weather condition function
+ function getCondition(condition) {
+    let weather;
+
+   switch (condition) {
+      case "Clear":
+      case "Sunny":
+      weather = "clear";
+      break;
+      case "Clouds":
+      case "Cloudy":
+      case "Overcast":
+      weather = "cloud";
+      break;
+      case "Fog": 
+      case "Foggy":
+      weather = "fog";
+      break;
+      case "Rain":
+      case "Rainy":
+      weather = "rain";
+      break;
+      case "Snow":
+      case "Snowy":
+      weather = "snow";
+      break;
+   }
+
+   return weather;
+ }
+
+
+ // change img class function
+ function changeSummaryImage(weather) {
+   const weatherImg = document.getElementById('weatherImg')
+
+   switch (weather) {
+      case "clear":
+      weatherImg.setAttribute("class", "clear");
+      break;
+      case "clouds":
+      weatherImg.setAttribute("class", "clouds");
+      break;
+      case "fog": 
+      weatherImg.setAttribute("class", "fog");
+      break;
+      case "rain":
+      weatherImg.setAttribute("class", "rain");
+      break;
+      case "snow":
+      weatherImg.setAttribute("class", "snow");
+      break;
+   }
+ }
+
+ // convert meters to feet function
+ function convertMeters(meters) {
+   const feet = Math.floor(meters*3.28084);
+   return feet;
+ }
+
+ console.log("speed is " + speed);
+ console.log("temp is " + temp);
+ console.log("wind direction is " + direction);
+ console.log("weather condition is " + condition);
+ console.log("weather is " + weather);
+ console.log("elevation in meters is " + meters);
+ console.log("elevation in feet is " + feet);

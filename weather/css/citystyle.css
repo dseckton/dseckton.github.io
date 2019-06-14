@@ -123,6 +123,27 @@ dt:first-child::before, #wind dt::before {
   transform: rotate(315deg);
 }
 
+/*! 2.3 Summary Image changes */
+.rain {
+  background-image: url("../images/rain-400w-o.jpg");
+}
+
+.clear {
+  background-image: url("../images/clear-400w-o.jpg");
+}
+
+.clouds {
+  background-image: url("../images/clouds-400w-o.jpg");
+}
+
+.fog {
+  background-image: url("../images/fog-400w-o.jpg");
+}
+
+.snow {
+  background-image: url("../images/snow-400w-o.jpg");
+}
+
 /*! dseckton.github.io navegation styles */
 /*! Header and Nav styles */
 header figure {
@@ -211,12 +232,14 @@ section {
 }
 
 /*! Summary section styles */
-#summary img {
-  min-width: 200px;
-  max-width: 75%;
-  min-height: 200px;
-  max-height: 75%;
-  object-fit: cover;
+#summary #weatherImg {
+  width: 80%;
+  padding-bottom: 80%;
+  margin: 2em auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 /*! Forecast section styles */
@@ -246,6 +269,26 @@ section {
 
   nav {
     position: relative;
+  }
+
+  .rain {
+    background-image: url("../images/rain-600w-o.jpg");
+  }
+
+  .clear {
+    background-image: url("../images/clear-600w-o.jpg");
+  }
+
+  .clouds {
+    background-image: url("../images/clouds-600w-o.jpg");
+  }
+
+  .fog {
+    background-image: url("../images/fog-600w-o.jpg");
+  }
+
+  .snow {
+    background-image: url("../images/snow-600w-o.jpg");
   }
 }
 
