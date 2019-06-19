@@ -29,15 +29,15 @@
  /* * * * VARIABLES * * * */
 
 // declaration of variables to be used in functions
- const speed = document.getElementById('windspeed').innerHTML;
- const temp = document.getElementById('actual').innerHTML;
+ let speed = document.getElementById('windspeed').innerHTML;
+ let temp = document.getElementById('actual').innerHTML;
 
- const direction = document.getElementById('direction').innerHTML;
+ let direction = document.getElementById('direction').innerHTML;
 
- const condition = document.getElementById('condition').innerHTML;
+ let condition = document.getElementById('condition').innerHTML;
 
- const meters = 1514.246;
- const feet = convertMeters(meters);
+ let meters = 1514.246;
+ let feet = convertMeters(meters);
 
  /* * * * CALL FUNCTIONS * * * */
 
@@ -48,7 +48,7 @@ buildWC(speed, temp);
 windDial(direction);
 
 // call get condition function
-const weather = getCondition(condition);
+let weather = getCondition(condition);
 
 //call change img class function
 changeSummaryImage(weather);
@@ -61,7 +61,7 @@ convertMeters(meters);
 
  // Calculate Wind Chill function
  function buildWC(speed, temp) {
-    const tempFeel = document.getElementById('tempFeel');
+    let tempFeel = document.getElementById('tempFeel');
 
     console.log("speed is " + speed);
     console.log("temp is " + temp);
@@ -83,7 +83,7 @@ convertMeters(meters);
  //Rotate wind pointer function
  function windDial(direction) {
     // get wind dial container
-    const dial = document.getElementById('dial');
+    let dial = document.getElementById('dial');
 
     // Determine the dial class
  switch (direction){
@@ -164,7 +164,7 @@ convertMeters(meters);
 
  // change img class function
  function changeSummaryImage(weather) {
-   const weatherImg = document.getElementById('weatherImg')
+   let weatherImg = document.getElementById('weatherImg')
 
    switch (weather) {
       case "clear":
@@ -190,9 +190,9 @@ convertMeters(meters);
  function convertMeters(meters) {
    console.log("elevation in meters is " + meters);
 
-   const elevation = document.getElementById('elevation');
+   let elevation = document.getElementById('elevation');
 
-   const feet = Math.floor(meters*3.28084);
+   let feet = Math.floor(meters*3.28084);
 
    elevation.innerHTML = feet;
 
