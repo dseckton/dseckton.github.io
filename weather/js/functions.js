@@ -98,6 +98,7 @@ buildHourlyData(nextHour, hourlyTemps);
    //  console.log(speed + ' & ' + temp)
    //  console.log(wc);
     tempFeel.innerHTML = wc;
+    return wc;
  }
 
  //Rotate wind pointer function

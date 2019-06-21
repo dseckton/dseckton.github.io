@@ -134,7 +134,7 @@ function fetchData(weatherURL){
 
 
     // change feels like temp
-    tempFeel.innerHTML = buildWC(locWind, locTemp);
+    buildWC(locWind, locTemp);
 
     // Set the current conditions information
     let condition = document.getElementById('condition');
@@ -148,7 +148,7 @@ function fetchData(weatherURL){
     
 
     hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyTemp);
-    console.log('Hourly temp: ' + hourlyTemp);
+    console.log('Hourly temp: ' + hourlyTemp.innerHTML);
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class
