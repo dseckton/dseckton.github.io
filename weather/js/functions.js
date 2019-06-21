@@ -95,6 +95,7 @@ buildHourlyData(nextHour, hourlyTemps);
     wc - (wc > temp)?temp:wc;
 
     //display windchill
+    console.log(speed + ' & ' + temp)
     console.log(wc);
     tempFeel.innerHTML = wc;
  }
@@ -168,6 +169,7 @@ buildHourlyData(nextHour, hourlyTemps);
       break;
       case "Rain":
       case "Rainy":
+      case "Thunderstorms":
       weather = "rain";
       break;
       case "Snow":
