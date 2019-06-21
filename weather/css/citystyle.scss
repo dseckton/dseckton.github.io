@@ -298,17 +298,17 @@ section {
         white-space: nowrap;
         display: flex;
         padding: 0;
+        margin: 0 1em;
     }
     li {
         font-weight: normal;
         list-style-type: none;
-        padding-right: 1em;
+        padding-right: .5em;
         &::before {
             content: ' | ';
         }
         &:first-child::before {
             content: '';
-            padding-left: .5em;
         }
     }
 }
