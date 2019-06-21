@@ -241,8 +241,8 @@ section {
 
 /*! Summary section styles */
 #summary #weatherImg {
-  width: 70%;
-  padding-bottom: 70%;
+  width: 60%;
+  padding-bottom: 60%;
   margin: 2em auto;
   background-position: center;
   background-size: cover;
@@ -258,6 +258,7 @@ section {
 }
 #forecast li {
   font-weight: normal;
+  list-style-type: none;
 }
 #forecast li::before {
   content: "|";
