@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Weather overview for Franklin ID">
-    <title>Greenville, SC | dseckton.github.io</title>
+    <title id="page-title">Greenville, SC | dseckton.github.io</title>
 
     <link rel="stylesheet" media="screen" type="text/css" href="css/citystyle.css">
 </head>
@@ -22,7 +22,7 @@
 
     </header>
 
-    <nav>
+    <nav id="page-nav">
         <ul>
             <li><a href="#" title="Go to the Weather Site home page">Current</a></li>
             <li><a href="#">Search</a></li>
@@ -31,7 +31,9 @@
         </ul>
     </nav>
 
-    <main>
+    <section id="status"Please be patient while I get your weather information.></section>
+
+    <main id="main-content" class="hide">
 
         <h1 id="location"></h1>
 
@@ -71,21 +73,21 @@
         </div>
         <section id="forecast">
             <h2>Hourly Forecast</h2>
-            <dl>
-                <dt> 10am </dt><dd class="temp"></dd>
-                <dt> 11am </dt><dd class="temp"></dd>
-                <dt> 12pm </dt><dd class="temp"></dd>
-                <dt> 1pm </dt><dd class="temp"></dd>
-                <dt> 2pm </dt><dd class="temp"></dd>
-                <dt> 3pm </dt><dd class="temp"></dd>
-                <dt> 4pm </dt><dd class="temp"></dd>
-                <dt> 5pm </dt><dd class="temp"></dd>
-                <dt> 6pm </dt><dd class="temp"></dd>
-                <dt> 7pm </dt><dd class="temp"></dd>
-                <dt> 8pm </dt><dd class="temp"></dd>
-                <dt> 9pm </dt><dd class="temp"></dd>
-                <dt> 10pm </dt><dd class="temp"></dd>
-            </dl>
+            <ul id="hourly-temp">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
         </section>
     </main>
 
@@ -93,6 +95,7 @@
         &copy;2019 - The Weather Site
     </footer>
 
-    <script src="/weather/js/functions.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/localdata.js"></script>
 </body>
 </html>

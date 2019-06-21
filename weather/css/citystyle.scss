@@ -40,6 +40,11 @@ $font-header: Sansita, sans-serif;
 $font-copy: Helvetica, sans-serif;
 
 /*! General Styles */
+
+.hide {
+    display: none;
+}
+
 body {
     font-family: $font-copy;
     position: relative;
