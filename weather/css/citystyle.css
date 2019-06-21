@@ -29,6 +29,10 @@
 /*! Inclusion of Google Font Sansita */
 @import url("https://fonts.googleapis.com/css?family=Sansita&display=swap");
 /*! General Styles */
+.hide {
+  display: none;
+}
+
 body {
   font-family: Helvetica, sans-serif;
   position: relative;
@@ -92,6 +96,10 @@ dt::before {
 
 dt:first-child::before, #wind dt::before {
   content: "";
+}
+
+#hourly-temp {
+  display: flex;
 }
 
 /*! 2.2 Wind pointer rotations */
