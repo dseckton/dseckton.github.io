@@ -6,7 +6,7 @@ let pageNav = document.getElementById('page-nav');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 
-let weatherURL = "https://dseckton.github.io/blob/master/weather/js/weather.json";
+let weatherURL = "https://dseckton.github.io/blob/master/weather/js";
 
 // call fetch function
 fetchData(weatherURL);
