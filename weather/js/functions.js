@@ -46,6 +46,8 @@
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
 
+// hourly variables
+let hourlyTemps = [];
 
 
 
@@ -66,6 +68,11 @@ changeSummaryImage(weather);
 //call meters to feet function
 convertMeters(meters);
 
+//call format time function
+format_time(nextHour);
+
+//call hourly data funciton
+buildHourlyData(nextHour, hourlyTemps);
 
 
 
@@ -224,7 +231,10 @@ function format_time(hour) {
    if(hour == 0) { 
     hour = "12"; 
    } 
+
+   console.log(hour + amPM);
    return hour + amPM;
+
   }
 
   // Build the hourly temperature list

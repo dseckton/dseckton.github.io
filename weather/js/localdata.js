@@ -55,6 +55,8 @@ function fetchData(weatherURL){
     // Get the hourly data 
     let locHourly = g.Hourly;
 
+    console.log(locHourly);
+
     // ************ Display the content ******************************
     // Set the title with the location name at the first
     // Gets the title element so it can be worked with
@@ -92,7 +94,7 @@ function fetchData(weatherURL){
     gustspeed.innerHTML = locGusts;
 
     // Set the current conditions information
-    let condition = document.getElementById('conditon');
+    let condition = document.getElementById('condition');
 
     condition.innerHTML = locCondition;
 
