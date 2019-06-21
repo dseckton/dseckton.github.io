@@ -252,7 +252,8 @@ function buildHourlyData(nextHour,hourlyTemps) {
     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
     }
-     console.log('HourlyList is: ' +hourlyListItems);
+     console.log('HourlyList is: ' + hourlyListItems);
+     console.log('HourlyList.length is: ' + hourlyTemps.length);
     return hourlyListItems;
    }
  

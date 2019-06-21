@@ -147,7 +147,7 @@ function fetchData(weatherURL){
     let nextHour = date.getHours() + 1;
     
 
-    hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyTemp);
+    hourlyTemp.innerHTML = buildHourlyData(nextHour, locHourly);
     console.log('Hourly temp: ' + hourlyTemp.innerHTML);
 
     // Change the status of the containers
