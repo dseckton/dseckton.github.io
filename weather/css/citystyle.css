@@ -229,8 +229,9 @@ section {
   position: relative;
 }
 #windfig img {
-  width: 40%;
-  max-width: 200px;
+  padding-top: 2em;
+  width: 50%;
+  max-width: 300px;
 }
 #windfig .windspeed {
   position: absolute;
@@ -255,13 +256,14 @@ section {
   overflow: auto;
   white-space: nowrap;
   display: flex;
+  padding: 0;
 }
 #forecast li {
   font-weight: normal;
   list-style-type: none;
 }
 #forecast li::before {
-  content: "|";
+  content: " | ";
 }
 #forecast li:first-child::before {
   content: "";

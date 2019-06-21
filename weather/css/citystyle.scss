@@ -264,8 +264,9 @@ section {
 #windfig {
     position: relative;
     img {
-        width: 40%;
-        max-width: 200px;
+        padding-top: 2em;
+        width: 50%;
+        max-width: 300px;
     }
     .windspeed {
         position: absolute;
@@ -294,12 +295,13 @@ section {
         overflow: auto;
         white-space: nowrap;
         display: flex;
+        padding: 0;
     }
     li {
         font-weight: normal;
         list-style-type: none;
         &::before {
-            content: '|';
+            content: ' | ';
         }
         &:first-child::before {
             content: '';
