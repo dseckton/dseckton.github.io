@@ -233,7 +233,7 @@ section {
 }
 #windfig img {
   width: 60%;
-  max-width: 300px;
+  max-width: 200px;
 }
 #windfig .windspeed {
   position: absolute;
