@@ -87,7 +87,7 @@ function fetchData(weatherURL){
     let long = document.getElementById('long');
 
     zip.innerHTML = locZip;
-    elevation.innerHTML = locElevation;
+    elevation.innerHTML = convertMeters(elevation);
     lat.innerHTML = locLatitude;
     long.innerHTML = locLongitude;
 
@@ -96,6 +96,7 @@ function fetchData(weatherURL){
     let actual = document.getElementById('actual');
     let high = document.getElementById('high');
     let low = document.getElementById('low');
+    let tempFeel = document.getElementById('tempFeel');
 
     actual.innerHTML = locTemp;
     high.innerHTML = locHigh;
@@ -105,10 +106,17 @@ function fetchData(weatherURL){
     let windspeed = document.getElementById('windspeed');
     let direction = document.getElementById('direction');
     let gustspeed = document.getElementById('gustspeed');
+    
 
     windspeed.innerHTML = locWind;
     direction.innerHTML = locDirection;
     gustspeed.innerHTML = locGusts;
+
+    windDial(direction);
+
+
+    // change feels like temp
+    tempFeel.innerHTML = buildWC(windspeed, actual);
 
     // Set the current conditions information
     let condition = document.getElementById('condition');
@@ -118,7 +126,10 @@ function fetchData(weatherURL){
     // Set the hourly temperature information
     let hourlyTemp = document.getElementById('hourly-temp');
 
-    hourlyTemp.innerHTML = locHourly;
+    
+
+    hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyTemp);
+    console.log(hourlyTemp);
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class
