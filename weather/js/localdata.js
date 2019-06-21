@@ -55,6 +55,12 @@ function fetchData(weatherURL){
     // Get the hourly data 
     let locHourly = g.Hourly;
 
+    // get area info
+    let locZip = g.Zip;
+    let locLatitude = g.Latitude;
+    let locLongitude = g.Longitude;
+    let locElevation = g.Elevation;
+
     console.log(locHourly);
 
     // ************ Display the content ******************************
@@ -73,6 +79,17 @@ function fetchData(weatherURL){
     let contentHeading = document.getElementById('location');
     contentHeading.innerHTML = fullName;
     // The h1 in main h1 should now say "Greenville, SC"
+
+    // set local information
+    let zip = document.getElementById('zip');
+    let elevation = document.getElementById('elevation');
+    let lat = document.getElementById('lat');
+    let long = document.getElementById('long');
+
+    zip.innerHTML = locZip;
+    elevation.innerHTML = locElevation;
+    lat.innerHTML = locLatitude;
+    long.innerHTML = locLongitude;
 
 
     // Set the temperature information
