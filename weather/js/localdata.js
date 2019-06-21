@@ -106,7 +106,7 @@ function fetchData(weatherURL){
     lat.innerHTML = locLatitude;
     long.innerHTML = locLongitude;
 
-    console.log(zip + lat + long + elevation);
+    console.log(zip.innerHTML + lat.innerHTML + long.innerHTML + elevation.innerHTML);
 
     // Set the temperature information
     let actual = document.getElementById('actual');
@@ -118,7 +118,7 @@ function fetchData(weatherURL){
     high.innerHTML = locHigh;
     low.innerHTML = locLow;
 
-    console.log(actual + high + low + tempFeel);
+    console.log(actual.innerHTML + high.innerHTML + low.innerHTML + tempFeel.innerHTML);
 
     // Set the wind information
     let windspeed = document.getElementById('windspeed');
