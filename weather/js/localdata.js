@@ -118,7 +118,7 @@ function fetchData(weatherURL){
     high.innerHTML = locHigh;
     low.innerHTML = locLow;
 
-    console.log(actual.innerHTML + high.innerHTML + low.innerHTML + tempFeel.innerHTML);
+    console.log('temp: ' + actual.innerHTML + 'high: ' + high.innerHTML + 'low: ' + low.innerHTML + 'feels like: ' + tempFeel.innerHTML);
 
     // Set the wind information
     let windspeed = document.getElementById('windspeed');
