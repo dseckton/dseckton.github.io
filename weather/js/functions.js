@@ -21,7 +21,7 @@
  * 
  * * * * * * * * * * * * * * * * * * * */
 
- console.log('my js worketh');
+//  console.log('my js worketh');
  
 
 
@@ -82,8 +82,8 @@ buildHourlyData(nextHour, hourlyTemps);
  function buildWC(speed, temp) {
     let tempFeel = document.getElementById('tempFeel');
 
-    console.log("speed is " + speed);
-    console.log("temp is " + temp);
+   //  console.log("speed is " + speed);
+   //  console.log("temp is " + temp);
 
     // compute windchill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
@@ -95,8 +95,8 @@ buildHourlyData(nextHour, hourlyTemps);
     wc - (wc > temp)?temp:wc;
 
     //display windchill
-    console.log(speed + ' & ' + temp)
-    console.log(wc);
+   //  console.log(speed + ' & ' + temp)
+   //  console.log(wc);
     tempFeel.innerHTML = wc;
  }
 
@@ -145,13 +145,13 @@ buildHourlyData(nextHour, hourlyTemps);
      break;
    }
 
-   console.log("wind direction is " + direction);
+   // console.log("wind direction is " + direction);
  }
 
 // get weather condition function
  function getCondition(condition) {
     let weather;
-    console.log("weather condition is " + condition);
+   //  console.log("weather condition is " + condition);
 
    switch (condition) {
       case "Clear":
@@ -178,7 +178,7 @@ buildHourlyData(nextHour, hourlyTemps);
       break;
    }
 
-   console.log("weather is " + weather);
+   // console.log("weather is " + weather);
    return weather;
  }
 
@@ -209,7 +209,7 @@ buildHourlyData(nextHour, hourlyTemps);
 
  // convert meters to feet function
  function convertMeters(meters) {
-   console.log("elevation in meters is " + meters);
+   // console.log("elevation in meters is " + meters);
 
    let elevation = document.getElementById('elevation');
 
@@ -217,7 +217,7 @@ buildHourlyData(nextHour, hourlyTemps);
 
    elevation.innerHTML = feet;
 
-   console.log("elevation in feet is " + feet);
+   // console.log("elevation in feet is " + feet);
    return feet;
  }
  
@@ -234,7 +234,7 @@ function format_time(hour) {
     hour = "12"; 
    } 
 
-   console.log(hour + amPM);
+   // console.log(hour + amPM);
    return hour + amPM;
 
   }
@@ -251,7 +251,7 @@ function buildHourlyData(nextHour,hourlyTemps) {
     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
     }
-    console.log('HourlyList is: ' +hourlyListItems);
+   //  console.log('HourlyList is: ' +hourlyListItems);
     return hourlyListItems;
    }
  

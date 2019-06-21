@@ -43,17 +43,29 @@ function fetchData(weatherURL){
     let locLow = g.Low;
     let locTemp = g.Temp;
 
+    console.log('High: ' + locHigh);
+    console.log('Low: ' + locLow);
+    console.log('Temp: ' + locTemp);
+
     // Get the wind data 
     let locWind = g.Wind;
     let locDirection = g.Direction;
     let locGusts = g.Gusts;
 
+    console.log('Wind: ' + locWind);
+    console.log('Direction: ' + locDirection);
+    console.log('Gusts: ' + locGusts);
+
     // Get the current conditions
     let locCondition = g.Summary;
     // let locPrecipitation = g.Precip;
 
+    console.log('Condition: ' + locCondition);
+
     // Get the hourly data 
     let locHourly = g.Hourly;
+
+    console.log('Hourly Data: ' + locHourly)
 
     // get area info
     let locZip = g.Zip;
@@ -61,7 +73,10 @@ function fetchData(weatherURL){
     let locLongitude = g.Longitude;
     let locElevation = g.Elevation;
 
-    console.log(locHourly);
+    console.log('Zip: ' + locZip);
+    console.log('Latitude: ' + locLatitude);
+    console.log('Longitude: ' + locLongitude);
+    console.log('Elevation: ' + locElevation)
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
