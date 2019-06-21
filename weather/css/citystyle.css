@@ -98,10 +98,6 @@ dt:first-child::before, #wind dt::before {
   content: "";
 }
 
-#hourly-temp {
-  display: flex;
-}
-
 /*! 2.2 Wind pointer rotations */
 .n {
   transform: rotate(0deg);
@@ -255,17 +251,18 @@ section {
 }
 
 /*! Forecast section styles */
-#forecast dl {
+#forecast ul {
   overflow: auto;
   white-space: nowrap;
+  display: flex;
 }
-#forecast dt {
+#forecast li {
   font-weight: normal;
 }
-#forecast dt::before {
+#forecast li::before {
   content: "|";
 }
-#forecast dt:first-child::before {
+#forecast li:first-child::before {
   content: "";
 }
 

@@ -110,10 +110,6 @@ dt:first-child::before, #wind dt::before {
     content: '';
 }
 
-#hourly-temp {
-    display: flex;
-}
-
 
 /*! 2.2 Wind pointer rotations */
 .n {
@@ -294,11 +290,12 @@ section {
 
 /*! Forecast section styles */
 #forecast {
-    dl {
+    ul {
         overflow: auto;
         white-space: nowrap;
+        display: flex;
     }
-    dt {
+    li {
         font-weight: normal;
         &::before {
             content: '|';
