@@ -263,9 +263,11 @@ section {
 
 #windfig {
     position: relative;
+    h2 {
+        padding-bottom: 2em;
+    }
     img {
-        padding-top: 2em;
-        width: 50%;
+        width: 60%;
         max-width: 300px;
     }
     .windspeed {
@@ -300,11 +302,13 @@ section {
     li {
         font-weight: normal;
         list-style-type: none;
+        padding-right: 1em;
         &::before {
             content: ' | ';
         }
         &:first-child::before {
             content: '';
+            padding-left: 1em;
         }
     }
 }
