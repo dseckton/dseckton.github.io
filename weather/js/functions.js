@@ -188,6 +188,7 @@ buildHourlyData(nextHour, hourlyTemps);
  function changeSummaryImage(weather) {
    let weatherImg = document.getElementById('weatherImg');
    let background = document.getElementById('bckimg');
+   console.log('Pre-switch: ' + backgound);
 
    switch (weather) {
       case "clear":
@@ -210,6 +211,7 @@ buildHourlyData(nextHour, hourlyTemps);
       weatherImg.setAttribute("class", "snow");
       background.setAttribute("class", "snow");
       break;
+      console.log('Post-switch: ' + background);
    }
 
  }
