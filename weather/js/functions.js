@@ -187,8 +187,6 @@ buildHourlyData(nextHour, hourlyTemps);
  // change img class function
  function changeSummaryImage(weather) {
    let weatherImg = document.getElementById('weatherImg');
-   let background = document.getElementById('bckimg');
-   console.log('Pre-switch: ' + background);
 
    switch (weather) {
       case "clear":
@@ -212,8 +210,8 @@ buildHourlyData(nextHour, hourlyTemps);
       background.setAttribute("class", "snow");
       break;
    }
-   console.log('Post-switch: ' + background);
  }
+
 
  // convert meters to feet function
  function convertMeters(meters) {
