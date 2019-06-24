@@ -188,7 +188,7 @@ buildHourlyData(nextHour, hourlyTemps);
  function changeSummaryImage(weather) {
    let weatherImg = document.getElementById('weatherImg');
    let background = document.getElementById('bckimg');
-   console.log('Pre-switch: ' + backgound);
+   console.log('Pre-switch: ' + background);
 
    switch (weather) {
       case "clear":
@@ -211,9 +211,8 @@ buildHourlyData(nextHour, hourlyTemps);
       weatherImg.setAttribute("class", "snow");
       background.setAttribute("class", "snow");
       break;
-      console.log('Post-switch: ' + background);
    }
-
+   console.log('Post-switch: ' + background);
  }
 
  // convert meters to feet function
