@@ -141,6 +141,8 @@ function fetchData(weatherURL){
 
     condition.innerHTML = locCondition;
 
+    changeSummaryImage(getCondition(locCondition));
+
     // Set the hourly temperature information
     let hourlyTemp = document.getElementById('hourly-temp');
     let date = new Date(); 

@@ -179,7 +179,7 @@ buildHourlyData(nextHour, hourlyTemps);
       break;
    }
 
-   // console.log("weather is " + weather);
+   console.log("weather is " + weather);
    return weather;
  }
 
@@ -187,6 +187,7 @@ buildHourlyData(nextHour, hourlyTemps);
  // change img class function
  function changeSummaryImage(weather) {
    let weatherImg = document.getElementById('weatherImg');
+   let background = document.getElementById('bckimg');
 
    switch (weather) {
       case "clear":
