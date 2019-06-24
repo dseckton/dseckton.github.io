@@ -186,17 +186,17 @@ buildHourlyData(nextHour, hourlyTemps);
 
  // change img class function
  function changeSummaryImage(weather) {
-   let weatherImg = document.getElementById('weatherImg')
+   let weatherImg = document.getElementById('weatherImg');
    let background = document.getElementById('bckimg');
 
    switch (weather) {
       case "clear":
       weatherImg.setAttribute("class", "clear");
-      background.setAttribute("class", "clear")
+      background.setAttribute("class", "clear");
       break;
       case "clouds":
       weatherImg.setAttribute("class", "clouds");
-      background.setAttribute("class", "clouds")
+      background.setAttribute("class", "clouds");
       break;
       case "fog": 
       weatherImg.setAttribute("class", "fog");
