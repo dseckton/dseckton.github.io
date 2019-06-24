@@ -151,7 +151,7 @@ buildHourlyData(nextHour, hourlyTemps);
 
 // get weather condition function
  function getCondition(condition) {
-    let weather;
+    let weather = "clear";
    //  console.log("weather condition is " + condition);
 
    switch (condition) {
