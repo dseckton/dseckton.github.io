@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Weather overview for Franklin ID">
+    <title id="page-title"> | dseckton.github.io</title>
+
+    <link rel="stylesheet" media="screen" type="text/css" href="css/citystyle.css">
+</head>
+<body>
+    <!-- <ul id="mynav">
+        <li><a href="../index.html" title="Return to dseckton.github.io">Home</a></li>
+        <li><a href="../test.html" title="Test page my dude">Test</a></li>
+        <li><a href="../presentation/selectors.html" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li>
+    </ul> -->
+
+    <header>
+        <figure><img src="images/logo.jpeg" alt="The Weather Site logo"></figure>
+        <!-- <p id="title"> -->The Weather Site<!--</p>-->
+
+    </header>
+
+    <nav id="page-nav">
+        <ul>
+            <li><a href="#" title="Go to the Weather Site home page">Current</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="franklin-id.html" title="Franklin, ID Weather Page">Franklin</a></li>
+            <li><a href="greenville-sc.html" title="Greenville, SC Weather Page">Greenville</a></li>
+            <li><a href="#" title="But, you're already here...">Springfield</a></li>
+        </ul>
+    </nav>
+
+    <section id="status">Please be patient while I get your weather information.</section>
+
+    <main id="main-content" class="hide">
+
+        <h1 id="location"></h1>
+
+        <dl>
+            <dt>Zip: </dt>
+            <dd id="zip"> </dd>
+            <dt> Elevation: </dt>
+            <dd id="elevation"></dd>
+            <dt> Location: </dt>
+            <dd><span id="lat"></span>N, <span id="long"></span>W </dd>
+        </dl>
+
+        <div id="bckimg" class="">
+            <section id="temperature">
+                <h2>Temperature</h2>
+                <p class="temp" id="actual"></p>
+                <p><span class="temp" id="high"></span> <span class="temp" id="low"></span></p>
+                <p>Feels Like <span id="tempFeel" class="temp"></span></p>
+            </section>
+
+            <section id="wind">
+                <h2>Wind</h2>
+                <figure id="windfig">
+                    <img id="dial" class="ne" src="images/wind-pointer.png" alt="Wind pointer graphic">
+                    <figcaption class="windspeed"><span id="windspeed"></span> mph</figcaption>
+                </figure>
+                <dl>
+                    <dt>Direction:</dt> <dd><span id="direction"></span><br></dd>
+                    <dt>Gusts:</dt> <dd><span id="gustspeed"></span>mph</dd>
+                </dl>
+            </section>
+                
+            <section id="summary">
+                <h2 id="condition"></h2>
+                <div id="weatherImg" class=""></div>
+            </section>
+        </div>
+        <section id="forecast">
+            <h2>Hourly Forecast</h2>
+            <ul id="hourly-temp">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy;2019 - The Weather Site
+    </footer>
+
+    <script src="js/functions.js"></script>
+    <script src="js/localdata.js"></script>
+</body>
+</html>
