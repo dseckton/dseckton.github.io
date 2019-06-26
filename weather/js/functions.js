@@ -63,7 +63,7 @@ windDial(direction);
 let weather = getCondition(condition);
 
 //call change img class function
-changeSummaryImage(weather);
+// changeSummaryImage(weather);
 
 //call meters to feet function
 convertMeters(meters);
@@ -162,6 +162,7 @@ buildHourlyData(nextHour, hourlyTemps);
       case "Clouds":
       case "Cloudy":
       case "Overcast":
+      case "Partly Cloudy":
       weather = "cloud";
       break;
       case "Fog": 
