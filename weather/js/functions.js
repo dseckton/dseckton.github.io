@@ -501,7 +501,10 @@ function buildPage() {
 
    windDial(storage.getItem("Direction"));
 
-   buildWC(storage.getItem("Wind"), storage.getItem("Temp"));
+
+console.log("Variables passed to the buildWC function are: " + storage.getItem("Wind") + " & " + storage.getItem("Temp"))
+
+   buildWC(Math.floor(2.237 * storage.getItem("Wind")), storage.getItem("Temp"));
 
    highTemp.innerHTML = storage.getItem("High");
    lowTemp.innerHTML = storage.getItem("Low");
