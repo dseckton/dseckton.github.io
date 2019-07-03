@@ -101,7 +101,7 @@ format_time(nextHour);
 getHighLow();
 
 //call hourly data funciton
-
+buildPage();
 
  /* * * * FUNCTIONS * * * */
 
@@ -184,6 +184,7 @@ getHighLow();
    switch (condition) {
       case "Clear":
       case "Sunny":
+      case "Mostly Clear":
       weather = "clear";
       break;
       case "Clouds":
@@ -472,8 +473,6 @@ function getWeather(stationId) {
     }) 
    .catch(error => console.log('There was a getWeather error: ', error)) 
   } // end getWeather function
-
-buildPage();
 
 function buildPage() {
    // read data from local storage
