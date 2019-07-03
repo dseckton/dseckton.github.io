@@ -15,7 +15,9 @@ switch (cityName) {
   case "Greenville":
   case "Springfield":
   evt.preventDefault();    
-    break;
+  break;
+  case "Current":
+  buildPage();
 }
 
 let hourlyList = document.getElementById('hourlyData');
