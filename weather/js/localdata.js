@@ -3,7 +3,7 @@
 
 // declare variables
 let pageNav = document.getElementById('page-nav');
-let statusContainer = document.getElementById('status');
+// let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 
 pageNav.addEventListener('click', function(evt){

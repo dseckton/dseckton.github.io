@@ -31,12 +31,27 @@
 // declaration of variables to be used in functions
 
 // feels like temperature and wind variables variables
- let speed = document.getElementById('windspeed').innerHTML;
- let temp = document.getElementById('actual').innerHTML;
+ let speed = document.getElementById('windspeed');
+ let temp = document.getElementById('actual');
 
- let direction = document.getElementById('direction').innerHTML;
+ let direction = document.getElementById('direction');
 
- let condition = document.getElementById('condition').innerHTML;
+ let condition = document.getElementById('condition');
+
+ let contentHeading = document.getElementById('location');
+
+ let pageTitle = document.getElementById("page-title");
+
+ let statusContainer = document.getElementById('status');
+
+ let mainContainer = document.getElementById('main-content');
+
+ let hourlyContainer = document.getElementById('hourly-temp');
+
+ let highTemp = document.getElementById('high');
+ let lowTemp = document.getElementById('low');
+
+ let gustSpeed = document.getElementById('gustspeed');
 
  // elevation variables
  let meters = 1514.246;
@@ -46,8 +61,19 @@
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
 
-// hourly variables
-let hourlyTemps = [];
+// location variables
+let storage = window.localStorage;
+
+// Set global variable for custom header required by NWS API
+var idHeader = {
+    headers: {
+      "User-Agent": "Student Learning Project - eck15001@byui.edu"
+    }
+  };
+
+//   let hourlyTemps = [];
+  let hourlyTempsStr = storage.getItem("hourlyTemps");
+  let hourlyTemps = hourlyTempsStr.split(",");
 
 
 
@@ -71,9 +97,10 @@ convertMeters(meters);
 //call format time function
 format_time(nextHour);
 
-//call hourly data funciton
-buildHourlyData(nextHour, hourlyTemps);
+// call get high low function
+getHighLow();
 
+//call hourly data funciton
 
 
  /* * * * FUNCTIONS * * * */
@@ -195,7 +222,7 @@ buildHourlyData(nextHour, hourlyTemps);
       weatherImg.setAttribute("class", "clear");
       background.setAttribute("class", "clear");
       break;
-      case "clouds":
+      case "cloud":
       weatherImg.setAttribute("class", "clouds");
       background.setAttribute("class", "clouds");
       break;
@@ -212,6 +239,8 @@ buildHourlyData(nextHour, hourlyTemps);
       background.setAttribute("class", "snow");
       break;
    }
+
+   return weather;
  }
 
 
@@ -247,6 +276,67 @@ function format_time(hour) {
 
   }
 
+  function getHighLow() {
+     fetch(storage.getItem("highLowURL"))
+     .then(function(response){
+        if(response.ok){
+           return response.json();
+        }
+        throw new ERROR('Response not OK.');
+     })
+     .then(function (data) {
+        console.log("Results from High-Low URL:");
+        console.log(data);
+
+        let tempHigh = data.properties.periods[0].temperature;
+
+        storage.setItem("High", tempHigh);
+
+        let tempLow = data.properties.periods[1].temperature;
+
+        storage.setItem("Low", tempLow);
+
+        let direction = data.properties.periods[0].windDirection;
+
+        storage.setItem("Direction", direction)
+
+        let windGust = data.properties.periods[0].windSpeed;
+
+        storage.setItem("Gusts", windGust);
+     })
+     .catch(error => console.log('There was a HourlyURL error: ', error)) 
+  }
+
+  function getHourly() {
+   fetch(storage.getItem("hourlyData")) 
+   .then(function(response){
+     if(response.ok){ 
+      return response.json(); 
+     } 
+     throw new ERROR('Response not OK.');
+   })
+   .then(function (data) {
+      console.log("Results from Hourly Forecast:")
+      console.log(data)
+
+      let hourlyTemps = [];
+
+      let i = 0;
+      while (i < 13) {
+
+         hourlyTemps[i] = data.properties.periods[i].temperature;
+         i++;
+         
+      }
+
+      console.log(hourlyTemps);
+      storage.setItem("hourlyTemps", hourlyTemps);
+   })
+   .catch(error => console.log('There was a HourlyURL error: ', error)) 
+   
+}
+
+
   // Build the hourly temperature list
 function buildHourlyData(nextHour,hourlyTemps) {
    // Data comes from a JavaScript object of hourly temp name - value pairs
@@ -257,13 +347,169 @@ function buildHourlyData(nextHour,hourlyTemps) {
     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
     // Build the remaining list items using a for loop
     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
-     hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
+     hourlyListItems += ' <li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li> ';
     }
      console.log('HourlyList is: ' + hourlyListItems);
      console.log('HourlyList.length is: ' + hourlyTemps.length);
     return hourlyListItems;
    }
  
- 
+ // Gets location information from the NWS API
+function getLocation(locale) {
+   const URL = "https://api.weather.gov/points/" + locale; 
 
- 
+   // NWS User-Agent header (built above) will be the second parameter 
+   fetch(URL, idHeader) 
+   .then(function(response){
+     if(response.ok){ 
+      return response.json(); 
+     } 
+     throw new ERROR('Response not OK.');
+   })
+   .then(function (data) { 
+     // Let's see what we got back
+     console.log('Json object from getLocation function:'); 
+     console.log(data);
+     // Store data to localstorage 
+     storage.setItem("locName", data.properties.relativeLocation.properties.city); 
+     storage.setItem("locState", data.properties.relativeLocation.properties.state); 
+  
+     // Next, get the weather station ID before requesting current conditions 
+     // URL for station list is in the data object 
+     let stationsURL = data.properties.observationStations; 
+     // Call the function to get the list of weather stations
+     getStationId(stationsURL); 
+
+     // set url
+      const hourlyURL = data.properties.forecastHourly;
+      console.log(`Hourly URL is: ${hourlyURL}`);
+
+      storage.setItem("hourlyData", hourlyURL)
+
+      const highLowURL = data.properties.forecast;
+      console.log(`High-Low UrRL is: ${highLowURL}`);
+
+      storage.setItem("highLowURL", highLowURL);
+    }) 
+   .catch(error => console.log('There was a getLocation error: ', error)) 
+  } // end getLocation function
+
+// Gets weather station list and the nearest weather station ID from the NWS API
+function getStationId(stationsURL) { 
+   // NWS User-Agent header (built above) will be the second parameter 
+   fetch(stationsURL, idHeader) 
+   .then(function(response){
+     if(response.ok){ 
+      return response.json(); 
+     } 
+     throw new ERROR('Response not OK.');
+   })
+   .then(function (data) { 
+     // Let's see what we got back
+     console.log('From getStationId function:'); 
+     console.log(data);
+   
+     // Store station ID and elevation (in meters - will need to be converted to feet) 
+     let stationId = data.features[0].properties.stationIdentifier; 
+     let stationElevation = data.features[0].properties.elevation.value; 
+     console.log('Station and Elevation are: ' + stationId, stationElevation); 
+  
+     // Store data to localstorage 
+     storage.setItem("stationId", stationId); 
+     storage.setItem("stationElevation", stationElevation); 
+  
+     // Request the Current Weather for this station 
+     getWeather(stationId);
+    }) 
+   .catch(error => console.log('There was a getStationId error: ', error)) 
+  } // end getStationId function
+
+// Gets current weather information for a specific weather station from the NWS API
+function getWeather(stationId) { 
+   // This is the URL for current observation data 
+   const URL = 'https://api.weather.gov/stations/' + stationId + '/observations/latest';
+   // NWS User-Agent header (built above) will be the second parameter 
+   fetch(URL, idHeader) 
+   .then(function(response){
+     if(response.ok){ 
+      return response.json(); 
+     } 
+     throw new ERROR('Response not OK.');
+   })
+   .then(function (data) { 
+     // Let's see what we got back
+     console.log('From getWeather function:'); 
+     console.log(data);
+
+   
+     // Store weather information to localStorage 
+      //  storage.setItem('City', data["@context"][1].city);
+      //  storage.setItem('State', data["@context"][1].state);
+      //  storage.setItem('High', data.properties.maxTemperatureLast24Hours.value);
+      //  storage.setItem('Low', data.properties.minTemperatureLast24Hours.value);
+      let farenheit = Math.floor(data.properties.temperature.value * (9/5) + 32);
+
+       storage.setItem('Temp', farenheit);
+      //  storage.setItem('Precip', data.properties.precipitationLastHour.value);
+       storage.setItem('Wind', data.properties.windSpeed.value);
+      //  storage.setItem('Direction', data.properties.windDirection.value);
+      //  storage.setItem('Gusts', data.properties.windGust.value);
+       storage.setItem('Summary', data.properties.textDescription);
+       storage.setItem('Latitude', data.geometry.coordinates[1]);
+       storage.setItem('Longitude', data.geometry.coordinates["0"]);
+       storage.setItem('Elevation', data.properties.elevation.value);
+       // storage.setItem('Zip', );
+
+       console.log(data);
+  
+     // Build the page for viewing 
+     
+
+     // get hourly
+     getHourly();
+
+     
+    }) 
+   .catch(error => console.log('There was a getWeather error: ', error)) 
+  } // end getWeather function
+
+buildPage();
+
+function buildPage() {
+   // read data from local storage
+
+   let currentLocation = storage.getItem("locName") + ", " + storage.getItem("locState");
+
+   // inject local info
+   elevation.innerHTML = convertMeters(storage.getItem("Elevation"));
+   long.innerHTML = storage.getItem("Longitude");
+   lat.innerHTML = storage.getItem("Latitude");
+
+   pageTitle.innerHTML = currentLocation;
+   contentHeading.innerHTML = currentLocation;
+
+   
+   // inject weather info
+   speed.innerHTML = Math.floor(2.237 * storage.getItem("Wind"));
+   temp.innerHTML = storage.getItem("Temp");
+   direction.innerHTML = storage.getItem("Direction");
+   condition.innerHTML = storage.getItem("Summary");
+
+   let weatherCondition = getCondition(storage.getItem("Summary"));
+   changeSummaryImage(weatherCondition);
+
+   hourlyContainer.innerHTML = buildHourlyData(nextHour, hourlyTemps);
+
+   windDial(storage.getItem("Direction"));
+
+   buildWC(storage.getItem("Wind"), storage.getItem("Temp"));
+
+   highTemp.innerHTML = storage.getItem("High");
+   lowTemp.innerHTML = storage.getItem("Low");
+
+   gustSpeed.innerHTML = storage.getItem("Gusts");
+
+   // hide status
+   statusContainer.setAttribute('class', 'hide');
+   mainContainer.setAttribute('class', '');
+}

@@ -9,12 +9,18 @@
 
     <link rel="stylesheet" media="screen" type="text/css" href="css/citystyle.css">
 </head>
+
+<!-- 
+
+In collaboration with:
+    - Daniel Eckton 
+    - 
+    - 
+    -
+
+-->
+
 <body>
-    <!-- <ul id="mynav">
-        <li><a href="../index.html" title="Return to dseckton.github.io">Home</a></li>
-        <li><a href="../test.html" title="Test page my dude">Test</a></li>
-        <li><a href="../presentation/selectors.html" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li>
-    </ul> -->
 
     <header>
         <figure><img src="images/logo.jpeg" alt="The Weather Site logo"></figure>
@@ -32,7 +38,7 @@
         </ul>
     </nav>
 
-    <section id="status">Please be patient while I get your weather information.</section>
+    <section id="status"></section>
 
     <main id="main-content" class="hide">
 
@@ -63,7 +69,7 @@
                 </figure>
                 <dl>
                     <dt>Direction:</dt> <dd><span id="direction"></span><br></dd>
-                    <dt>Gusts:</dt> <dd><span id="gustspeed"></span>mph</dd>
+                    <dt>Gusts:</dt> <dd><span id="gustspeed"></span></dd>
                 </dl>
             </section>
                 
@@ -75,20 +81,7 @@
         <section id="forecast">
             <h2>Hourly Forecast</h2>
             <ul id="hourly-temp">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            </ul>
         </section>
     </main>
 
@@ -98,5 +91,6 @@
 
     <script src="js/functions.js"></script>
     <script src="js/localdata.js"></script>
+    <script src="js/geo_loc.js"></script>
 </body>
 </html>
