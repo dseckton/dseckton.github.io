@@ -41,6 +41,10 @@ $font-copy: Helvetica, sans-serif;
 
 /*! General Styles */
 
+* {
+    transition: all 1s;
+}
+
 .hide {
     display: none;
 }

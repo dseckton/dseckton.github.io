@@ -29,6 +29,10 @@
 /*! Inclusion of Google Font Sansita */
 @import url("https://fonts.googleapis.com/css?family=Sansita&display=swap");
 /*! General Styles */
+* {
+  transition: all 1s;
+}
+
 .hide {
   display: none;
 }

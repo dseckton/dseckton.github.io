@@ -84,8 +84,8 @@ let weatherURL = "https://dseckton.github.io/weather/js/weather.json";
 
     // get area info
     let locZip = g.Zip;
-    let locLatitude = g.Latitude;
-    let locLongitude = g.Longitude;
+    let locLatitude = g.Latitude.toFixed(2);
+    let locLongitude = g.Longitude.toFixed(2);
     let locElevation = g.Elevation;
 
     console.log('Zip: ' + locZip);
@@ -100,6 +100,9 @@ let weatherURL = "https://dseckton.github.io/weather/js/weather.json";
     // Create a text node containing the full name 
     let fullNameNode = document.createTextNode(fullName);
     // inserts the fullName value before any other content that might exist
+    if (pageTitle.childNodes.length > 1) {
+      pageTitle.removeChild(pageTitle.childNodes[0]);
+   }
     pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
     // When this is done the title should look something like this:
     // Greenville, SC | The Weather Site

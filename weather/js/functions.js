@@ -31,6 +31,8 @@
 // declaration of variables to be used in functions
 
 // feels like temperature and wind variables variables
+let zip = document.getElementById('zip');
+
  let speed = document.getElementById('windspeed');
  let temp = document.getElementById('actual');
 
@@ -289,12 +291,20 @@ function format_time(hour) {
         console.log("Results from High-Low URL:");
         console.log(data);
 
-        let tempHigh = data.properties.periods[0].temperature;
+        let tempHigh, tempLow;
+
+        console.log(data.properties.periods[0].isDaytime + " IS TRUE OR NO?")
+
+        if(data.properties.periods[0].isDaytime == true) {
+         tempHigh = data.properties.periods[0].temperature;
+         tempLow = data.properties.periods[1].temperature;
+        }
+        else {
+         tempHigh = data.properties.periods[1].temperature;
+         tempLow = data.properties.periods[0].temperature;
+        }
 
         storage.setItem("High", tempHigh);
-
-        let tempLow = data.properties.periods[1].temperature;
-
         storage.setItem("Low", tempLow);
 
         let direction = data.properties.periods[0].windDirection;
@@ -484,8 +494,20 @@ function buildPage() {
    long.innerHTML = storage.getItem("Longitude");
    lat.innerHTML = storage.getItem("Latitude");
 
-   pageTitle.innerHTML = currentLocation;
+   let locationTitle = document.createTextNode(currentLocation);
+
+   if (pageTitle.childNodes.length > 1) {
+      pageTitle.removeChild(pageTitle.childNodes[0]);
+   }
+
+   pageTitle.insertBefore(locationTitle, pageTitle.childNodes[0]);
+
+   console.log("PageTitle length is: " + pageTitle.childNodes.length);
+
    contentHeading.innerHTML = currentLocation;
+
+   zip.innerHTML = "None";
+
 
    
    // inject weather info
