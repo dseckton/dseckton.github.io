@@ -1,0 +1,25 @@
+// @import 
+
+html {
+    background-image: url(/acme/images/site/background.jpg);
+}
+
+ body {
+     max-width: 90%;
+     background-color: white;
+     margin: 0 auto;
+ }
+
+footer {
+    border-top: solid 3px black;
+    text-align: center;
+}
+
+nav {
+    background-color: red;
+    color: white;
+    width: 100%;
+    ul {
+        display: block;
+    }
+}
