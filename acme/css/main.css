@@ -2,6 +2,7 @@
 html {
   background-image: url(/acme/images/site/background.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Lato", sans-serif;
 }
 
