@@ -4,7 +4,7 @@ let nav = document.getElementById('nav');
 //get the json file
 let json = "https://dseckton.github.io/acme/js/acme.json"
 
-
+//get info from json
 fetch(json).then(function(response) {
     if(response.ok){
         return response.json();
@@ -13,4 +13,15 @@ fetch(json).then(function(response) {
 })
 .then(function(data){
     console.log(data);
+    //get the name of each item
+    let keys = (Object.keys(data));
+
+    let navItems = '<li>Home</li>';
+
+    let i = 0;
+    while (i < keys.length) {
+        navItems += '<li>' + keys[i] + '</li>'
+        i++;
+    }
+    nav.innerHTML = navItems;
 })
