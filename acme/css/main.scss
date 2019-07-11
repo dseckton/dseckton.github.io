@@ -1,23 +1,37 @@
-// @import 
+@import url('https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap');
+
+$color1: #000;
+$color2: #0000ee;
+$color3: #808080;
+$color4: #990033;
+$color5: #de2226;
+$color6: #fff;
+
+$font1: 'Righteous', 'Comic Sans', cursive;
+$font2: 'Lato', sans-serif;
 
 html {
     background-image: url(/acme/images/site/background.jpg);
+    background-repeat: no-repeat;
+    font-family: $font2;
 }
 
  body {
      max-width: 90%;
-     background-color: white;
+     background-color: $color6;
      margin: 0 auto;
+     padding: 10px;
  }
 
 footer {
-    border-top: solid 3px black;
+    border-top: solid 3px $color1;
     text-align: center;
 }
 
 nav {
-    background-color: red;
-    color: white;
+    background-color: $color5;
+    color: $color6;
+    font-family: $font1;
     width: 100%;
     ul {
         display: block;

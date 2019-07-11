@@ -1,21 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap");
 html {
   background-image: url(/acme/images/site/background.jpg);
+  background-repeat: no-repeat;
+  font-family: "Lato", sans-serif;
 }
 
 body {
   max-width: 90%;
-  background-color: white;
+  background-color: #fff;
   margin: 0 auto;
+  padding: 10px;
 }
 
 footer {
-  border-top: solid 3px black;
+  border-top: solid 3px #000;
   text-align: center;
 }
 
 nav {
-  background-color: red;
-  color: white;
+  background-color: #de2226;
+  color: #fff;
+  font-family: "Righteous", "Comic Sans", cursive;
+  width: 100%;
 }
 nav ul {
   display: block;
