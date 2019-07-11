@@ -16,11 +16,11 @@ fetch(json).then(function(response) {
     //get the name of each item
     let keys = (Object.keys(data));
 
-    let navItems = '<li>Home</li>';
+    let navItems = '<li><a href="#">Home</a></li>';
 
     let i = 0;
     while (i < keys.length) {
-        navItems += '<li>' + keys[i] + '</li>'
+        navItems += '<li><a href="#">' + keys[i] + '</a></li>'
         i++;
     }
     nav.innerHTML = navItems;
