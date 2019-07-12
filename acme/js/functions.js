@@ -67,7 +67,6 @@ if (itemSelection == "Home") {
 }
 else {
     evt.preventDefault();
-// - - anonymous function which sets home content container to invisible, and item content container to visible
 
     fetch(json).then(function(response) {
         if(response.ok){
