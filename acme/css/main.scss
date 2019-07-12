@@ -1,5 +1,9 @@
+
+//imports
 @import url('https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap');
 
+
+//scss variables
 $color1: #000;
 $color2: #0000ee;
 $color3: #808080;
@@ -7,8 +11,18 @@ $color4: #990033;
 $color5: #de2226;
 $color6: #fff;
 
-$font1: 'Righteous', 'Comic Sans', cursive;
+$font1: 'Righteous', cursive;
 $font2: 'Lato', sans-serif;
+
+// normalize-ish
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+// general styles
 
 html {
     background-image: url(/acme/images/site/background.jpg);
@@ -17,34 +31,144 @@ html {
     font-family: $font2;
 }
 
-a {
-    color: $color6;
-    text-decoration: none;
-}
-
  body {
-     max-width: 90%;
+     width: 90%;
+     max-width: 790px;
+     min-width: 415px;
      background-color: $color6;
      margin: 0 auto;
-     padding: 10px;
  }
 
-footer {
-    border-top: solid 3px $color1;
-    text-align: center;
-}
+ img {
+     max-width: 100%;
+ }
+
+ section {
+     margin-bottom: 15px;
+ }
+
+ .hidden {
+     display: none;
+ }
+//nav bar styles
 
 nav {
     background-color: $color5;
     font-family: $font1;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1em;
     ul {
         display: flex;
         list-style-type: none;
-        padding: 20px;
+        padding: 10px;
         li {
-            padding-right: 20px;
+            padding-right: 10px;
+            a {
+                color: $color6;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//main content styles
+
+//first section styles
+#rocketman {
+    color: $color4;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    div {
+        background-color: rgba(255, 255, 255, .7);
+        width: 50%;
+        max-width: 250px;
+        height: 100%;
+        padding: 5px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: background-color .5s;
+        button {
+            background-color: #f7f193;
+            font-family: $font1;
+            font-size: 1.3em;
+            padding: .5em;
+            color: $color3;
+            border-radius: 10px;
+            width: 100%;
+            border: solid 1px $color3;
+            margin-top: 5px;
+        }
+    }
+}
+
+//reviews section styles
+#reviews {
+    ul {
+        padding-left: 40px;
+    }
+}
+
+//recipes section styles
+#recipes {
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        width: 90%;
+        li {
+            text-align: center;
+            width: 50%;
+            padding: 2px;
+            div {
+                background-color: lightgray;
+            }
+        }
+    }
+}
+
+//footer styles
+footer {
+    border-top: solid 3px $color1;
+    text-align: center;
+    padding: 5px;
+    margin-top: .8em;
+}
+
+
+//media query
+@media screen and (min-width: 740px) {
+
+    //layout adjustments
+    #home-container {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-column-gap: 10px;
+    }
+
+    h1, #rocketman {
+        grid-column: 1/-1;
+    }
+
+    #rocketman {
+        grid-row: 2/3;
+        div {
+            background: none;
+        }
+    }
+
+    #reviews {
+        grid-column: 2/-1;
+        grid-row: 3/4;
+    }
+
+    #recipes {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        ul {
+            width: 100%;
         }
     }
 }

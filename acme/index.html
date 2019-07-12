@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>| ACME</title>
 
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -17,7 +17,61 @@
         </ul>
     </nav>
     <main>
-        <h1>Content Title Here</h1>
+        <div id="home-container" class="">
+            <h1>Welcome to ACME!</h1>
+            <section id="rocketman">
+                <img src="images/site/feature.jpg" alt="Wiley Coyote">
+                <div>
+                    <h2>ACME Rocket</h2>
+                    <p>Quick lighting fuse</p>
+                    <p>NHTSA Approved seat belts</p>
+                    <p>Mobile launch stand included</p>
+                    <button>I Want It Now!</button>
+                    <!-- <a href="#"><img id="actionbtn" alt="Add to cart button" src="/acme/images/site/iwantit.gif"></a> -->
+                </div>
+            </section>
+
+            <section id="reviews">
+                <h2>ACME Rocket Reviews</h2>
+                <ul>
+                    <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
+                    <li>"That thing was fast!" (4/5)</li>
+                    <li>"Talk about fast delivery." (5/5)</li>
+                    <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
+                    <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+                </ul>
+            </section>
+
+            <aside id="recipes">
+                <h3>Featured Recipes</h3>
+                <ul>
+                    <li><a href="#"><figure><div><img src="images/recipes/bbqsand.jpg" alt=""></div><figcaption>Pulled Roadrunner BBQ</figcaption></figure></a></li>
+                    <li><a href="#"><figure><div><img src="images/recipes/potpie.jpg" alt=""></div><figcaption>Roadrunner Pot Pie</figcaption></figure></a></li>
+                    <li><a href="#"><figure><div><img src="images/recipes/soup.jpg" alt=""></div><figcaption>Roadrunner Soup</figcaption></figure></a></li>
+                    <li><a href="#"><figure><div><img src="images/recipes/taco.jpg" alt=""></div><figcaption>Roadrunner Tacos</figcaption></figure></a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <div id="content-container" class="hidden">
+            <h1 id="name"></h1>
+            <section>
+                <div>
+                    <img src="" id="path">
+                </div>
+
+                <div>
+                    <p id="description"></p>
+                    <ul>
+                        <li id="manufacturer"></li>
+                        <li id="reviews"></li>
+                    </ul>
+                    <p id="price">Price: $</p>
+                </div>
+
+            </section>
+        </div>
+
     </main>
     <footer>
         <p>&copy; 2018 ACME, All rights reserved.<br /> All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be removed.</p>

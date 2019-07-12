@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap");
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
   background-image: url(/acme/images/site/background.jpg);
   background-repeat: no-repeat;
@@ -6,36 +12,131 @@ html {
   font-family: "Lato", sans-serif;
 }
 
-a {
+body {
+  width: 90%;
+  max-width: 790px;
+  min-width: 415px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  margin-bottom: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  background-color: #de2226;
+  font-family: "Righteous", cursive;
+  width: 100%;
+  font-size: 1em;
+}
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 10px;
+}
+nav ul li {
+  padding-right: 10px;
+}
+nav ul li a {
   color: #fff;
   text-decoration: none;
 }
 
-body {
-  max-width: 90%;
-  background-color: #fff;
-  margin: 0 auto;
-  padding: 10px;
+#rocketman {
+  color: #990033;
+  position: relative;
+}
+#rocketman img {
+  width: 100%;
+}
+#rocketman div {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 50%;
+  max-width: 250px;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background-color 0.5s;
+}
+#rocketman div button {
+  background-color: #f7f193;
+  font-family: "Righteous", cursive;
+  font-size: 1.3em;
+  padding: 0.5em;
+  color: #808080;
+  border-radius: 10px;
+  width: 100%;
+  border: solid 1px #808080;
+  margin-top: 5px;
+}
+
+#reviews ul {
+  padding-left: 40px;
+}
+
+#recipes ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  width: 90%;
+}
+#recipes ul li {
+  text-align: center;
+  width: 50%;
+  padding: 2px;
+}
+#recipes ul li div {
+  background-color: lightgray;
 }
 
 footer {
   border-top: solid 3px #000;
   text-align: center;
+  padding: 5px;
+  margin-top: 0.8em;
 }
 
-nav {
-  background-color: #de2226;
-  font-family: "Righteous", "Comic Sans", cursive;
-  width: 100%;
-  font-size: 1.2em;
-}
-nav ul {
-  display: flex;
-  list-style-type: none;
-  padding: 20px;
-}
-nav ul li {
-  padding-right: 20px;
+@media screen and (min-width: 740px) {
+  #home-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 10px;
+  }
+
+  h1, #rocketman {
+    grid-column: 1/-1;
+  }
+
+  #rocketman {
+    grid-row: 2/3;
+  }
+  #rocketman div {
+    background: none;
+  }
+
+  #reviews {
+    grid-column: 2/-1;
+    grid-row: 3/4;
+  }
+
+  #recipes {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #recipes ul {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

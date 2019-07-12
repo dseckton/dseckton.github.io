@@ -25,3 +25,4 @@ fetch(json).then(function(response) {
     }
     nav.innerHTML = navItems;
 })
+
