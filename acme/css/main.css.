@@ -99,6 +99,9 @@ nav ul li a {
 #recipes ul li div {
   background-color: lightgray;
 }
+#recipes a, #recipes a:visted {
+  color: #0000ee;
+}
 
 #content-container section {
   display: flex;

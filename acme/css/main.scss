@@ -127,6 +127,9 @@ nav {
             }
         }
     }
+    a, a:visted {
+        color: $color2;
+    }
 }
 
 //ITEM CONTENT STYLES
