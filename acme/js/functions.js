@@ -48,7 +48,8 @@ console.log(navItems);
 })
 
 
-
+//SET PAGE TITLE ON STARTUP
+title.insertBefore(document.createTextNode("Home"), title.childNodes[0]);
 
 
 
@@ -61,12 +62,26 @@ let itemSelection = evt.target.innerHTML;
 
 console.log("Item selection: " + itemSelection);
 
+//set page title
+itemNode = document.createTextNode(itemSelection);
+
+if (title.childNodes.length > 1) {
+    title.removeChild(title.childNodes[0]);
+}
+title.insertBefore(itemNode, title.childNodes[0]);
+
+//change content based on click
 if (itemSelection == "Home") {
     homeContainer.classList.remove('hidden');
     contentContainer.classList.add('hidden');
 }
 else {
     evt.preventDefault();
+
+    if (title.childNodes.length > 1) {
+        title.removeChild(title.childNodes[0]);
+    }
+    title.insertBefore(itemNode, title.childNodes[0]);
 
     fetch(json).then(function(response) {
         if(response.ok){
