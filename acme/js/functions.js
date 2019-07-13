@@ -80,6 +80,7 @@ else {
 
         //input info into the HTML
         name.innerHTML = itemInfo.name;
+        console.log(itemInfo.path);
         path.src = itemInfo.path;
         description.innerHTML = itemInfo.description;
         manufacturer.innerHTML = itemInfo.manufacturer;
