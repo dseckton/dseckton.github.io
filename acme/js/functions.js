@@ -37,7 +37,6 @@ fetch(json).then(function(response) {
     //get the name of each item
     keys = (Object.keys(data));
     let navItems = '<li><a href="#">Home</a></li>';
-console.log(navItems);
     let i = 0;
     while (i < keys.length) {
         navItems += '<li><a href="#">' + keys[i] + '</a></li>'
@@ -62,52 +61,56 @@ let itemSelection = evt.target.innerHTML;
 
 console.log("Item selection: " + itemSelection);
 
-//set page title
-itemNode = document.createTextNode(itemSelection);
+//test if user clicks anything but a valid menu item
+if (!itemSelection.includes("<li>")) {
+    itemNode = document.createTextNode(itemSelection);
 
-if (title.childNodes.length > 1) {
-    title.removeChild(title.childNodes[0]);
-}
-title.insertBefore(itemNode, title.childNodes[0]);
-
-//change content based on click
-if (itemSelection == "Home") {
-    homeContainer.classList.remove('hidden');
-    contentContainer.classList.add('hidden');
-}
-else {
-    evt.preventDefault();
-
+    //remove old title
     if (title.childNodes.length > 1) {
         title.removeChild(title.childNodes[0]);
     }
+    //set new title
     title.insertBefore(itemNode, title.childNodes[0]);
 
-    fetch(json).then(function(response) {
-        if(response.ok){
-            return response.json();
+    //change content based on click
+    if (itemSelection == "Home") {
+        homeContainer.classList.remove('hidden');
+        contentContainer.classList.add('hidden');
+    }
+    else {
+        evt.preventDefault();
+
+        if (title.childNodes.length > 1) {
+            title.removeChild(title.childNodes[0]);
         }
-        throw new Error('Network response was not OK.');
-    })
-    .then(function(data){
-        let itemInfo = data[itemSelection];
-        console.log(itemInfo);
+        title.insertBefore(itemNode, title.childNodes[0]);
 
-        //input info into the HTML
-        name.innerHTML = itemInfo.name;
-        console.log(itemInfo.path);
-        path.src = itemInfo.path;
-        description.innerHTML = itemInfo.description;
-        manufacturer.innerHTML = itemInfo.manufacturer;
-        reviews.innerHTML = itemInfo.reviews;
-        price.innerHTML = itemInfo.price;
+        fetch(json).then(function(response) {
+            if(response.ok){
+                return response.json();
+            }
+            throw new Error('Network response was not OK.');
+        })
+        .then(function(data){
+            let itemInfo = data[itemSelection];
+            console.log(itemInfo);
+
+            //input info into the HTML
+            name.innerHTML = itemInfo.name;
+            console.log(itemInfo.path);
+            path.src = itemInfo.path;
+            description.innerHTML = itemInfo.description;
+            manufacturer.innerHTML = itemInfo.manufacturer;
+            reviews.innerHTML = itemInfo.reviews;
+            price.innerHTML = itemInfo.price;
 
 
-        console.log(name.innerHTML + path.src + description.innerHTML + manufacturer.innerHTML + reviews.innerHTML + price.innerHTML)
-        //change visibilty of containers
-        homeContainer.classList.add('hidden');
-        contentContainer.classList.remove('hidden');
-    })
+            console.log(name.innerHTML + path.src + description.innerHTML + manufacturer.innerHTML + reviews.innerHTML + price.innerHTML)
+            //change visibilty of containers
+            homeContainer.classList.add('hidden');
+            contentContainer.classList.remove('hidden');
+        })
+    }
 }
 
 })
