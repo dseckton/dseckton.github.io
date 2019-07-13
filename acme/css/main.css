@@ -28,7 +28,7 @@ section {
   margin-bottom: 15px;
 }
 
-.hidden {
+#home-container.hidden, #content-container.hidden {
   display: none;
 }
 
@@ -98,6 +98,40 @@ nav ul li a {
 }
 #recipes ul li div {
   background-color: lightgray;
+}
+
+#content-container section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+#content-container section div {
+  width: 48%;
+}
+#content-container ul {
+  padding: 10px 0;
+  list-style-type: none;
+}
+#content-container #manufacturer::before {
+  content: "Made By: ";
+  font-weight: bold;
+}
+#content-container #rating::before {
+  content: "Reviews: ";
+  font-weight: bold;
+}
+#content-container #rating::after {
+  content: "/5 stars";
+}
+#content-container #price {
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #de2226;
+}
+#content-container #price::before {
+  content: "Price: $";
 }
 
 footer {

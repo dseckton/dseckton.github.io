@@ -47,8 +47,8 @@ html {
      margin-bottom: 15px;
  }
 
- .hidden {
-     display: none;
+ #home-container.hidden, #content-container.hidden {
+    display: none;
  }
 //nav bar styles
 
@@ -71,7 +71,7 @@ nav {
     }
 }
 
-//main content styles
+//HOME CONTENT STYLES
 
 //first section styles
 #rocketman {
@@ -127,6 +127,45 @@ nav {
             }
         }
     }
+}
+
+//ITEM CONTENT STYLES
+
+#content-container {
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        div {
+            width: 48%;
+        }
+    }
+    ul {
+        padding: 10px 0;
+        list-style-type: none;
+    }
+    #manufacturer::before {
+        content: 'Made By: ';
+        font-weight: bold;
+    }
+    #rating::before {
+        content: 'Reviews: ';
+        font-weight: bold;
+    }
+    #rating::after {
+        content: '/5 stars';
+    }
+    #price {
+        margin-top: 10px;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $color5;
+        &::before {
+            content: 'Price: $'
+        }
+    }
+
 }
 
 //footer styles
