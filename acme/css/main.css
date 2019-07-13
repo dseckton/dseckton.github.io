@@ -102,7 +102,7 @@ nav ul li a {
 #recipes ul li div {
   background-color: lightgray;
 }
-#recipes a, #recipes a:visted {
+#recipes a, #recipes a:visited {
   color: #0000ee;
 }
 
