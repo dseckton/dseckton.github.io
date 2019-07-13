@@ -163,6 +163,7 @@ footer {
   }
   #rocketman div {
     background: none;
+    padding-top: 1em;
   }
 
   #reviews {
