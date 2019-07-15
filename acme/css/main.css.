@@ -40,6 +40,13 @@ nav {
   width: 100%;
   font-size: 1.2em;
 }
+nav noscript {
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+  display: block;
+  padding: 1em;
+}
 nav ul {
   display: flex;
   list-style-type: none;
@@ -107,12 +114,21 @@ nav ul li a {
 
 #content-container section {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   padding: 10px;
 }
 #content-container section div {
-  width: 48%;
+  width: 100%;
+  margin-bottom: 1em;
+}
+#content-container section div:first-of-type {
+  display: flex;
+  justify-content: center;
+  max-height: 333px;
+}
+#content-container section div:first-of-type img {
+  object-fit: contain;
 }
 #content-container ul {
   padding: 10px 0;
@@ -176,6 +192,21 @@ footer {
   }
   #recipes ul {
     width: 100%;
+  }
+
+  #content-container section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  #content-container section div {
+    width: 48%;
+  }
+  #content-container section div:first-of-type {
+    height: 50%;
+    display: flex;
+    justify-content: center;
   }
 }
 
