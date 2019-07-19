@@ -14,7 +14,7 @@ $color6: #fff;
 $font1: 'Righteous', cursive;
 $font2: 'Lato', sans-serif;
 
-// normalize-ish
+/* normalize-ish */
 *, *::after, *::before {
     padding: 0;
     margin: 0;
@@ -22,7 +22,7 @@ $font2: 'Lato', sans-serif;
 }
 
 
-// general styles
+/* general styles */
 
 html {
     background-image: url(/acme/images/site/background.jpg);
@@ -80,9 +80,9 @@ nav {
     }
 }
 
-//HOME CONTENT STYLES
+/* HOME CONTENT STYLES */
 
-//first section styles
+/* first section styles */
 #rocketman {
     color: $color4;
     position: relative;
@@ -113,14 +113,14 @@ nav {
     }
 }
 
-//reviews section styles
+/* reviews section styles */
 #reviews {
     ul {
         padding-left: 40px;
     }
 }
 
-//recipes section styles
+/* recipes section styles */
 #recipes {
     ul {
         list-style-type: none;
@@ -141,7 +141,7 @@ nav {
     }
 }
 
-//ITEM CONTENT STYLES
+/* ITEM CONTENT STYLES */
 
 #content-container {
     section {
@@ -189,7 +189,7 @@ nav {
 
 }
 
-//footer styles
+/* footer styles */
 footer {
     border-top: solid 3px $color1;
     text-align: center;
@@ -198,10 +198,10 @@ footer {
 }
 
 
-//media query
+/* media query */
 @media screen and (min-width: 740px) {
 
-    //layout adjustments
+    /* layout adjustments */
     #home-container {
         display: grid;
         grid-template-columns: 2fr 3fr;
