@@ -1,0 +1,97 @@
+/* * * * IMPORTS * * * */
+@import url("https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap");
+/* * * * VARIABLES * * * */
+/* colors */
+/* font families */
+/* screen breakpoints */
+/* * * * STYLES * * * */
+/* reset-ish */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* general styles */
+html {
+  background-color: #cc9900;
+  font-size: 30px;
+}
+
+body {
+  width: 100%;
+}
+
+/* <header> styles */
+header {
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+header .position {
+  margin: 0 -20px;
+  background-color: #e6ac00;
+}
+header h1 {
+  text-transform: uppercase;
+  font-family: "Major Mono Display", monospace;
+  font-size: 20vw;
+  padding: 10px 20px;
+}
+header nav {
+  margin-top: 1em;
+}
+header ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+header ul li {
+  margin: 10px 0;
+}
+header ul a {
+  display: block;
+  text-decoration: none;
+  background-color: #997300;
+  box-shadow: 2px 2px 2px #806000;
+  padding: 0.4em;
+}
+
+/* <main> styles */
+/* <footer> styles */
+/* * * * MEDIA QUERIES * * * */
+/* media: small screens */
+@media only screen and (min-width: 600px) {
+  /* <header> styles */
+  header .position {
+    margin-top: -32px;
+    margin-left: -30px;
+  }
+  header h1 {
+    font-size: 3em;
+    line-height: 0.9em;
+  }
+  header h1 span {
+    display: block;
+  }
+
+  /* <main> styles */
+  /* <footer> styles */
+}
+/* media: medium screens */
+@media only screen and (min-width: 900px) {
+  /* <header> styles */
+  /* <main> styles */
+  /* <footer> styles */
+}
+/* media: large screens */
+@media only screen and (min-width: 1200px) {
+  /* <header> styles */
+  /* <main> styles */
+  /* <footer> styles */
+}
+
+/*# sourceMappingURL=home.css.map */

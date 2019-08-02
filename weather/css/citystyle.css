@@ -25,11 +25,12 @@
 * ****************************** */
 /*! Imports */
 /*! Inclusion of Normalize CSS file, available at https://necolas.github.io/normalize.css/ */
-@import "normalize.css";
+@import url(c:\Users\Daniel\Desktop\Spring 2019\3 Web Frontend Development\dseckton.github.io\weather\css\normalize.css);
 /*! Inclusion of Google Font Sansita */
 @import url("https://fonts.googleapis.com/css?family=Sansita&display=swap");
 /*! General Styles */
 * {
+  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
@@ -54,7 +55,7 @@ h1, header {
 }
 
 h1 {
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
 
 h2 {
@@ -71,16 +72,16 @@ header, footer, nav {
 }
 
 .temp::after {
-  content: "°F";
+  content: '°F';
 }
 
 #elevation::after {
-  content: "ft";
+  content: 'ft';
 }
 
 /*! Descriptive list styles */
 dl {
-  margin: 0.3em;
+  margin: .3em;
 }
 
 dt, dd {
@@ -95,44 +96,52 @@ dt {
 
 dt::before {
   font-weight: normal;
-  content: "|";
+  content: '|';
 }
 
 dt:first-child::before, #wind dt::before {
-  content: "";
+  content: '';
 }
 
 /*! 2.2 Wind pointer rotations */
 .n {
-  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .ne {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .e {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .se {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .s {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .sw {
-  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 
 .w {
-  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .nw {
-  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
 }
 
 /*! 2.3 Summary Image changes */
@@ -165,6 +174,7 @@ header figure {
   display: inline-block;
   vertical-align: center;
 }
+
 header figure img {
   width: 100%;
 }
@@ -175,20 +185,30 @@ nav {
   width: 100%;
   z-index: 3;
 }
+
 nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 0;
   padding: 0;
   bottom: 0;
 }
+
 nav ul li {
   list-style-type: none;
 }
+
 nav ul li a {
   display: block;
-  padding: 0.5em;
+  padding: .5em;
   text-decoration: none;
   color: #fff;
 }
@@ -196,7 +216,7 @@ nav ul li a {
 /*! General section styles */
 section {
   background-color: rgba(200, 200, 200, 0.6);
-  margin: 0.2em;
+  margin: .2em;
   border: 1px solid;
   border-radius: 15px;
   text-align: center;
@@ -207,8 +227,13 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /*! Temperature section styles */
@@ -232,18 +257,22 @@ section {
 #windfig {
   position: relative;
 }
+
 #windfig h2 {
   padding-bottom: 2em;
 }
+
 #windfig img {
   width: 60%;
   max-width: 200px;
 }
+
 #windfig .windspeed {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 /*! Summary section styles */
@@ -261,20 +290,25 @@ section {
 #forecast ul {
   overflow: auto;
   white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1em 0;
   margin: 0 1em;
 }
+
 #forecast li {
   font-weight: normal;
   list-style-type: none;
-  padding-right: 0.5em;
+  padding-right: .5em;
 }
+
 #forecast li::before {
-  content: " | ";
+  content: ' | ';
 }
+
 #forecast li:first-child::before {
-  content: "";
+  content: '';
 }
 
 /* Media Queries */
@@ -282,38 +316,33 @@ section {
   body {
     padding-bottom: 0;
   }
-
   #bckimg {
-    flex-direction: row;
-    padding: 0.5em 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: .5em 0;
   }
   #bckimg section {
     width: 33.33%;
   }
-
   nav {
     position: relative;
   }
-
   .rain {
     background-image: url("../images/rain-600w-o.jpg");
   }
-
   .clear {
     background-image: url("../images/clear-600w-o.jpg");
   }
-
   .clouds {
     background-image: url("../images/clouds-600w-o.jpg");
   }
-
   .fog {
     background-image: url("../images/fog-600w-o.jpg");
   }
-
   .snow {
     background-image: url("../images/snow-600w-o.jpg");
   }
 }
-
 /*# sourceMappingURL=citystyle.css.map */

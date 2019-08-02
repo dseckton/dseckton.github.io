@@ -1,17 +1,151 @@
-$head-back-color: ;
-$head-text-color: ;
+/* * * * IMPORTS * * * */
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap');
 
+/* * * * VARIABLES * * * */
+
+/* colors */
+$color1: #ff6600;
+$color2: #ff3300;
+$color3: #cc9900;
+
+$text-color1: black;
+$text-color2: white;
+
+/* font families */
+$font1: 'Major Mono Display', monospace;
+$font2: '';
+
+/* screen breakpoints */
+$sm: 600px;
+$md: 900px;
+$lg: 1200px;
+
+
+
+
+/* * * * STYLES * * * */
+
+/* reset-ish */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header {
-    background-color: $head-back-color;
-    color: $head-text-color;
-    h1 {
-        text-alignment: center;
-    }
+/* general styles */
+html {
+    background-color: $color3;
+    font-size: 30px;
 }
 
+body {
+    // margin: 0 auto;
+    width: 100%;
+}
+
+/* <header> styles */
+header {
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    // text-align: center;
+    .position {
+        margin: 0 -20px;
+        background-color: lighten($color3, 5%);
+    }
+    h1 {
+        text-transform: uppercase;
+        font-family: $font1;
+        font-size: 20vw;
+        padding: 10px 20px;
+    }
+    nav {
+        margin-top: 1em;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        li {
+            margin: 10px 0;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            background-color: darken($color3, 10%);
+            box-shadow: 2px 2px 2px darken($color3, 15%);
+            padding: .4em;
+        }
+    }
+    
+}
+
+/* <main> styles */
+main {
+    
+}
+
+/* <footer> styles */
+footer {
+
+}
+
+/* * * * MEDIA QUERIES * * * */
+
+/* media: small screens */
+@media only screen and (min-width: $sm) {
+
+
+    /* <header> styles */
+    header {
+        .position {
+            margin-top: -32px;
+            margin-left: -30px;
+        }
+        h1 {
+            font-size: 3em;
+            line-height: .9em;
+            span {
+                display: block;
+            }
+        }
+    } 
+
+    /* <main> styles */
+
+
+    /* <footer> styles */
+
+    }
+
+
+/* media: medium screens */
+@media only screen and (min-width: $md) {
+
+
+    /* <header> styles */
+    
+    
+    /* <main> styles */
+    
+    
+    /* <footer> styles */
+    
+    }
+
+/* media: large screens */
+@media only screen and (min-width: $lg) {
+
+
+    /* <header> styles */
+    
+    
+    /* <main> styles */
+    
+    
+    /* <footer> styles */
+
+    }

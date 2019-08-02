@@ -1,8 +1,16 @@
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  flex: 0 1 auto;
-  align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
   padding: 3em;
 }
 
@@ -13,105 +21,101 @@ section {
   margin: 10px;
   max-width: 600px;
 }
+
 section picture img {
   width: 100%;
 }
 
 .dim::after {
-  content: "400 x 400";
+  content: '400 x 400';
 }
 
 #cle-name::after {
-  content: "clear-400w-o.jpg";
+  content: 'clear-400w-o.jpg';
 }
 
 #cle-weight::after {
-  content: "29.7 KB";
+  content: '29.7 KB';
 }
 
 #clo-name::after {
-  content: "clouds-400w-o.jpg";
+  content: 'clouds-400w-o.jpg';
 }
 
 #clo-weight::after {
-  content: "28.7 KB";
+  content: '28.7 KB';
 }
 
 #fog-name::after {
-  content: "fog-400w-o.jpg";
+  content: 'fog-400w-o.jpg';
 }
 
 #fog-weight::after {
-  content: "3.41 KB";
+  content: '3.41 KB';
 }
 
 #rain-name::after {
-  content: "rain-400w-o.jpg";
+  content: 'rain-400w-o.jpg';
 }
 
 #rain-weight::after {
-  content: "8.54 KB";
+  content: '8.54 KB';
 }
 
 #sn-name::after {
-  content: "snow-400w-o.jpg";
+  content: 'snow-400w-o.jpg';
 }
 
 #sn-weight::after {
-  content: "25.3 KB";
+  content: '25.3 KB';
 }
 
 @media screen and (min-width: 960px) {
   .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    flex: 1 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
     padding: 3em;
   }
-
   .dim::after {
-    content: "600 x 600";
+    content: '600 x 600';
   }
-
   #cle-name::after {
-    content: "clear-600w-o.jpg";
+    content: 'clear-600w-o.jpg';
   }
-
   #cle-weight::after {
-    content: "61.4 KB";
+    content: '61.4 KB';
   }
-
   #clo-name::after {
-    content: "clouds-600w-o.jpg";
+    content: 'clouds-600w-o.jpg';
   }
-
   #clo-weight::after {
-    content: "36.2 KB";
+    content: '36.2 KB';
   }
-
   #fog-name::after {
-    content: "fog-600w-o.jpg";
+    content: 'fog-600w-o.jpg';
   }
-
   #fog-weight::after {
-    content: "11.9 KB";
+    content: '11.9 KB';
   }
-
   #rain-name::after {
-    content: "rain-600w-o.jpg";
+    content: 'rain-600w-o.jpg';
   }
-
   #rain-weight::after {
-    content: "16.5 KB";
+    content: '16.5 KB';
   }
-
   #sn-name::after {
-    content: "snow-600w-o.jpg";
+    content: 'snow-600w-o.jpg';
   }
-
   #sn-weight::after {
-    content: "49.5 KB";
+    content: '49.5 KB';
   }
 }
-
 /*# sourceMappingURL=img-styles.css.map */
