@@ -12,12 +12,19 @@
 
  <body>
     <header>
-        <div class="position">
-            <h1>Daniel Eckton</h1>
+        <div class="pgtitle">
+            <div class="name">
+                <img src="assets/danieleckton.svg" alt="">
+            
+            </div>
+            
+            <div class="toggle-container">
+                <span id="menuToggle" class="menu-open"></span>
+            </div>
         </div>
     
         <nav>
-            <ul>
+            <ul class="menu-open">
                 <li><a href="#" title="Return to dseckton.github.io">Home</a></li>
                 <!-- <li><a href="../presentation/selectors.html" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li> -->
                 <li><a href="#">Media</a></li>
@@ -32,21 +39,28 @@
         <h1>Home</h1>
         <p>Hi! Welcome to my webpage.</p>
 
-        <section>
+        <div>
             <h2>School Assignments</h2>
-            <nav>
                 <ul>
-                    <li><a href="analysis/analysis.html">Design Analysis</a></li>
-                    <li><a href="weather/weather.html">Weather Site Plan</a></li>
-                    <li><a href="weather/index.html">The Weather Site</a></li>
-                    <li><a href="weather/franklin-id.html" title="Weather overview for Franklin Idaho" >Franklin Idaho Weather</a></li>
-                    <!-- <li><a href="weather/greenville-sc.html">Greenville South Carolina Weather</a></li> -->
-                    <li><a href="responsive_media/index.html" title="Showcase of responsive images">Responsive Media</a></li>
-                    <li><a href="weather/weather-imgs.html" title="Images used in weather pages">Responsive Weather Images</a></li>
-                    <li><a href="acme/index.html" title="Homepage for The ACME Site">The ACME Site</a></li>
-                    <li><a href="acme/template.html" title="Template for The ACME Site">ACME Template</a></li>
+                    <div>
+                        <li><a href="analysis/analysis.html">Design Analysis</a></li>
+                    </div>
+                    <div>
+                        <li><a href="weather/weather.html">Weather Site Plan</a></li>
+                        <li><a href="weather/index.html">The Weather Site</a></li>
+                        <li><a href="weather/franklin-id.html" title="Weather overview for Franklin Idaho" >Franklin Idaho Weather</a></li>
+                        <!-- <li><a href="weather/greenville-sc.html">Greenville South Carolina Weather</a></li> -->
+                    </div>
+                    <div>
+                        <li><a href="responsive_media/index.html" title="Showcase of responsive images">Responsive Media</a></li>
+                        <li><a href="weather/weather-imgs.html" title="Images used in weather pages">Responsive Weather Images</a></li>
+                    </div>
+                    <div>
+                        <li><a href="acme/index.html" title="Homepage for The ACME Site">The ACME Site</a></li>
+                        <li><a href="acme/template.html" title="Template for The ACME Site">ACME Template</a></li>
+                        <li><a href="">PLACEHOLDER | YOUTUBE</a></li>
+                    </div>
                 </ul>
-            </nav>
             <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xIS17FevO7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
         </section>
 
@@ -57,10 +71,11 @@
                 <li><a href="#">placeholder</a></li>
             </ul>
         </section>
+        <script src="javascript/home.js"></script>
     </main>
 
     <footer>
-        <p>&copy; Daniel Eckton, July 13, 2019</p>
+        <p>&copy; Daniel Eckton | August 3, 2019</p>
     </footer>
     </body>
 </html>
