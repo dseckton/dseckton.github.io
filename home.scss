@@ -37,6 +37,7 @@ $lg: 1200px;
 /* general styles */
 html {
     font-size: 20px;
+    background-color: black;
 }
 
 a {
@@ -60,7 +61,7 @@ body {
 /* <header> styles */
 header {
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     .pgtitle {
@@ -68,36 +69,41 @@ header {
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-        height: 70px;
-        .name {
-            display: block;
-            position: relative;
-            width: 70%;
-            height: inherit;
-            padding: 10px 0;
-            h1 {
-                height: inherit;
-            }
-            span {
-                position: absolute;
-            }
-            .first-name {
-                transform: translatey(0%);
-                transition: transform .4s ease-out;
-            }
-            .surname {
-                transform: translatey(-300%);
-                transition: transform .4s ease-out;
-            }
-            &:hover {
-                & .first-name {
-                    transform: translatey(-300%);
-                }
-                & .surname {
-                    transform: translatey(0%);
-                }
-            }
+        img {
+            width: 100%;
         }
+
+        // UNUSED STUFF, MAYBE
+
+        // .name {
+        //     display: block;
+        //     position: relative;
+        //     width: 70%;
+        //     height: inherit;
+        //     padding: 10px 0;
+        //     h1 {
+        //         height: inherit;
+        //     }
+        //     span {
+        //         position: absolute;
+        //     }
+        //     .first-name {
+        //         transform: translatey(0%);
+        //         transition: transform .4s ease-out;
+        //     }
+        //     .surname {
+        //         transform: translatey(-300%);
+        //         transition: transform .4s ease-out;
+        //     }
+        //     &:hover {
+        //         & .first-name {
+        //             transform: translatey(-300%);
+        //         }
+        //         & .surname {
+        //             transform: translatey(0%);
+        //         }
+        //     }
+        // }
     }
     h1 {
         text-transform: uppercase;
@@ -105,7 +111,7 @@ header {
         font-size: 13vw;
     }
     .toggle-container {
-        width: 50px;
+        width: 40px;
         // border: solid black;
         display: flex;
         align-items: center;

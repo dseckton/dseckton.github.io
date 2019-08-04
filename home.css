@@ -16,6 +16,7 @@
 /* general styles */
 html {
   font-size: 20px;
+  background-color: black;
 }
 
 a {
@@ -38,7 +39,7 @@ body {
 /* <header> styles */
 header {
   width: 100%;
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -47,34 +48,9 @@ header .pgtitle {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
-header .pgtitle .name {
-  display: block;
-  position: relative;
-  width: 70%;
-  height: inherit;
-  padding: 10px 0;
-}
-header .pgtitle .name h1 {
-  height: inherit;
-}
-header .pgtitle .name span {
-  position: absolute;
-}
-header .pgtitle .name .first-name {
-  transform: translatey(0%);
-  transition: transform 0.4s ease-out;
-}
-header .pgtitle .name .surname {
-  transform: translatey(-300%);
-  transition: transform 0.4s ease-out;
-}
-header .pgtitle .name:hover .first-name {
-  transform: translatey(-300%);
-}
-header .pgtitle .name:hover .surname {
-  transform: translatey(0%);
+header .pgtitle img {
+  width: 100%;
 }
 header h1 {
   text-transform: uppercase;
@@ -82,7 +58,7 @@ header h1 {
   font-size: 13vw;
 }
 header .toggle-container {
-  width: 50px;
+  width: 40px;
   display: flex;
   align-items: center;
 }
