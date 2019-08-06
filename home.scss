@@ -1,21 +1,23 @@
 /* * * * IMPORTS * * * */
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Blinker|Righteous&display=swap');
 
 @import url(fonts/stylesheet.css);
 
 /* * * * VARIABLES * * * */
 
 /* colors */
-$color1: #ff6600;
-$color2: #ff3300;
-$color3: #cc9900;
+$color1: #fe0ca1;
+$color2: #da29ff;
+$color3: #7729e5;
 
 $text-color1: black;
 $text-color2: white;
 
 /* font families */
-$font1: 'Major Mono Display', monospace;
-$font2: 'lazer84regular', cursive;
+$font1: 'lazer84regular', cursive;
+$font2: 'Blinker', sans-serif;
+$font3: 'Righteous', cursive;
+
 
 /* screen breakpoints */
 $sm: 550px;
@@ -37,7 +39,9 @@ $lg: 1200px;
 /* general styles */
 html {
     font-size: 20px;
-    background-color: black;
+    background-color: darken($color3, 45%);
+    color: white;
+    font-family: $font2;
 }
 
 a {
@@ -49,8 +53,8 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: $font2;
-    text-transform: lowercase;
+    font-family: $font3;
+    text-transform: uppercase;
 }
 
 body {
@@ -63,52 +67,20 @@ header {
     width: 100%;
     padding: 20px;
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: space-between;
     .pgtitle {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
+        width: calc(100% - 60px);
         img {
             width: 100%;
         }
-
-        // UNUSED STUFF, MAYBE
-
-        // .name {
-        //     display: block;
-        //     position: relative;
-        //     width: 70%;
-        //     height: inherit;
-        //     padding: 10px 0;
-        //     h1 {
-        //         height: inherit;
-        //     }
-        //     span {
-        //         position: absolute;
-        //     }
-        //     .first-name {
-        //         transform: translatey(0%);
-        //         transition: transform .4s ease-out;
-        //     }
-        //     .surname {
-        //         transform: translatey(-300%);
-        //         transition: transform .4s ease-out;
-        //     }
-        //     &:hover {
-        //         & .first-name {
-        //             transform: translatey(-300%);
-        //         }
-        //         & .surname {
-        //             transform: translatey(0%);
-        //         }
-        //     }
-        // }
     }
-    h1 {
-        text-transform: uppercase;
-        font-family: $font1;
-        font-size: 13vw;
+    .menu-burger {
+        width: 40px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-left: 20px;
     }
     .toggle-container {
         width: 40px;
@@ -118,16 +90,16 @@ header {
 
         #menuToggle {
             display: block;
-            background-color: black;
+            background-color: white;
             height: 4px;
             width: 100%;
             border-radius: 3px;
             &.menu-closed {
-                transform: rotate(45deg);
+                transform: rotate(0deg);
                 &::before {
                     content:'';
-                    display: block;
-                    background-color: black;
+                    display: inherit;
+                    background-color: inherit;
                     height: 4px;
                     width: 100%;
                     border-radius: 3px;
@@ -135,8 +107,8 @@ header {
                 }
                 &::after {
                     content:'';
-                    display: block;
-                    background-color: black;
+                    display: inherit;
+                    background-color: inherit;
                     height: 4px;
                     width: 100%;
                     border-radius: 3px;
@@ -149,8 +121,8 @@ header {
                     transform: rotate(90deg);
 
                     content:'';
-                    display: block;
-                    background-color: black;
+                    display: inherit;
+                    background-color: inherit;
                     height: 4px;
                     width: 100%;
                     border-radius: 3px;
@@ -160,11 +132,11 @@ header {
                     transform: rotate(90deg);
 
                     content:'';
-                    display: block;
-                    background-color: black;
-                    height: 4px;
-                    width: 100%;
-                    border-radius: 3px;
+                    display: none;
+                    // background-color: inherit;
+                    // height: 4px;
+                    // width: 100%;
+                    // border-radius: 3px;
                     // margin-top: 25px;
                 }
             }
@@ -172,6 +144,7 @@ header {
     }
     nav {
         margin-top: .6em;
+        width: 100%;
         ul {
             list-style-type: none;
             display: flex;
@@ -209,6 +182,9 @@ main {
 /* <footer> styles */
 footer {
     text-align: center;
+    img {
+        width: 100%;
+    }
 }
 
 /* * * * MEDIA QUERIES * * * */
