@@ -164,10 +164,10 @@ footer img {
   }
   header nav ul li {
     margin: 0;
-    padding: 0 1em;
   }
   header nav ul a {
     display: inline-block;
+    padding: 0 1em;
   }
 
   /* <main> styles */
