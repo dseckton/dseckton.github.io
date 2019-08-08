@@ -152,8 +152,35 @@ main {
   background-size: cover, cover;
   margin-bottom: 0;
 }
+main ul {
+  list-style-type: none;
+}
 main section {
   padding: 0.5em 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+main div {
+  background-color: rgba(33, 8, 68, 0.7);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #370e71;
+}
+main div p a {
+  text-decoration: underline;
+}
+main div li a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background-color: #180632;
+  border: solid 2px;
+  border-top-color: #0b0316;
+  border-right-color: #25094d;
+  border-bottom-color: #25094d;
+  border-left-color: #0b0316;
+  border-radius: 4px;
 }
 
 /* <footer> styles */

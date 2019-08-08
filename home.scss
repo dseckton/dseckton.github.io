@@ -8,7 +8,7 @@
 /* colors */
 $color1: #fe0ca1;
 $color2: #da29ff;
-$color3: #7729e5;
+$color3: #7729e5; // rgba(119, 41, 229, a)
 
 $text-color1: black;
 $text-color2: white;
@@ -185,8 +185,40 @@ main {
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     margin-bottom: 0;
+    ul {
+        list-style-type: none;
+    }
     section {
         padding: .5em 0;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    div {
+        // border: solid 2px darken($color3, 30%);
+        background-color: rgba(33, 8, 68, .7);
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 4px darken($color3, 28%);
+        p {
+            a {
+                text-decoration: underline;
+            }
+        }
+        li{
+            a {
+                display: block;
+                padding: 10px;
+                text-align: center;
+                background-color: darken($color3, 42%);
+                border: solid 2px;
+                border-top-color: darken($color3, 48%);
+                border-right-color: darken($color3, 36%);
+                border-bottom-color: darken($color3, 36%);
+                border-left-color: darken($color3, 48%);
+                border-radius: 4px;
+            }
+        }
     }
     
 }
