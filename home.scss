@@ -74,8 +74,10 @@ header {
     border-bottom: solid 1px $color1;
     .pgtitle {
         width: calc(100% - 60px);
+        max-height: 205px;
         img {
             width: 100%;
+            max-height: 150px;
         }
     }
     .menu-burger {
@@ -180,7 +182,7 @@ header {
 /* <main> styles */
 main {
     padding: 0 20px;
-    margin: 1em 0;
+    padding-top: 1em;
     background-image: url("/assets/gradient.svg"), url("/assets/stars.png");
     background-attachment: scroll, fixed;
     background-position: center bottom, center;
@@ -263,6 +265,14 @@ footer {
     header {
         .pgtitle {
             width: 100%;
+            max-width: 580px;
+            margin-right: auto;
+            margin-left: auto;
+
+            img {
+                width: auto;
+                min-height: 150px;
+            }
         }
         .menu-burger { 
             display: none;
@@ -308,6 +318,15 @@ footer {
 
     /* <header> styles */
     header {
+        .pgtitle {
+            width: 100%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            img {
+                width: auto;
+            }
+        }
         nav {
             max-width: 1200px;
             margin-left: auto;
@@ -355,7 +374,6 @@ footer {
 
 
     /* <header> styles */
-    
     
     /* <main> styles */
     main {
