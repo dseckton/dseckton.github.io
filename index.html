@@ -81,11 +81,12 @@
                             <ul>
                                 <li><a href="acme/index.html" title="Homepage for The ACME Site">The ACME Site</a></li>
                                 <li><a href="acme/template.html" title="Template for The ACME Site">ACME Template</a></li>
-                                <li><a href="#">Video Showcase</a></li>
+                                <li><button id="modalButton">Video Showcase</button></li>
                             </ul>
                         </div>
                     </article>
-                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/xIS17FevO7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                <!--  -->
+
             </section>
             <section>
                 <h2>Personal Projects</h2>
@@ -99,6 +100,20 @@
                     </div>
                 </article>
             </section>
+        </div>
+
+        <!-- MODALS -->
+        <div id="acmeVidModal" class="closed">
+            <div id="modalContent">
+                <div id="modalHeader">
+                    <h4>Overview of the ACME webpage</h4>
+                    <span id="closeModal">&times;</span>
+                </div>
+                
+                <div id="iframeContainer">
+                    <iframe src="https://www.youtube.com/embed/xIS17FevO7Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
 
         <script src="javascript/home.js"></script>
