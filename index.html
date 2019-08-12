@@ -10,19 +10,19 @@
   <link rel="stylesheet" type="text/css" href="home.css">
  </head>
 
- <body>
-    <header>
+ <body id="pageBody">
+    <header class="sticky">
         <div class="pgtitle">
             <img src="assets/danieleckton.svg" alt="">
         </div>
         <div class="menu-burger">
-            <div class="toggle-container">
+            <div id="navToggle" class="toggle-container">
                 <span id="menuToggle" class="menu-open"></span>
             </div>
         </div>
     
         <nav>
-            <ul class="menu-open">
+            <ul id="navMenu" class="menu-open">
                 <li><a href="#" title="Return to dseckton.github.io">Home</a></li>
                 <!-- <li><a href="../presentation/selectors.html" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li> -->
                 <li><a href="#">Media</a></li>
@@ -81,11 +81,10 @@
                             <ul>
                                 <li><a href="acme/index.html" title="Homepage for The ACME Site">The ACME Site</a></li>
                                 <li><a href="acme/template.html" title="Template for The ACME Site">ACME Template</a></li>
-                                <li><button id="modalButton">Video Showcase</button></li>
+                                <li><button id="acmeModalButton" class="modal-button" title="Pop-up with Youtube Showcase" onclick="openAcmeModal()">Video Showcase</button></li>
                             </ul>
                         </div>
                     </article>
-                <!--  -->
 
             </section>
             <section>
@@ -102,12 +101,15 @@
             </section>
         </div>
 
+
+
+
         <!-- MODALS -->
         <div id="acmeVidModal" class="closed">
             <div id="modalContent">
                 <div id="modalHeader">
                     <h4>Overview of the ACME webpage</h4>
-                    <span id="closeModal">&times;</span>
+                    <span id="closeModal" title="Return to page" onclick="closeAcmeModal()">&times;</span>
                 </div>
                 
                 <div id="iframeContainer">
@@ -115,6 +117,9 @@
                 </div>
             </div>
         </div>
+
+
+
 
         <script src="javascript/home.js"></script>
     </main>
