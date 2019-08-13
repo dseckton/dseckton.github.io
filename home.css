@@ -236,6 +236,9 @@ main {
   margin-bottom: 0;
   padding-bottom: 1.5em;
 }
+main.stickied {
+  padding-top: 200px;
+}
 main article {
   display: flex;
   flex-flow: column nowrap;

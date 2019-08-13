@@ -277,6 +277,9 @@ main {
     background-size: cover, cover;
     margin-bottom: 0;
     padding-bottom: 1.5em;
+    &.stickied {
+        padding-top: 200px;
+    }
     article {
         display: flex;
         flex-flow: column nowrap;
