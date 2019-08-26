@@ -9,89 +9,168 @@ const navToggle = document.getElementById("navToggle");
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
+const stickyContainer = document.getElementById("stickyContainer");
+const stickyNavMenu = document.getElementById("stickyNavMenu");
+const stickyMenuToggle = document.getElementById("stickyMenuToggle");
+const stickyNavToggle = document.getElementById("stickyNavToggle");
+
 const titleName = document.getElementById("titleName");
 
 const acmeModalButton = document.getElementById("acmeModalButton");
 const acmeVidModal = document.getElementById("acmeVidModal");
+const closeModal = document.getElementById("closeModal");
 
-let headerHeight = pageHeader.clientHeight;
+const logoContainer = document.getElementById("logoContainer");
+
+// let headerHeight = logoContainer.clientHeight + 20 + "px";
+// console.log("logoContainer.clientHeight: " + logoContainer.clientHeight);
+// pageMain.style.marginTop = headerHeight;
+
 
 // nav menu opening and closing function
-navToggle.addEventListener("click", function() {
-    if (menuToggle.classList.contains("menu-open")) { //close
+function toggleNav() {
+    console.log("function runs...")
+    if (navMenu.classList.contains("menu-open")) {
         menuToggle.classList.remove("menu-open");
         navMenu.classList.remove("menu-open");
-
         menuToggle.classList.add("menu-closed");
         navMenu.classList.add("menu-closed");
-        console.log("Closed Navigation Menu");
+
+        stickyMenuToggle.classList.remove("menu-open");
+        stickyNavMenu.classList.remove("menu-open");
+        stickyMenuToggle.classList.add("menu-closed");
+        stickyNavMenu.classList.add("menu-closed");
     }
-    else if (menuToggle.classList.contains("menu-closed")) { //open
+    else if (navMenu.classList.contains("menu-closed")) {
         menuToggle.classList.remove("menu-closed");
         navMenu.classList.remove("menu-closed");
-
         menuToggle.classList.add("menu-open");
-        navMenu.classList.remove("menu-open");
-        console.log("Opened Navigation Menu");
+        navMenu.classList.add("menu-open");
+
+        stickyMenuToggle.classList.remove("menu-closed");
+        stickyNavMenu.classList.remove("menu-closed");
+        stickyMenuToggle.classList.add("menu-open");
+        stickyNavMenu.classList.add("menu-open");
+    }
+}
+
+navToggle.addEventListener("click", toggleNav);
+stickyNavToggle.addEventListener("click", toggleNav);
+
+console.log ("Load up window width is: " + window.innerWidth);
+
+(function () {
+    if (window.innerWidth > 550) {
+        menuToggle.classList.remove("menu-closed");
+        navMenu.classList.remove("menu-closed");
+        menuToggle.classList.add("menu-open");
+        navMenu.classList.add("menu-open");
+
+        stickyMenuToggle.classList.remove("menu-closed");
+        stickyNavMenu.classList.remove("menu-closed");
+        stickyMenuToggle.classList.add("menu-open");
+        stickyNavMenu.classList.add("menu-open");
     }
     else {
-        return Error;
-    }
-});
+        menuToggle.classList.remove("menu-open");
+        navMenu.classList.remove("menu-open");
+        menuToggle.classList.add("menu-closed");
+        navMenu.classList.add("menu-closed");
 
-console.log (window.innerWidth);
+        stickyMenuToggle.classList.remove("menu-open");
+        stickyNavMenu.classList.remove("menu-open");
+        stickyMenuToggle.classList.add("menu-closed");
+        stickyNavMenu.classList.add("menu-closed");
+        console.log("Page opened in mobile view")
+    }
+})();
 
 // function to test the menu status, and open it if it's closed when window resizes
-window.addEventListener("resize", function() {
-    console.log (window.innerWidth);
+window.addEventListener("resize", function () {
+    console.log ("Window width is: " + window.innerWidth);
     if (window.innerWidth >= 550) {
-        if (menuToggle.classList.contains("menu-closed")) {
-            menuToggle.classList.remove("menu-closed");
-            navMenu.classList.remove("menu-closed");
-    
-            menuToggle.classList.add("menu-open");
-            navMenu.classList.add("menu-open");
-            console.log("Opened Navigation Menu");
-        }
+        menuToggle.classList.remove("menu-closed");
+        navMenu.classList.remove("menu-closed");
+        menuToggle.classList.add("menu-open");
+        navMenu.classList.add("menu-open");
+
+        stickyMenuToggle.classList.remove("menu-closed");
+        stickyNavMenu.classList.remove("menu-closed");
+        stickyMenuToggle.classList.add("menu-open");
+        stickyNavMenu.classList.add("menu-open");
     }
+    else if (this.window.innerWidth < 550) {
+        menuToggle.classList.remove("menu-open");
+        navMenu.classList.remove("menu-open");
+        menuToggle.classList.add("menu-closed");
+        navMenu.classList.add("menu-closed");
+
+        stickyMenuToggle.classList.remove("menu-open");
+        stickyNavMenu.classList.remove("menu-open");
+        stickyMenuToggle.classList.add("menu-closed");
+        stickyNavMenu.classList.add("menu-closed");
+    }
+    // pageMain.style.marginTop = headerHeight;
+    // console.log("headerHeight is: " + headerHeight);
 });
 
 
-// function to open acme modal
+acmeModalButton.addEventListener("click", openAcmeModal);
+closeModal.addEventListener("click", closeAcmeModal);
+
+
+// functions to open or close acme modal
 function openAcmeModal() {
     acmeVidModal.classList.remove("closed");
     acmeVidModal.classList.add("open");
+    pageBody.classList.add("noScroll");
     console.log("Opened ACME Modal");
 }
 
-// function to close acme modal
 function closeAcmeModal() {
     acmeVidModal.classList.remove("open");
     acmeVidModal.classList.add("closed");
+    pageBody.classList.remove("noScroll");
     console.log("Closed ACME Modal");
 }
 
-window.addEventListener("scroll", function(){ 
-    let titleBoundary = contentTitle.getBoundingClientRect();
-    if (titleBoundary.top <= 0) {
-        pageHeader.classList.add("sticky");
-        pageMain.style.paddingTop = (headerHeight + 20 + "px");
 
-        if (window.innerWidth <= 550) {
-            if (menuToggle.classList.contains("menu-open")) { //close
-                menuToggle.classList.remove("menu-open");
-                navMenu.classList.remove("menu-open");
+// functions to open or close nav menu
+
+
+
+// window.addEventListener("scroll", function(){ 
+//     let titleBoundary = contentTitle.getBoundingClientRect();
+//     if (titleBoundary.top <= 0) {
+//         pageHeader.classList.add("sticky");
+//         pageMain.style.paddingTop = (headerHeight + 20 + "px");
+
+//         if (window.innerWidth <= 550) {
+//             if (menuToggle.classList.contains("menu-open")) { //close
+//                 menuToggle.classList.remove("menu-open");
+//                 navMenu.classList.remove("menu-open");
         
-                menuToggle.classList.add("menu-closed");
-                navMenu.classList.add("menu-closed");
-                console.log("Closed Navigation Menu");
-            }
+//                 menuToggle.classList.add("menu-closed");
+//                 navMenu.classList.add("menu-closed");
+//                 console.log("Closed Navigation Menu");
+//             }
+//         }
+//     }
+//     if (titleBoundary.top >= 0) {
+//         pageHeader.classList.remove("sticky");
+//         pageMain.style.removeProperty("padding-top")
+
+//     }
+// });
+
+window.addEventListener("scroll", function() {
+    let headerBoundary = pageHeader.getBoundingClientRect();
+    // if (window.innerWidth <= 550) {
+        if (headerBoundary.bottom <= 0) {
+            stickyContainer.classList.remove("offscreen");        stickyContainer.classList.add("onscreen");
+        } else if (headerBoundary.bottom > 0) {
+            stickyContainer.classList.remove("onscreen");
+            stickyContainer.classList.add("offscreen");
         }
     }
-    if (titleBoundary.top >= 0) {
-        pageHeader.classList.remove("sticky");
-        pageMain.style.removeProperty("padding-top")
-
-    }
-});
-
+);

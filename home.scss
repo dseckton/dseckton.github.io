@@ -36,6 +36,7 @@ $lg: 1200px;
     box-sizing: border-box;
 }
 
+
 /* general styles */
 html {
     font-size: 20px;
@@ -57,6 +58,9 @@ h1, h2, h3, h4, h5, h6 {
 body {
     // margin: 0 auto;
     width: 100%;
+    &.noScroll {
+        overflow: hidden;
+    }
 }
 
 /* modal styles */
@@ -149,6 +153,7 @@ header {
     justify-content: space-between;
     background-color: darken($color3, 42%);
     border-bottom: solid 1px $color1;
+    position: relative;
     .pgtitle {
         width: calc(100% - 60px);
         img {
@@ -172,12 +177,13 @@ header {
         display: flex;
         align-items: center;
 
-        #menuToggle {
+        span {
             display: block;
             background-color: white;
             height: 4px;
             width: 100%;
             border-radius: 3px;
+            transition-duration: .2s;
             &.menu-closed {
                 transform: rotate(0deg);
                 &::before {
@@ -227,6 +233,13 @@ header {
         }
     }
     nav {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 100%;
+        background-color: inherit;
+        overflow: hidden;
+        border-bottom: solid 1px $color1;
         width: 100%;
         ul {
             list-style-type: none;
@@ -234,6 +247,7 @@ header {
             flex-flow: column nowrap;
             text-align: center;
             margin: .6em -20px;
+            
             a {
                 display: block;
                 text-decoration: none;
@@ -251,19 +265,54 @@ header {
             display: none;
         }
     }
-
-
-    &.sticky {
+    .sticky {
         position: fixed;
         top: 0;
         left: 0;
+        width: 100%;
+        background-color: darken($color3, 42%);
+        border-bottom: solid 1px $color1;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        transition: transform .5s;
+        opacity: 0;
+        transition-delay: opacity .5s;
+        &.onscreen {
+            transform: translatey(0);
+            opacity: 1;
+            z-index: 2
+        }
+        &.offscreen {
+            transform: translatey(-100%);
+            opacity: 1;
+            z-index: -2;
+        }
+        &>div {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
         .pgtitle {
-            img {
-                max-height: 40px;
-                width: auto;
-            }
+            width: auto;
+        }
+        img {
+            max-height: 40px;
+            width: auto;
         }
     }
+
+    // &.sticky {
+    //     position: sticky;
+    //     top: 0;
+    //     left: 0;
+    //     .pgtitle {
+    //         img {
+    //             max-height: 40px;
+    //             width: auto;
+    //         }
+    //     }
+    // }
 }
 
 /* <main> styles */
@@ -277,9 +326,13 @@ main {
     background-size: cover, cover;
     margin-bottom: 0;
     padding-bottom: 1.5em;
-    &.stickied {
-        padding-top: 200px;
-    }
+    // &.stickied {
+    //     padding-top: 200px;
+    // }
+    // a {   (Not yet supported)
+    //     target-name: new;
+    //     target-new: tab;
+    // }
     article {
         display: flex;
         flex-flow: column nowrap;
@@ -357,12 +410,21 @@ footer {
 
     /* <header> styles */
     header {
-        &.sticky {
+        // &.sticky {
+        //     padding-top: 0;
+        //     .pgtitle {
+        //        img {
+        //            display: none;
+        //        }
+        //     }
+        // }
+        .sticky {
             padding-top: 0;
             .pgtitle {
-               img {
-                   display: none;
-               }
+                width: 100%;
+            }
+            img {
+                display: none;
             }
         }
 
@@ -382,6 +444,8 @@ footer {
             display: none;
         }
         nav {
+            position: relative;
+            border-bottom: none;
             ul {
                 flex-direction: row;
                 justify-content: space-between;
@@ -426,8 +490,7 @@ footer {
         .pgtitle {
             width: 100%;
             max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             img {
                 width: auto;
             }

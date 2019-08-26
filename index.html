@@ -12,17 +12,17 @@
 
  <body id="pageBody">
     <header id="pageHeader" class="">
-        <div class="pgtitle">
+        <div class="pgtitle" id="logoContainer">
             <img id="titleName" src="assets/danieleckton.svg" alt="">
         </div>
         <div class="menu-burger">
             <div id="navToggle" class="toggle-container">
-                <span id="menuToggle" class="menu-open"></span>
+                <span id="menuToggle" class="menu-closed"></span>
             </div>
         </div>
     
         <nav>
-            <ul id="navMenu" class="menu-open">
+            <ul id="navMenu" class="menu-closed">
                 <li><a href="#" title="Return to dseckton.github.io">Home</a></li>
                 <!-- <li><a href="../presentation/selectors.html" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li> -->
                 <li><a href="#">Media</a></li>
@@ -30,6 +30,27 @@
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
+
+        <div id="stickyContainer" class="sticky offscreen">
+            <div class="pgtitle">
+                <img src="assets/danieleckton.svg" alt="">
+            </div>
+            <div class="menu-burger">
+                <div id="stickyNavToggle" class="toggle-container">
+                    <span id="stickyMenuToggle" class="menu-closed"></span>
+                </div>
+            </div>
+        
+            <nav>
+                <ul id="stickyNavMenu" class="menu-closed">
+                    <li><a href="#" title="Return to dseckton.github.io">Home</a></li>
+                    <!-- <li><a href="../presentation/selectors.html" title="Check out my sweet CSS Selectors Presentation Page!">CSS Selectors Presentation</a></li> -->
+                    <li><a href="#">Media</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     
     <main id="pageMain" class="">
@@ -43,9 +64,9 @@
                     <article>
                         <h3>Design Analysis</h3>
                         <div class="article-content">
-                            <p>This is a basic document analyzing the <a href="https://www.w3schools.com/">W3 Schools</a> website, and it's usage of the design principles of proximity, alignment, repetition, contrast, and typography, as well as examining the target audience. A collaborative effort between Ashley Ray, Justin Lilly, Vova Zhdanov, and myself.</p>
+                            <p>This is a basic document analyzing the <a target="_blank" href="https://www.w3schools.com/">W3 Schools</a> website, and it's usage of the design principles of proximity, alignment, repetition, contrast, and typography, as well as examining the target audience. A collaborative effort between Ashley Ray, Justin Lilly, Vova Zhdanov, and myself.</p>
                             <ul>
-                                <li><a href="analysis/analysis.html">Design Analysis</a></li>
+                                <li><a target="_blank" href="analysis/analysis.html">Design Analysis</a></li>
                             </ul>
                         </div>
                     </article>
@@ -55,8 +76,8 @@
                         <div class="article-content">
                             <p>Pages which showcase the dynamic changing of images, based upon the size of the browser.</p>
                             <ul>
-                                <li><a href="responsive_media/index.html" title="Showcase of responsive images">Responsive Media</a></li>
-                                <li><a href="weather/weather-imgs.html" title="Images used in weather pages">Responsive Weather Images</a></li>
+                                <li><a target="_blank" href="responsive_media/index.html" title="Showcase of responsive images">Responsive Media</a></li>
+                                <li><a target="_blank" href="weather/weather-imgs.html" title="Images used in weather pages">Responsive Weather Images</a></li>
                             </ul>
                         </div>
                     </article>
@@ -64,11 +85,11 @@
                     <article>
                         <h3>The Weather Site</h3>
                         <div class="article-content">
-                            <p>A simple web application which utilizes the <a href="https://www.weather.gov/documentation/services-web-api">National Weather Service API</a> to take the user's geo-location and find and display the weather information for the local area.</p>
+                            <p>A simple web application which utilizes the <a target="_blank" href="https://www.weather.gov/documentation/services-web-api">National Weather Service API</a> to take the user's geo-location and find and display the weather information for the local area.</p>
                             <ul>
-                                <li><a href="weather/weather.html">Weather Site Plan</a></li>
-                                <li><a href="weather/index.html">The Weather Site</a></li>
-                                <li><a href="weather/franklin-id.html" title="Weather overview for Franklin Idaho" >Franklin Idaho Weather</a></li>
+                                <li><a target="_blank" href="weather/weather.html">Weather Site Plan</a></li>
+                                <li><a target="_blank" href="weather/index.html">The Weather Site</a></li>
+                                <li><a target="_blank" href="weather/franklin-id.html" title="Weather overview for Franklin Idaho" >Franklin Idaho Weather</a></li>
                                 <!-- <li><a href="weather/greenville-sc.html">Greenville South Carolina Weather</a></li> -->
                             </ul>
                         </div>
@@ -79,9 +100,9 @@
                         <div class="article-content">
                             <p>A simple web application which changes the content of the page based upon which menu item the user clicks.</p>
                             <ul>
-                                <li><a href="acme/index.html" title="Homepage for The ACME Site">The ACME Site</a></li>
-                                <li><a href="acme/template.html" title="Template for The ACME Site">ACME Template</a></li>
-                                <li><button id="acmeModalButton" class="modal-button" title="Pop-up with Youtube Showcase" onclick="openAcmeModal()">Video Showcase</button></li>
+                                <li><a target="_blank" href="acme/index.html" title="Homepage for The ACME Site">The ACME Site</a></li>
+                                <li><a target="_blank" href="acme/template.html" title="Template for The ACME Site">ACME Template</a></li>
+                                <li><button id="acmeModalButton" class="modal-button" title="Pop-up with Youtube Showcase" >Video Showcase</button></li>
                             </ul>
                         </div>
                     </article>
@@ -94,7 +115,7 @@
                     <div class="article-content">
                         <p>Uh oh, that's awkward. I honestly didn't expect anybody to get this far down. I guess I'll just put a bunch of placeholder text, to make it look like I actually I work on projects.</p>
                         <ul>
-                            <li><a href="#">This is a totally valid and well thought out link name</a></li>
+                            <li><a target="_blank" href="#">This is a totally valid and well thought out link name</a></li>
                         </ul>
                     </div>
                 </article>
@@ -109,7 +130,7 @@
             <div id="modalContent">
                 <div id="modalHeader">
                     <h4>Overview of the ACME webpage</h4>
-                    <span id="closeModal" title="Return to page" onclick="closeAcmeModal()">&times;</span>
+                    <span id="closeModal" title="Return to page" >&times;</span>
                 </div>
                 
                 <div id="iframeContainer">

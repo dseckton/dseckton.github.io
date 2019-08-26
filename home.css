@@ -30,6 +30,9 @@ h1, h2, h3, h4, h5, h6 {
 body {
   width: 100%;
 }
+body.noScroll {
+  overflow: hidden;
+}
 
 /* modal styles */
 .modal-button {
@@ -121,6 +124,7 @@ header {
   justify-content: space-between;
   background-color: #180632;
   border-bottom: solid 1px #fe0ca1;
+  position: relative;
 }
 header .pgtitle {
   width: calc(100% - 60px);
@@ -144,17 +148,18 @@ header .toggle-container {
   display: flex;
   align-items: center;
 }
-header .toggle-container #menuToggle {
+header .toggle-container span {
   display: block;
   background-color: white;
   height: 4px;
   width: 100%;
   border-radius: 3px;
+  transition-duration: 0.2s;
 }
-header .toggle-container #menuToggle.menu-closed {
+header .toggle-container span.menu-closed {
   transform: rotate(0deg);
 }
-header .toggle-container #menuToggle.menu-closed::before {
+header .toggle-container span.menu-closed::before {
   content: "";
   display: inherit;
   background-color: inherit;
@@ -163,7 +168,7 @@ header .toggle-container #menuToggle.menu-closed::before {
   border-radius: 3px;
   margin-top: -15px;
 }
-header .toggle-container #menuToggle.menu-closed::after {
+header .toggle-container span.menu-closed::after {
   content: "";
   display: inherit;
   background-color: inherit;
@@ -172,10 +177,10 @@ header .toggle-container #menuToggle.menu-closed::after {
   border-radius: 3px;
   margin-top: 25px;
 }
-header .toggle-container #menuToggle.menu-open {
+header .toggle-container span.menu-open {
   transform: rotate(45deg);
 }
-header .toggle-container #menuToggle.menu-open::before {
+header .toggle-container span.menu-open::before {
   transform: rotate(90deg);
   content: "";
   display: inherit;
@@ -184,12 +189,19 @@ header .toggle-container #menuToggle.menu-open::before {
   width: 100%;
   border-radius: 3px;
 }
-header .toggle-container #menuToggle.menu-open::after {
+header .toggle-container span.menu-open::after {
   transform: rotate(90deg);
   content: "";
   display: none;
 }
 header nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 100%;
+  background-color: inherit;
+  overflow: hidden;
+  border-bottom: solid 1px #fe0ca1;
   width: 100%;
 }
 header nav ul {
@@ -214,12 +226,39 @@ header nav ul a:hover {
 header nav .menu-closed {
   display: none;
 }
-header.sticky {
+header .sticky {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  background-color: #180632;
+  border-bottom: solid 1px #fe0ca1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  transition: transform 0.5s;
+  opacity: 0;
+  transition-delay: opacity 0.5s;
 }
-header.sticky .pgtitle img {
+header .sticky.onscreen {
+  transform: translatey(0);
+  opacity: 1;
+  z-index: 2;
+}
+header .sticky.offscreen {
+  transform: translatey(-100%);
+  opacity: 1;
+  z-index: -2;
+}
+header .sticky > div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+header .sticky .pgtitle {
+  width: auto;
+}
+header .sticky img {
   max-height: 40px;
   width: auto;
 }
@@ -235,9 +274,6 @@ main {
   background-size: cover, cover;
   margin-bottom: 0;
   padding-bottom: 1.5em;
-}
-main.stickied {
-  padding-top: 200px;
 }
 main article {
   display: flex;
@@ -308,10 +344,13 @@ footer p {
 /* media: small screens */
 @media only screen and (min-width: 550px) {
   /* <header> styles */
-  header.sticky {
+  header .sticky {
     padding-top: 0;
   }
-  header.sticky .pgtitle img {
+  header .sticky .pgtitle {
+    width: 100%;
+  }
+  header .sticky img {
     display: none;
   }
   header .pgtitle {
@@ -326,6 +365,10 @@ footer p {
   }
   header .menu-burger {
     display: none;
+  }
+  header nav {
+    position: relative;
+    border-bottom: none;
   }
   header nav ul {
     flex-direction: row;
@@ -360,8 +403,7 @@ footer p {
   header .pgtitle {
     width: 100%;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
   }
   header .pgtitle img {
     width: auto;
