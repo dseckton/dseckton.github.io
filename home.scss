@@ -184,7 +184,7 @@ header {
             height: 4px;
             width: 100%;
             border-radius: 3px;
-            transition-duration: .2s;
+            transition: ease-in .4s;
             &.menu-closed {
                 transform: rotate(0deg);
                 &::before {
@@ -221,7 +221,6 @@ header {
                 }
                 &::after {
                     transform: rotate(90deg);
-
                     content:'';
                     display: none;
                     // background-color: inherit;
@@ -302,18 +301,6 @@ header {
             width: auto;
         }
     }
-
-    // &.sticky {
-    //     position: sticky;
-    //     top: 0;
-    //     left: 0;
-    //     .pgtitle {
-    //         img {
-    //             max-height: 40px;
-    //             width: auto;
-    //         }
-    //     }
-    // }
 }
 
 /* <main> styles */
@@ -420,7 +407,7 @@ footer {
         //     }
         // }
         .sticky {
-            padding-top: 0;
+            padding: 0 20px;
             .pgtitle {
                 width: 100%;
             }

@@ -155,7 +155,7 @@ header .toggle-container span {
   height: 4px;
   width: 100%;
   border-radius: 3px;
-  transition-duration: 0.2s;
+  transition: ease-in 0.4s;
 }
 header .toggle-container span.menu-closed {
   transform: rotate(0deg);
@@ -346,7 +346,7 @@ footer p {
 @media only screen and (min-width: 550px) {
   /* <header> styles */
   header .sticky {
-    padding-top: 0;
+    padding: 0 20px;
   }
   header .sticky .pgtitle {
     width: 100%;

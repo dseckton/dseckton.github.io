@@ -139,30 +139,6 @@ function closeAcmeModal() {
 
 
 
-// window.addEventListener("scroll", function(){ 
-//     let titleBoundary = contentTitle.getBoundingClientRect();
-//     if (titleBoundary.top <= 0) {
-//         pageHeader.classList.add("sticky");
-//         pageMain.style.paddingTop = (headerHeight + 20 + "px");
-
-//         if (window.innerWidth <= 550) {
-//             if (menuToggle.classList.contains("menu-open")) { //close
-//                 menuToggle.classList.remove("menu-open");
-//                 navMenu.classList.remove("menu-open");
-        
-//                 menuToggle.classList.add("menu-closed");
-//                 navMenu.classList.add("menu-closed");
-//                 console.log("Closed Navigation Menu");
-//             }
-//         }
-//     }
-//     if (titleBoundary.top >= 0) {
-//         pageHeader.classList.remove("sticky");
-//         pageMain.style.removeProperty("padding-top")
-
-//     }
-// });
-
 window.addEventListener("scroll", function() {
     let headerBoundary = pageHeader.getBoundingClientRect();
     // if (window.innerWidth <= 550) {
