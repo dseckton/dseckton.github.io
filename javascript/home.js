@@ -22,10 +22,6 @@ const closeModal = document.getElementById("closeModal");
 
 const logoContainer = document.getElementById("logoContainer");
 
-// let headerHeight = logoContainer.clientHeight + 20 + "px";
-// console.log("logoContainer.clientHeight: " + logoContainer.clientHeight);
-// pageMain.style.marginTop = headerHeight;
-
 
 // nav menu opening and closing function
 function toggleNav() {
@@ -110,8 +106,6 @@ window.addEventListener("resize", function () {
         stickyMenuToggle.classList.add("menu-closed");
         stickyNavMenu.classList.add("menu-closed");
     }
-    // pageMain.style.marginTop = headerHeight;
-    // console.log("headerHeight is: " + headerHeight);
 });
 
 

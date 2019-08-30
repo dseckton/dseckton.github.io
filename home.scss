@@ -314,9 +314,6 @@ main {
     background-size: cover, cover;
     margin-bottom: 0;
     padding-bottom: 1.5em;
-    // &.stickied {
-    //     padding-top: 200px;
-    // }
     // a {   (Not yet supported)
     //     target-name: new;
     //     target-new: tab;
@@ -398,14 +395,6 @@ footer {
 
     /* <header> styles */
     header {
-        // &.sticky {
-        //     padding-top: 0;
-        //     .pgtitle {
-        //        img {
-        //            display: none;
-        //        }
-        //     }
-        // }
         .sticky {
             padding: 0 20px;
             .pgtitle {
