@@ -21,7 +21,7 @@ switch (cityName) {
 }
 
 let hourlyList = document.getElementById('hourlyData');
-let weatherURL = "https://dseckton.github.io/weather/js/weather.json";
+let weatherURL = "https://dseckton.github.io/cit260/weather/js/weather.json";
 
 // call fetch function
 // fetchData(weatherURL);

@@ -3,13 +3,12 @@
 *, *::after, *::before {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* general styles */
 html {
-  background-image: url(/acme/images/site/background.jpg);
+  background-image: url(/cit260/acme/images/site/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Lato", sans-serif;
@@ -43,7 +42,6 @@ nav {
   width: 100%;
   font-size: 1.2em;
 }
-
 nav noscript {
   color: white;
   font-size: 1.4em;
@@ -51,19 +49,14 @@ nav noscript {
   display: block;
   padding: 1em;
 }
-
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   padding: 10px;
 }
-
 nav ul li {
   padding-right: 10px;
 }
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
@@ -75,11 +68,9 @@ nav ul li a {
   color: #990033;
   position: relative;
 }
-
 #rocketman img {
   width: 100%;
 }
-
 #rocketman div {
   background-color: rgba(255, 255, 255, 0.7);
   width: 50%;
@@ -89,15 +80,13 @@ nav ul li a {
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transition: background-color .5s;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
-
 #rocketman div button {
   background-color: #f7f193;
   font-family: "Righteous", cursive;
   font-size: 1.3em;
-  padding: .5em;
+  padding: 0.5em;
   color: #808080;
   border-radius: 10px;
   width: 100%;
@@ -113,93 +102,64 @@ nav ul li a {
 /* recipes section styles */
 #recipes ul {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
   width: 90%;
 }
-
 #recipes ul li {
   text-align: center;
   width: 50%;
   padding: 2px;
 }
-
 #recipes ul li div {
   background-color: lightgray;
 }
-
 #recipes a, #recipes a:visited {
   color: #0000ee;
 }
 
 /* ITEM CONTENT STYLES */
 #content-container section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
 }
-
 #content-container section div {
   width: 100%;
   margin-bottom: 1em;
 }
-
 #content-container section div:first-of-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   max-height: 333px;
 }
-
 #content-container section div:first-of-type img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
-
 #content-container ul {
   padding: 10px 0;
   list-style-type: none;
 }
-
 #content-container #manufacturer::before {
-  content: 'Made By: ';
+  content: "Made By: ";
   font-weight: bold;
 }
-
 #content-container #rating::before {
-  content: 'Reviews: ';
+  content: "Reviews: ";
   font-weight: bold;
 }
-
 #content-container #rating::after {
-  content: '/5 stars';
+  content: "/5 stars";
 }
-
 #content-container #price {
   margin-top: 10px;
   font-size: 1.5em;
   font-weight: bold;
   color: #de2226;
 }
-
 #content-container #price::before {
-  content: 'Price: $';
+  content: "Price: $";
 }
 
 /* footer styles */
@@ -207,59 +167,47 @@ footer {
   border-top: solid 3px #000;
   text-align: center;
   padding: 5px;
-  margin-top: .8em;
+  margin-top: 0.8em;
 }
 
 /* media query */
 @media screen and (min-width: 740px) {
   /* layout adjustments */
   #home-container {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 3fr;
-        grid-template-columns: 2fr 3fr;
+    grid-template-columns: 2fr 3fr;
     grid-column-gap: 10px;
   }
+
   h1, #rocketman {
     grid-column: 1/-1;
   }
+
   #rocketman {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
   #rocketman div {
     background: none;
     padding-top: 1em;
   }
+
   #reviews {
     grid-column: 2/-1;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
+
   #recipes {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
     grid-column: 1/2;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
     grid-row: 3/4;
   }
   #recipes ul {
     width: 100%;
   }
+
   #content-container section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
   }
   #content-container section div {
@@ -267,12 +215,9 @@ footer {
   }
   #content-container section div:first-of-type {
     height: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
+
 /*# sourceMappingURL=main.css.map */

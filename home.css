@@ -413,6 +413,7 @@ footer p {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    overflow: visible;
   }
   header nav ul {
     justify-content: flex-start;
