@@ -26,7 +26,7 @@ let price = document.getElementById('price');
 let nav = document.getElementById('nav');
 
 //get the json file
-let json = "https://dseckton.github.io/acme/js/acme.json"
+let json = "https://dseckton.github.io/cit260/acme/js/acme.json"
 
 //get info from json
 fetch(json).then(function(response) {
