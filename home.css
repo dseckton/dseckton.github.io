@@ -451,6 +451,13 @@ footer p {
 @media only screen and (min-width: 1200px) {
   /* <header> styles */
   /* <main> styles */
+  main section {
+    justify-content: flex-start;
+  }
+  main section > article:nth-of-type(2), main section > article:nth-of-type(5), main section > article:nth-of-type(8) {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
   main article {
     width: 32%;
   }

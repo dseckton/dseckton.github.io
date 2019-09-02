@@ -523,6 +523,13 @@ footer {
     
     /* <main> styles */
     main {
+        section {
+            justify-content: flex-start;
+            &>article:nth-of-type(2), &>article:nth-of-type(5), &>article:nth-of-type(8) {
+                margin-right: 2%;
+                margin-left: 2%;
+            }
+        }
         article {
             width: 32%; // change this for rows
         }
