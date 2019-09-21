@@ -4,4 +4,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Turret Road", cursive;
 }
 
-/*# sourceMappingURL=main.css.map */
+picture {
+  float: none;
+}
+
+@media only screen and (min-width: 32.5em) {
+  picture {
+    float: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,9 @@
 @import 'typography';
 @import 'normalize.css';
 
+picture {
+    float: none;
+}
+
+
+@import 'queries';
