@@ -1,8 +1,102 @@
 @import 'typography';
 @import 'normalize.css';
+@import 'colors';
 
-picture {
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .me {
+    font-family: 'Turret Road', cursive;
+}
+
+html {
+    background-color: $color1;
+}
+
+body {
+    background-color: white;
+}
+
+main {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }  
+
+#pic {
     float: none;
+    clear: both;
+    img {
+        width: 100%;
+    }
+}
+
+.padding-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+header, footer {
+    background-color: $color1;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+header {
+    border-bottom: solid 4px darken($color1, 10%);
+}
+
+nav {
+    background-color: darken($color1, 15%);
+    margin: 0;
+    padding-bottom: 0;
+    border-radius: 0 0 20px 20px;
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+        li {
+            list-style-type: none;
+            margin-right: .5em;
+            a {
+                display: block;
+                padding: 1em;
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    background-color: darken($color1, 10%);
+                }
+            }
+        }
+    }
+}
+
+footer {
+    border-radius: 20px 20px 0 0;
+    clear: both;
+    text-align: center;
+    p {
+        margin: 0;
+        margin-top: .4em;
+    }
+    a {
+        color: black;
+    }
+}
+
+h1 {
+    border-bottom: solid black 1px;
+}
+
+.me {
+    font-size: 3em;
 }
 
 

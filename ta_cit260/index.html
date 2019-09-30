@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Daniel Eckton">
+    <meta name="description" content="Simple web portal for my CIT 230 assignments.">
     <title>Home | dseckton.github.io/ta_cit260</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <div>Home | dseckton.github.io/ta_cit260</div>
-        <nav>
-            <ul>
-                <li><a href="">Link numero uno</a></li>
-                <li><a href="">Link numero dos</a></li>
-            </ul>
-        </nav>
+        <div class="padding-container">
+            <div class="me">Daniel Eckton</div>
+        </div>
+        
     </header>
 
+    <nav>
+        <div class="padding-container">
+            <ul>
+                <li><a href="#">Homepage</a></li>
+                <!-- <li><a href=""></a></li> -->
+            </ul>
+        </div>
+    </nav>
+
     <main>
-        <h1>Daniel Eckton</h1>
-        <picture>
-            <img src="images/profilio.jpeg" alt="">
-        </picture>
-        <h2>CIT 230: Assignment Portal</h2>
-        <ul>
-            <li>Lesson 02: <a href="">Assignment Link</a></li>
-            <li>Lesson 03: <a href="">Assignment Link</a></li>
-            <li>Lesson 04: <a href="">Link</a> | <a href="">Link</a></li>
-        </ul>
+        <div class="padding-container">
+            <div id="pic">
+                <img src="images/profilio.jpeg" alt="Daniel Eckton, looking to his right.">
+            </div>
+            <h1>CIT 230: Assignment Portal</h1>
+            <ul>
+                <li>Lesson 02: <a href="lesson2/design-principles.html">Design Principles</a></li>
+                <li>Lesson 03: <a href="">Assignment Link</a></li>
+                <li>Lesson 04: <a href="">Link</a> | <a href="">Link</a></li>
+            </ul>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; | Daniel Eckton | Idaho | CIT 260</p>
-        <p>Last Updated: 09/20/2019</p>
+        <div class="padding-container">
+            <p>&copy; Daniel Eckton | Idaho | CIT 260 | <a href="https://developer.mozilla.org/en-US/">MDN Web Documentation</a></p>
+            <p>Last Updated: <span id="partyTime"></span></p>
+        </div>
     </footer>
+
+    <script src="js/docload.js"></script>
 </body>
 </html>

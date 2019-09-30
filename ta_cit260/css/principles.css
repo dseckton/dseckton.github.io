@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Turret+Road&display=swap");
+@import 'normalize.css';
+.padding-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .me {
+  font-family: "Turret Road", cursive;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  padding: 0.5em;
+}
+
+header, footer {
+  background-color: #408000;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+header {
+  border-bottom: solid 4px #274d00;
+}
+header .me {
+  font-size: 3em;
+}
+
+nav {
+  background-color: #1a3400;
+  margin: 0;
+  padding-bottom: 0;
+  border-radius: 0 0 20px 20px;
+}
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style-type: none;
+  margin-right: 0.5em;
+}
+nav ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  background-color: #274d00;
+}
+
+a {
+  color: black;
+}
+a img {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+}
+
+section {
+  overflow: hidden;
+}
+
+.section-head {
+  background-color: #274d00;
+  border-radius: 10px 10px 0 0;
+  color: white;
+}
+
+.section-content {
+  background-color: #408000;
+  padding: 5px;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 30px;
+}
+
+footer {
+  border-radius: 20px 20px 0 0;
+  clear: both;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  margin-top: 0.4em;
+}
+footer a {
+  color: black;
+}
+
+@media screen and (min-width: 620px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid section:last-of-type {
+    grid-column-start: 1;
+    grid-column-end: -1;
+  }
+}
+@media screen and (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid section:last-of-type {
+    grid-column-start: -2;
+    grid-column-end: -1;
+  }
+}
+
+/*# sourceMappingURL=principles.css.map */
