@@ -1,5 +1,54 @@
 @import url("https://fonts.googleapis.com/css?family=Turret+Road&display=swap");
 @import 'normalize.css';
+header {
+  border-bottom: solid 4px #274d00;
+  background-color: #408000;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+nav {
+  background-color: #1a3400;
+  margin: 0;
+  padding-bottom: 0;
+  border-radius: 0 0 20px 20px;
+}
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  list-style-type: none;
+  margin-right: 0.5em;
+}
+nav ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  background-color: #274d00;
+}
+
+footer {
+  background-color: #408000;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-radius: 20px 20px 0 0;
+  clear: both;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  margin-top: 0.4em;
+}
+footer a {
+  color: black;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -38,55 +87,6 @@ main {
   padding-right: 20px;
   max-width: 940px;
   margin: 0 auto;
-}
-
-header, footer {
-  background-color: #408000;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-
-header {
-  border-bottom: solid 4px #274d00;
-}
-
-nav {
-  background-color: #1a3400;
-  margin: 0;
-  padding-bottom: 0;
-  border-radius: 0 0 20px 20px;
-}
-nav ul {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  list-style-type: none;
-  margin-right: 0.5em;
-}
-nav ul li a {
-  display: block;
-  padding: 1em;
-  text-decoration: none;
-  color: white;
-}
-nav ul li a:hover {
-  background-color: #274d00;
-}
-
-footer {
-  border-radius: 20px 20px 0 0;
-  clear: both;
-  text-align: center;
-}
-footer p {
-  margin: 0;
-  margin-top: 0.4em;
-}
-footer a {
-  color: black;
 }
 
 h1 {
