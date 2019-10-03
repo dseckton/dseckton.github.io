@@ -1,0 +1,24 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.padding-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+html {
+    background-color: $color1;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+}
+
+main {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}  

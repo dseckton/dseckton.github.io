@@ -1,21 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Turret+Road&display=swap");
-@import 'normalize.css';
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Oswald&display=swap");
 * {
   font-family: sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, .me {
-  font-family: "Turret Road", cursive;
-}
-
-header {
-  border-bottom: solid 4px #274d00;
-  background-color: #408000;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-}
-header .me {
-  font-size: 3em;
+  font-family: "Turret Road", sans-serif;
 }
 
 nav {
@@ -42,6 +32,16 @@ nav ul li a {
 }
 nav ul li a:hover {
   background-color: #274d00;
+}
+
+header {
+  border-bottom: solid 4px #274d00;
+  background-color: #408000;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+header .me {
+  font-size: 3em;
 }
 
 footer {
@@ -85,28 +85,54 @@ main {
   padding-bottom: 50px;
 }
 
-#pic {
-  float: none;
-  clear: both;
+.logo {
+  max-width: 40px;
+  display: block;
 }
-#pic img {
+
+.li-desc {
+  font-weight: bold;
+}
+
+.colorlist {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+.colorlist li {
+  display: block;
+  padding: 2em;
+  color: white;
+}
+.colorlist li:first-of-type {
+  background-color: #aa8439;
+}
+.colorlist li:nth-of-type(2) {
+  background-color: #d4c26a;
+}
+.colorlist li:last-of-type {
+  background-color: #d49a6a;
+}
+
+.persona {
   width: 100%;
 }
-@media only screen and (min-width: 32.5em) {
-  #pic {
-    float: right;
-    max-width: 200px;
-    margin-right: 2em;
-    margin-top: -1em;
-  }
+
+.content .personalinfo > li {
+  margin-bottom: 1em;
 }
 
-h1 {
-  border-bottom: solid black 1px;
-}
-
-.me {
+.type {
   font-size: 3em;
 }
 
-/*# sourceMappingURL=style.css.map */
+.headerfont span {
+  font-family: "Oswald", sans-serif;
+}
+
+.mainfont span {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/*# sourceMappingURL=planning.css.map */

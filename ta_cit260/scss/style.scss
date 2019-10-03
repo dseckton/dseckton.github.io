@@ -4,31 +4,8 @@
 @import 'header';
 @import 'nav';
 @import 'footer';
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-* {
-    font-family: sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, .me {
-    font-family: 'Turret Road', cursive;
-}
-
-html {
-    background-color: $color1;
-}
-
-body {
-    background-color: white;
-}
-
-main {
-    padding-top: 20px;
-    padding-bottom: 50px;
-  }  
+@import 'common';
+@import 'queries';
 
 #pic {
     float: none;
@@ -44,13 +21,6 @@ main {
     }
 }
 
-.padding-container {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 940px;
-    margin: 0 auto;
-}
-
 h1 {
     border-bottom: solid black 1px;
 }
@@ -58,6 +28,3 @@ h1 {
 .me {
     font-size: 3em;
 }
-
-
-@import 'queries';

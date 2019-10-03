@@ -5,21 +5,7 @@
 @import 'header';
 @import 'footer';
 @import 'nav';
-
-.padding-container {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 940px;
-    margin: 0 auto;
-}
-
-* {
-    font-family: sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6, .me {
-    font-family: 'Turret Road', cursive;
-}
+@import 'common';
 
 h1, h2 {
     text-align: center;

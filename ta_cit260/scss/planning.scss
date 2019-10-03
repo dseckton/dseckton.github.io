@@ -1,0 +1,64 @@
+@import 'colors';
+@import 'typography';
+@import 'nav';
+@import 'header';
+@import 'footer';
+@import 'common';
+
+.logo {
+    max-width: 40px;
+    display: block;
+}
+
+.li-desc {
+    font-weight: bold;
+}
+
+.colorlist {
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding-left: 0;
+    li {
+        display: block;
+        padding: 2em;
+        color: white;
+        &:first-of-type {
+            background-color: $maincolor;
+        }
+        &:nth-of-type(2) {
+            background-color: $secondarycolor;
+        }
+        &:last-of-type {
+            background-color: $tertiarycolor;
+        }
+    }
+}
+
+.persona {
+    width: 100%;
+}
+
+.content {
+    .personalinfo {
+        &>li {
+            margin-bottom: 1em;
+        }
+    }
+}
+
+.type {
+    font-size: 3em;
+}
+
+.headerfont {
+    span {
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+.mainfont {
+    span {
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+}

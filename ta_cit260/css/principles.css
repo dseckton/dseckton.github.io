@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Turret+Road&display=swap");
 @import 'normalize.css';
+* {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .me {
+  font-family: "Turret Road", cursive;
+}
+
 header {
   border-bottom: solid 4px #274d00;
   background-color: #408000;
@@ -52,6 +60,10 @@ nav ul li a:hover {
   background-color: #274d00;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .padding-container {
   padding-left: 20px;
   padding-right: 20px;
@@ -59,12 +71,18 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-* {
-  font-family: sans-serif;
+html {
+  background-color: #408000;
 }
 
-h1, h2, h3, h4, h5, h6, .me {
-  font-family: "Turret Road", cursive;
+body {
+  background-color: white;
+  margin: 0;
+}
+
+main {
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 h1, h2 {
