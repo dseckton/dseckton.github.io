@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="A summary of the weather info for Preston, Idaho.">
+    <meta name="author" content="Daniel Eckton">
+    <title>Preston ID | Weather Today</title>
+
+    <link rel="stylesheet" href="../css/weather.css">
+    <link rel="icon"  href="../images/weather-logo.png">
+</head>
+<body>
+    <header>
+        <div class="padding-container">
+            <div id="site-logo">
+                <img src="../images/weather-logo.png" alt="">
+            </div>
+            <div class="page-header">
+                <span>Weather Today</span>
+
+            </div>
+            <div class="brief">
+                <span id="preview">32&deg;F</span>
+                <img src="../images/icons/hail.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div id="disabler" class="closed"></div>
+    <nav id="menu-nav" class="closed">
+        <button id="nav-toggle"><span id="menu-arrow" class="closed"></span></button>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Preston</a></li>
+            <li><a href="">Soda Springs</a></li>
+            <li><a href="">Fish Haven</a></li>
+            <li><a href="">Storm Center</a></li>
+            <li><a href="">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="padding-container">
+            <section>
+                <div class="location-intro">
+                    <h1 id="location-name">Preston, ID</h1>
+                    <div class="local-coords">GPS: <span id="latitude">42.095 N</span> | <span id="longitude">111.875 W</span></div>
+                </div>
+                <div class="weather-info">
+                    <div class="glance">
+                        <div class="current-temp">
+                            32&deg;F
+                        </div>
+                        <div class="hi-low">
+                            <span id="high">45&deg;F</span>
+                            <span id="low">28&deg;F</span>
+                        </div>
+                        <div class="feels">Feels like: 
+                            <span id="feel-temp">30&deg;F</span>
+                        </div>
+                        <div class="wind">
+                            <span id="speed">7mph</span>
+                            <span id="gusts">12-15mph</span>
+                        </div>
+                    </div>
+                    <div id="temp" class="sm-module">
+                        Temperature
+                        <div id="temp-forecast" class="forecast-graphic">
+                            
+                        </div>
+                    </div>
+                    <div id="precip" class="sm-module">
+                        Precipitaion
+                        <div id="precip-forecast" class="forecast-graphic">
+
+                        </div>
+                    </div>
+                    <div id="cond" class="sm-module">
+                        Conditions
+                        <div id="cond-forecast" class="forecast-graphic">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="padding-container">
+            <div class="upper-footer">
+                <div>
+                    Contact info
+                </div>
+                <div>
+                    Site map
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div>
+                    &copy; - Daniel Eckton
+                </div>
+                <div>
+                    Terms of use
+                </div>
+                <div>
+                    <span id="current-date"></span>
+                </div>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"         title="Flaticon">www.flaticon.com</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/functions.js"></script>
+</body>
+</html>
