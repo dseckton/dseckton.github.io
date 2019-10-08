@@ -102,14 +102,14 @@ nav {
     
     button {
         position: absolute;
-        right: -30px;
+        right: -45px;
         top: 90px;
-        width: 30px;
-        height: 60px;
+        width: 45px;
+        height: 70px;
         padding-left: 5px;
         background-color:  #538628;
-        border-top-right-radius: 60px;
-        border-bottom-right-radius: 60px;
+        border-top-right-radius: 70px;
+        border-bottom-right-radius: 70px;
         border: transparent;
         cursor: pointer;
     }
@@ -117,16 +117,16 @@ nav {
         display: block;
         height: 0;
         width: 0;
-        border-right: solid 10px white;
-            border-top: solid 10px transparent;
-            border-bottom: solid 10px transparent;
+        border-right: solid 20px white;
+            border-top: solid 15px transparent;
+            border-bottom: solid 15px transparent;
             border-left: solid 0px transparent;
         &.closed {
-            border-left: solid 10px white;
-        border-top: solid 10px transparent;
-        border-bottom: solid 10px transparent;
-        border-right: solid 0px transparent;
-        margin-left: 3px;
+            border-left: solid 20px white;
+            border-top: solid 15px transparent;
+            border-bottom: solid 15px transparent;
+            border-right: solid 0px transparent;
+            margin-left: 5px;
         }
     }
     ul {
