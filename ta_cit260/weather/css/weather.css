@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .brief img {
-  width: 1.5em;
+  width: 1.6em;
 }
 
 header {
@@ -101,37 +101,42 @@ nav {
   top: 0;
   left: 0;
 }
+@media only screen and (min-width: 480px) {
+  nav {
+    position: sticky;
+    width: 100%;
+    height: auto;
+    transition-duration: 0s;
+    top: -1px;
+  }
+}
 nav.closed {
   transform: translatex(-250px);
 }
+@media only screen and (min-width: 480px) {
+  nav.closed {
+    transform: none;
+  }
+}
 nav button {
   position: absolute;
-  right: -45px;
+  right: -40px;
   top: 90px;
-  width: 45px;
-  height: 70px;
-  padding-left: 5px;
+  width: 40px;
+  height: 65px;
+  padding-left: 3px;
   background-color: #538628;
   border-top-right-radius: 70px;
   border-bottom-right-radius: 70px;
   border: transparent;
   cursor: pointer;
+  color: white;
+  font-size: 1.8em;
 }
-nav #menu-arrow {
-  display: block;
-  height: 0;
-  width: 0;
-  border-right: solid 20px white;
-  border-top: solid 15px transparent;
-  border-bottom: solid 15px transparent;
-  border-left: solid 0px transparent;
-}
-nav #menu-arrow.closed {
-  border-left: solid 20px white;
-  border-top: solid 15px transparent;
-  border-bottom: solid 15px transparent;
-  border-right: solid 0px transparent;
-  margin-left: 5px;
+@media only screen and (min-width: 480px) {
+  nav button {
+    display: none;
+  }
 }
 nav ul {
   display: flex;
@@ -140,15 +145,32 @@ nav ul {
   list-style: none;
   margin: 0;
 }
+@media only screen and (min-width: 480px) {
+  nav ul {
+    flex-direction: row;
+    text-align: center;
+    align-items: stretch;
+  }
+}
 nav ul li {
-  border-top: solid 1px transparent;
-  border-bottom: solid 1px transparent;
+  border: solid 1px transparent;
   transform-origin: 0 50%;
   transition-duration: 0.3s;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 nav ul li:hover {
   border-top: solid 1px rgba(255, 255, 255, 0.3);
   border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+}
+@media only screen and (min-width: 480px) {
+  nav ul li:hover {
+    border-right: solid 1px rgba(255, 255, 255, 0.3);
+    border-left: solid 1px rgba(255, 255, 255, 0.3);
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+  }
 }
 nav ul li a {
   display: block;
@@ -161,17 +183,26 @@ nav ul li a {
 main {
   padding-top: 2em;
 }
+@media only screen and (min-width: 480px) {
+  main {
+    padding-top: 1em;
+  }
+}
 
 h1 {
   font-size: 2.2em;
   margin: 0 0 5px 0;
   padding: 0;
   line-height: 1em;
-  text-align: center;
 }
 
-.local-coords {
+.location-intro {
   text-align: center;
+}
+@media only screen and (min-width: 480px) {
+  .location-intro {
+    text-align: left;
+  }
 }
 
 .weather-info {
@@ -200,6 +231,11 @@ h1 {
   text-align: center;
   padding: 0.8em;
   margin-bottom: 1em;
+}
+
+section > div {
+  max-width: 900px;
+  margin: inherit auto;
 }
 
 .current-temp {
