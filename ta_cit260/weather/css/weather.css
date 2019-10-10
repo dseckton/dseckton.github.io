@@ -15,17 +15,6 @@ h1, h2, h3, h4, h5, h6, .me {
   box-sizing: border-box;
 }
 
-input[type=button] {
-  outline: none;
-}
-input[type=button]::moz-focus-inner {
-  border: 0;
-}
-input[type=button]:focus {
-  outline: none;
-  border: 0;
-}
-
 body {
   margin: 0;
 }
@@ -95,13 +84,13 @@ header #preview {
 nav {
   width: 250px;
   position: fixed;
-  background-color: #538628;
+  background-color: #3C631D;
   height: 100vh;
   transition-duration: 0.8s;
   top: 0;
   left: 0;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   nav {
     position: sticky;
     width: 100%;
@@ -113,7 +102,7 @@ nav {
 nav.closed {
   transform: translatex(-250px);
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   nav.closed {
     transform: none;
   }
@@ -125,7 +114,7 @@ nav button {
   width: 40px;
   height: 65px;
   padding-left: 3px;
-  background-color: #538628;
+  background-color: #3C631D;
   border-top-right-radius: 70px;
   border-bottom-right-radius: 70px;
   border: transparent;
@@ -133,7 +122,7 @@ nav button {
   color: white;
   font-size: 1.8em;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   nav button {
     display: none;
   }
@@ -145,7 +134,7 @@ nav ul {
   list-style: none;
   margin: 0;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   nav ul {
     flex-direction: row;
     text-align: center;
@@ -164,7 +153,7 @@ nav ul li:hover {
   border-top: solid 1px rgba(255, 255, 255, 0.3);
   border-bottom: solid 1px rgba(255, 255, 255, 0.3);
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   nav ul li:hover {
     border-right: solid 1px rgba(255, 255, 255, 0.3);
     border-left: solid 1px rgba(255, 255, 255, 0.3);
@@ -183,7 +172,7 @@ nav ul li a {
 main {
   padding-top: 2em;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   main {
     padding-top: 1em;
   }
@@ -199,7 +188,7 @@ h1 {
 .location-intro {
   text-align: center;
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 495px) {
   .location-intro {
     text-align: left;
   }
@@ -210,6 +199,18 @@ h1 {
   flex-flow: column nowrap;
   border-radius: 10px;
   margin-top: 20px;
+}
+@media only screen and (min-width: 620px) {
+  .weather-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1em;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .weather-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .sm-module {
@@ -223,6 +224,22 @@ h1 {
   align-content: center;
   padding: 0.8em;
   margin-bottom: 1em;
+  grid-column: span 2;
+}
+@media only screen and (min-width: 900px) {
+  .sm-module {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 620px) {
+  .sm-module:last-of-type {
+    grid-column: 2/span 2;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .sm-module:last-of-type {
+    grid-column: span 1;
+  }
 }
 
 .glance {
@@ -231,11 +248,18 @@ h1 {
   text-align: center;
   padding: 0.8em;
   margin-bottom: 1em;
+  width: 100%;
+}
+@media only screen and (min-width: 620px) {
+  .glance {
+    grid-column: 1/-1;
+  }
 }
 
-section > div {
-  max-width: 900px;
-  margin: inherit auto;
+article {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
 }
 
 .current-temp {
@@ -244,11 +268,11 @@ section > div {
 }
 
 #high {
-  color: red;
+  color: #b60000;
 }
 
 #low {
-  color: blue;
+  color: #0001b6;
 }
 
 .forecast-graphic {
@@ -265,7 +289,17 @@ footer {
 }
 footer .padding-container {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+footer .upper-footer {
+  text-align: center;
+}
+footer .lower-footer {
+  text-align: center;
 }
 
 /*# sourceMappingURL=weather.css.map */

@@ -10,16 +10,16 @@
     }
 }
 
-input[type="button"] {
-    outline: none;
-    &::moz-focus-inner {
-        border: 0;
-    }
-    &:focus {
-        outline:none;
-        border: 0;
-    }
-}
+// input[type="button"] {
+//     outline: none;
+//     &::moz-focus-inner {
+//         border: 0;
+//     }
+//     &:focus {
+//         outline:none;
+//         border: 0;
+//     }
+// }
 
 body {
     margin: 0;
@@ -91,7 +91,7 @@ header {
 nav {
     width: 250px;
     position: fixed;
-    background-color: #538628;
+    background-color: #3C631D;
     height: 100vh;
     transition-duration: .8s;
     top: 0;
@@ -117,7 +117,7 @@ nav {
         width: 40px;
         height: 65px;
         padding-left: 3px;
-        background-color:  #538628;
+        background-color:  #3C631D;
         border-top-right-radius: 70px;
         border-bottom-right-radius: 70px;
         border: transparent;
@@ -200,6 +200,14 @@ h1 {
     // border: solid black 1px;
     border-radius: 10px;
     margin-top: 20px;
+    @include medium-screen {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1em;
+    }
+    @include large-screen {
+        grid-template-columns: repeat(3, 1fr)
+    }
 }
 
 .sm-module {
@@ -213,6 +221,18 @@ h1 {
     align-content: center;
     padding: .8em;
     margin-bottom: 1em;
+    grid-column: span 2;
+    @include large-screen {
+        grid-column: span 1;
+    }
+    &:last-of-type {
+        @include medium-screen {
+            grid-column: 2 / span 2;
+        }
+        @include large-screen {
+            grid-column: span 1;
+        }
+    }
 }
 
 .glance {
@@ -221,13 +241,19 @@ h1 {
     text-align: center;
     padding: .8em;
     margin-bottom: 1em;
+    width: 100%;
+    // max-width: 620px;
+    // margin-right: auto;
+    // margin-left: auto;
+    @include medium-screen {
+        grid-column: 1 / -1;
+    }
 }
 
-section {
-    &>div {
-        max-width: 900px;
-        margin: inherit auto;
-    }
+article {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
 }
 
 .current-temp {
@@ -236,11 +262,11 @@ section {
 }
 
 #high {
-    color: red;
+    color: #b60000;
 }
 
 #low {
-    color: blue;
+    color: #0001b6;
 }
 
 .forecast-graphic {
@@ -256,6 +282,16 @@ footer {
     padding: 10px 0;
     .padding-container {
         display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
+        max-width: 1100px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .upper-footer {
+        text-align: center;
+    }
+    .lower-footer {
+        text-align: center;
     }
 }
