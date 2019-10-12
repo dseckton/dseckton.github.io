@@ -161,6 +161,18 @@ nav ul li:hover {
     border-bottom: solid 1px transparent;
   }
 }
+nav ul li.current-page {
+  border-top: solid 1px rgba(255, 255, 255, 0.5);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+@media only screen and (min-width: 495px) {
+  nav ul li.current-page {
+    border-right: solid 1px rgba(255, 255, 255, 0.5);
+    border-left: solid 1px rgba(255, 255, 255, 0.5);
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent;
+  }
+}
 nav ul li a {
   display: block;
   padding: 0.8em;
