@@ -84,6 +84,7 @@ header #preview {
 nav {
   width: 250px;
   position: fixed;
+  z-index: 3;
   background-color: #3C631D;
   height: 100vh;
   transition-duration: 0.8s;
@@ -148,6 +149,7 @@ nav ul li {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  width: 100%;
 }
 nav ul li:hover {
   border-top: solid 1px rgba(255, 255, 255, 0.3);
@@ -289,9 +291,6 @@ article {
 
 .forecast-graphic {
   display: block;
-  background-color: lightgray;
-  width: 70%;
-  padding-bottom: 70%;
   margin-top: 0.8em;
 }
 
@@ -312,6 +311,194 @@ footer .upper-footer {
 }
 footer .lower-footer {
   text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  z-index: 2;
+}
+
+.component {
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.outer {
+  position: absolute;
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+}
+
+.inner {
+  display: grid;
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  left: 15%;
+  top: 15%;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(14, 1fr);
+}
+
+.indicator {
+  width: 1.5em;
+  height: 1.5em;
+  background-color: red;
+  border-radius: 2em;
+  grid-column: 4/span 2;
+  grid-row: 2/span 2;
+}
+
+.twelveOut {
+  grid-column: 7/span 2;
+  grid-row: 1/span 2;
+}
+
+.twelveIn {
+  grid-column: 7/span 2;
+  grid-row: 1/span 2;
+}
+
+.elevenOut {
+  grid-column: 4/span 2;
+  grid-row: 2/span 2;
+}
+
+.elevenIn {
+  grid-column: 4/span 2;
+  grid-row: 2/span 2;
+}
+
+.tenOut {
+  grid-column: 2/span 2;
+  grid-row: 4/span 2;
+}
+
+.tenIn {
+  grid-column: 2/span 2;
+  grid-row: 4/span 2;
+}
+
+.nineOut {
+  grid-column: 1/span 2;
+  grid-row: 7/span 2;
+}
+
+.nineIn {
+  grid-column: 1/span 2;
+  grid-row: 7/span 2;
+}
+
+.eightOut {
+  grid-column: 2/span 2;
+  grid-row: -6/span 2;
+}
+
+.eightIn {
+  grid-column: 2/span 2;
+  grid-row: -6/span 2;
+}
+
+.sevenOut {
+  grid-column: 4/span 2;
+  grid-row: -4/span 2;
+}
+
+.sevenIn {
+  grid-column: 4/span 2;
+  grid-row: -4/span 2;
+}
+
+.sixOut {
+  grid-column: 7/span 2;
+  grid-row: -3/span 2;
+}
+
+.sixIn {
+  grid-column: 7/span 2;
+  grid-row: -3/span 2;
+}
+
+.fiveOut {
+  grid-column: -6/span 2;
+  grid-row: -4/span 2;
+}
+
+.fiveIn {
+  grid-column: -6/span 2;
+  grid-row: -4/span 2;
+}
+
+.fourOut {
+  grid-column: -4/span 2;
+  grid-row: -6/span 2;
+}
+
+.fourIn {
+  grid-column: -4/span 2;
+  grid-row: -6/span 2;
+}
+
+.threeOut {
+  grid-column: -3/span 2;
+  grid-row: 7/span 2;
+}
+
+.threeIn {
+  grid-column: -3/span 2;
+  grid-row: 7/span 2;
+}
+
+.twoOut {
+  grid-column: -4/span 2;
+  grid-row: 4/span 2;
+}
+
+.twoIn {
+  grid-column: -4/span 2;
+  grid-row: 4/span 2;
+}
+
+.oneOut {
+  grid-column: -6/span 2;
+  grid-row: 2/span 2;
+}
+
+.oneIn {
+  grid-column: -6/span 2;
+  grid-row: 2/span 2;
+}
+
+.circular {
+  /*  box-sizing: border-box; */
+  position: absolute;
+  width: 68%;
+  height: 68%;
+  top: 16%;
+  left: 16%;
+  border-radius: 50%;
+  background: radial-gradient(circle, transparent 50%, lightgray 30%);
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 2.5em;
 }
 
 /*# sourceMappingURL=weather.css.map */
