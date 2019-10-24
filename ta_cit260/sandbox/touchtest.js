@@ -10,7 +10,7 @@ touchMe.addEventListener('touchmove', function() {
     touchMe.classList.add('touching');
 })
 
-touchMe.addEventListener('touchend', function {
+touchMe.addEventListener('touchend', function() {
     touchMe.classList.remove('touching', 'touched');
     touchMe.classList.add('untouch');
 })
