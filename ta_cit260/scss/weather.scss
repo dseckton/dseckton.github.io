@@ -190,6 +190,41 @@ main {
     }
 }
 
+.snow {
+    background-image: url('../images/pics/snow-sm.jpg');
+    @include medium-screen {
+        background-image: url('../images/pics/snow-lg.jpg');
+    }
+}
+
+.clear {
+    background-image: url('../images/pics/clear-sm.jpg');
+    @include medium-screen {
+        background-image: url('../images/pics/clear-lg.jpg');
+    }
+}
+
+.rain {
+    background-image: url('../images/pics/rain-sm.jpg');
+    @include medium-screen {
+        background-image: url('../images/pics/rain-lg.jpg');
+    }
+}
+
+.cloud {
+    background-image: url('../images/pics/cloud-sm.jpg');
+    @include medium-screen {
+        background-image: url('../images/pics/cloud-lg.jpg');
+    }
+}
+
+.fog {
+    background-image: url('../images/pics/fog-sm.jpg');
+    @include medium-screen {
+        background-image: url('../images/pics/fog-lg.jpg');
+    }
+}
+
 h1 {
     font-size: 2.2em;
     margin: 0 0 5px 0;
@@ -208,12 +243,20 @@ h1 {
     }
 }
 
-.weather-info {
+.glance, .sm-module {
+  background-color: rgba(255,255,255,.7);
+  box-shadow: 1px 1px 3px black;
+}
+
+#weather-info {
     display: flex;
     flex-flow: column nowrap;
     // border: solid black 1px;
     border-radius: 10px;
     margin-top: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @include medium-screen {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -225,7 +268,7 @@ h1 {
 }
 
 .sm-module {
-    border: solid black 1px;
+    // border: solid black 1px;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -250,7 +293,7 @@ h1 {
 }
 
 .glance {
-    border: solid black 1px;
+    // border: solid black 1px;
     border-radius: 10px;
     text-align: center;
     padding: .8em;
@@ -270,7 +313,7 @@ article {
     max-width: 1100px;
 }
 
-.current-temp {
+#current-temp {
     font-size: 3em;
     font-weight: 700;
 }
@@ -346,105 +389,58 @@ ul {
   .indicator {
     width: 1.5em;
     height: 1.5em;
-    background-color: red;
+    background-color:#ff3333;
     border-radius: 2em;
-    grid-column: 4 / span 2;
-    grid-row: 2 / span 2;
+    // grid-column: 4 / span 2;
+    // grid-row: 2 / span 2;
   }
   
-  .twelveOut {
+  
+  .twelve {
     grid-column: 7 / span 2;
     grid-row: 1 / span 2;
   }
-  .twelveIn {
-    grid-column: 7 / span 2;
-    grid-row: 1 / span 2;
-  }
-  .elevenOut {
+  .eleven {
     grid-column: 4 / span 2;
     grid-row: 2 / span 2;
   }
-  .elevenIn {
-     grid-column: 4 / span 2;
-    grid-row: 2 / span 2;
-  }
-  .tenOut {
-    grid-column: 2 / span 2;
-    grid-row: 4 / span 2;
-  }
-  .tenIn {
+  .ten {
    grid-column: 2 / span 2;
     grid-row: 4 / span 2;
   }
-  .nineOut {
+  .nine {
     grid-column: 1 / span 2;
     grid-row: 7 / span 2;
   }
-  .nineIn {
-    grid-column: 1 / span 2;
-    grid-row: 7 / span 2;
-  }
-  .eightOut {
+  .eight {
     grid-column: 2 / span 2;
     grid-row: -6 / span 2;
   }
-  .eightIn {
-  grid-column: 2 / span 2;
-    grid-row: -6 / span 2;
-  }
-  .sevenOut {
+  .seven {
     grid-column: 4 / span 2;
     grid-row: -4 / span 2;
   }
-  .sevenIn {
-    grid-column: 4 / span 2;
-    grid-row: -4 / span 2;
-  }
-  .sixOut {
+  .six {
     grid-column: 7 / span 2;
     grid-row: -3 / span 2;
   }
-  .sixIn {
-    grid-column: 7 / span 2;
-    grid-row: -3 / span 2;
-  }
-  .fiveOut {
+  .five {
     grid-column: -6 / span 2;
     grid-row: -4 / span 2;
   }
-  .fiveIn {
-    grid-column: -6 / span 2;
-    grid-row: -4 / span 2;
-  }
-  .fourOut {
+  .four {
     grid-column: -4 / span 2;
     grid-row: -6 / span 2;
   }
-  .fourIn {
-      grid-column: -4 / span 2;
-    grid-row: -6 / span 2;
-  }
-  .threeOut {
+  .three {
     grid-column: -3 / span 2;
     grid-row: 7 / span 2;
   }
-  .threeIn {
-     grid-column: -3 / span 2;
-    grid-row: 7 / span 2;
-  }
-  .twoOut {
+  .two {
      grid-column: -4 / span 2;
     grid-row: 4 / span 2;
   }
-  .twoIn {
-    grid-column: -4 / span 2;
-    grid-row: 4 / span 2;
-  }
-  .oneOut {
-     grid-column: -6 / span 2;
-    grid-row: 2 / span 2;
-  }
-  .oneIn {
+  .one {
     grid-column: -6 / span 2;
     grid-row: 2 / span 2;
   }
@@ -457,8 +453,8 @@ ul {
     top: 18%;
     left: 18%;
     border-radius: 50%;
-     background: radial-gradient(circle, transparent 40%, lightgray 10%);;
-      border-radius: 100%;
+    background: radial-gradient(circle, transparent 40%, #94c968 10%);;
+    border-radius: 100%;
     z-index: 1;
   }
   

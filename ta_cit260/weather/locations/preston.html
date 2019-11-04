@@ -22,7 +22,7 @@
                 Embrace the day
             </div>
             <div class="brief">
-                <span id="preview">32&deg;F</span>
+                <span id="preview"></span>
                 <img src="../images/icons/hail.png" alt="">
             </div>
         </div>
@@ -48,20 +48,18 @@
                     <h1 id="location-name">Preston, ID</h1>
                     <div class="local-coords">GPS: <span id="latitude">42.095 N</span> | <span id="longitude">111.875 W</span></div>
                 </section>
-                <div class="weather-info">
+                <div id="weather-info" class="snow">
                     <section class="glance">
-                        <div class="current-temp">
-                            32&deg;F
-                        </div>
+                        <div id="current-temp"></div>
                         <div class="hi-low">
                             <span id="high">45&deg;F</span>
                             <span id="low">28&deg;F</span>
                         </div>
                         <div class="feels">Feels like: 
-                            <span id="feel-temp">30&deg;F</span>
+                            <span id="feel-temp"></span>
                         </div>
                         <div class="wind">
-                            <span id="speed">7mph</span>
+                            <span id="speed"></span>
                             <span id="gusts">12-15mph</span>
                         </div>
                     </section>
@@ -70,33 +68,33 @@
                         <div id="temp-forecast" class="forecast-graphic">
                             <div class="component">
                                 <ul class="outer">
-                                  <li class="twelveOut">53</li>
-                                  <li class="oneOut">57</li>
-                                  <li class="twoOut">58</li>
-                                  <li class="threeOut">57</li>
-                                  <li class="fourOut">58</li>
-                                  <li class="fiveOut">57</li>
-                                  <li class="sixOut">58</li>
-                                  <li class="sevenOut">58</li>
-                                  <li class="eightOut">55</li>
-                                  <li class="nineOut">53</li>
-                                  <li class="tenOut">52</li>
-                                  <li class="elevenOut">50</li>
+                                  <li class="twelve">53</li>
+                                  <li class="one">57</li>
+                                  <li class="two">58</li>
+                                  <li class="three">57</li>
+                                  <li class="four">58</li>
+                                  <li class="five">57</li>
+                                  <li class="six">58</li>
+                                  <li class="seven">58</li>
+                                  <li class="eight">55</li>
+                                  <li class="nine">53</li>
+                                  <li class="ten">52</li>
+                                  <li class="eleven">50</li>
                                 </ul>
                                 <ul class="inner">
-                                  <li class="indicator"></li>
-                                  <li class="twelveIn">12</li>
-                                  <li class="oneIn">1</li>
-                                  <li class="twoIn">2</li>
-                                  <li class="threeIn">3</li>
-                                  <li class="fourIn">4</li>
-                                  <li class="fiveIn">5</li>
-                                  <li class="sixIn">6</li>
-                                  <li class="sevenIn">7</li>
-                                  <li class="eightIn">8</li>
-                                  <li class="nineIn">9</li>
-                                  <li class="tenIn">10</li>
-                                  <li class="elevenIn">11</li>
+                                  <li class="indicator" id="tInd"></li>
+                                  <li class="twelve">12</li>
+                                  <li class="one">1</li>
+                                  <li class="two">2</li>
+                                  <li class="three">3</li>
+                                  <li class="four">4</li>
+                                  <li class="five">5</li>
+                                  <li class="six">6</li>
+                                  <li class="seven">7</li>
+                                  <li class="eight">8</li>
+                                  <li class="nine">9</li>
+                                  <li class="ten">10</li>
+                                  <li class="eleven">11</li>
                                 </ul>
                                 <div class="circular">
                                 </div>
@@ -111,33 +109,33 @@
                         <div id="precip-forecast" class="forecast-graphic">
                             <div class="component">
                                 <ul class="outer">
-                                    <li class="twelveOut">3</li>
-                                    <li class="oneOut">5</li>
-                                    <li class="twoOut">5</li>
-                                    <li class="threeOut">7</li>
-                                    <li class="fourOut">8</li>
-                                    <li class="fiveOut">6</li>
-                                    <li class="sixOut">4</li>
-                                    <li class="sevenOut">2</li>
-                                    <li class="eightOut">20</li>
-                                    <li class="nineOut">50</li>
-                                    <li class="tenOut">75</li>
-                                    <li class="elevenOut">80</li>
+                                    <li class="twelve">3</li>
+                                    <li class="one">5</li>
+                                    <li class="two">5</li>
+                                    <li class="three">7</li>
+                                    <li class="four">8</li>
+                                    <li class="five">6</li>
+                                    <li class="six">4</li>
+                                    <li class="seven">2</li>
+                                    <li class="eight">20</li>
+                                    <li class="nine">50</li>
+                                    <li class="ten">75</li>
+                                    <li class="eleven">80</li>
                                   </ul>
                                   <ul class="inner">
-                                    <li class="indicator"></li>
-                                    <li class="twelveIn">12</li>
-                                    <li class="oneIn">1</li>
-                                    <li class="twoIn">2</li>
-                                    <li class="threeIn">3</li>
-                                    <li class="fourIn">4</li>
-                                    <li class="fiveIn">5</li>
-                                    <li class="sixIn">6</li>
-                                    <li class="sevenIn">7</li>
-                                    <li class="eightIn">8</li>
-                                    <li class="nineIn">9</li>
-                                    <li class="tenIn">10</li>
-                                    <li class="elevenIn">11</li>
+                                    <li class="indicator" id="fInd"></li>
+                                    <li class="twelve">12</li>
+                                    <li class="one">1</li>
+                                    <li class="two">2</li>
+                                    <li class="three">3</li>
+                                    <li class="four">4</li>
+                                    <li class="five">5</li>
+                                    <li class="six">6</li>
+                                    <li class="seven">7</li>
+                                    <li class="eight">8</li>
+                                    <li class="nine">9</li>
+                                    <li class="ten">10</li>
+                                    <li class="eleven">11</li>
                                   </ul>
                                 <div class="circular">
                                 </div>
@@ -152,33 +150,33 @@
                         <div id="cond-forecast" class="forecast-graphic">
                             <div class="component">
                                 <ul class="outer">
-                                    <li class="twelveOut">:(</li>
-                                    <li class="oneOut">:(</li>
-                                    <li class="twoOut">:(</li>
-                                    <li class="threeOut">:(</li>
-                                    <li class="fourOut">:/</li>
-                                    <li class="fiveOut">:/</li>
-                                    <li class="sixOut">:/</li>
-                                    <li class="sevenOut">:/</li>
-                                    <li class="eightOut">:/</li>
-                                    <li class="nineOut">:)</li>
-                                    <li class="tenOut">:)</li>
-                                    <li class="elevenOut">:D</li>
+                                    <li class="twelve">:(</li>
+                                    <li class="one">:(</li>
+                                    <li class="two">:(</li>
+                                    <li class="three">:(</li>
+                                    <li class="four">:/</li>
+                                    <li class="five">:/</li>
+                                    <li class="six">:/</li>
+                                    <li class="seven">:/</li>
+                                    <li class="eight">:/</li>
+                                    <li class="nine">:)</li>
+                                    <li class="ten">:)</li>
+                                    <li class="eleven">:D</li>
                                   </ul>
                                   <ul class="inner">
-                                    <li class="indicator"></li>
-                                    <li class="twelveIn">12</li>
-                                    <li class="oneIn">1</li>
-                                    <li class="twoIn">2</li>
-                                    <li class="threeIn">3</li>
-                                    <li class="fourIn">4</li>
-                                    <li class="fiveIn">5</li>
-                                    <li class="sixIn">6</li>
-                                    <li class="sevenIn">7</li>
-                                    <li class="eightIn">8</li>
-                                    <li class="nineIn">9</li>
-                                    <li class="tenIn">10</li>
-                                    <li class="elevenIn">11</li>
+                                    <li class="indicator" id="cInd"></li>
+                                    <li class="twelve">12</li>
+                                    <li class="one">1</li>
+                                    <li class="two">2</li>
+                                    <li class="three">3</li>
+                                    <li class="four">4</li>
+                                    <li class="five">5</li>
+                                    <li class="six">6</li>
+                                    <li class="seven">7</li>
+                                    <li class="eight">8</li>
+                                    <li class="nine">9</li>
+                                    <li class="ten">10</li>
+                                    <li class="eleven">11</li>
                                   </ul>
                                 <div class="circular">
                                 </div>
@@ -213,13 +211,15 @@
                 <div>
                     <span id="current-date"></span>
                 </div>
+                <div>
+                    <span id="partyTime"></span>
+                </div>
                 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </div>
         </div>
     </footer>
     
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
-    <script src="../js/fontload.js"></script>
     <script src="../js/functions.js"></script>
 </body>
 </html>

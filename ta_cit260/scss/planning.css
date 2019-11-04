@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Turret+Road&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic|Oswald&display=swap");
+* {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .me {
+  font-family: 'Turret Road', sans-serif;
+}
+
+nav {
+  background-color: #1a3400;
+  margin: 0;
+  padding-bottom: 0;
+  border-radius: 0 0 20px 20px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin-right: .5em;
+}
+
+nav ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  background-color: #274d00;
+}
+
+header {
+  border-bottom: solid 4px #274d00;
+  background-color: #408000;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+header .me {
+  font-size: 3em;
+}
+
+footer {
+  background-color: #408000;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  border-radius: 20px 20px 0 0;
+  clear: both;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  margin-top: .4em;
+}
+
+footer a {
+  color: black;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.padding-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+html {
+  background-color: #408000;
+}
+
+body {
+  background-color: white;
+  margin: 0;
+}
+
+main {
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.logo {
+  max-width: 40px;
+  display: block;
+}
+
+.li-desc {
+  font-weight: bold;
+}
+
+.colorlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.colorlist li {
+  display: block;
+  padding: 2em;
+  color: white;
+}
+
+.colorlist li:first-of-type {
+  background-color: #aa8439;
+}
+
+.colorlist li:nth-of-type(2) {
+  background-color: #d4c26a;
+}
+
+.colorlist li:last-of-type {
+  background-color: #d49a6a;
+}
+
+.persona {
+  width: 100%;
+}
+
+.content .personalinfo > li {
+  margin-bottom: 1em;
+}
+
+.type {
+  font-size: 3em;
+}
+
+.headerfont span {
+  font-family: 'Oswald', sans-serif;
+}
+
+.mainfont span {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+/*# sourceMappingURL=planning.css.map */
