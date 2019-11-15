@@ -503,7 +503,7 @@ for (let i = 0, x = 12; i < x; i++) {
   if (currentHour > 12) {
   currentHour = currentHour - 12;
 
-  let HourString;
+//   let HourString;
 
 //   switch(currentHour) {
 //       case 1: hourString = "one"; break;
@@ -563,6 +563,13 @@ let links = document.querySelectorAll("#nav-list li");
 console.log(links);
 console.log(links.length);
 
-
+for(let i=0;i < links.length;i++) {
+    console.log(links[i]);
+    if(links[i].innerText == pageTitle.dataset.location) {
+        links[i].className = "current-page";
+    }
+}
 
    }
+
+
