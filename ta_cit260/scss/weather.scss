@@ -175,6 +175,26 @@ nav {
                 text-decoration: none;
                 color: white;
                 font-weight: 600;
+                // &:hover {
+                //     border-top: solid 1px rgba(255,255,255,.3);
+                //     border-bottom: solid 1px rgba(255,255,255,.3);
+                //     @include small-screen {
+                //         border-right: solid 1px rgba(255,255,255,.3);
+                //         border-left: solid 1px rgba(255,255,255,.3);
+                //         border-top: solid 1px transparent;
+                //         border-bottom: solid 1px transparent;
+                //     }
+                // }
+                // &.current-page {
+                //     border-top: solid 1px rgba(255,255,255,.5);
+                //     border-bottom: solid 1px rgba(255,255,255,.5);
+                //     @include small-screen {
+                //         border-right: solid 1px rgba(255,255,255,.5);
+                //         border-left: solid 1px rgba(255,255,255,.5);
+                //         border-top: solid 1px transparent;
+                //         border-bottom: solid 1px transparent;
+                //     }
+                // }
             
             }
         }
@@ -185,6 +205,9 @@ nav {
 
 main {
     padding-top: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     @include small-screen {
         padding-top: 1em;
     }
@@ -212,9 +235,9 @@ main {
 }
 
 .cloud {
-    background-image: url('../images/pics/cloud-sm.jpg');
+    background-image: url('../images/pics/clouds-sm.jpg');
     @include medium-screen {
-        background-image: url('../images/pics/cloud-lg.jpg');
+        background-image: url('../images/pics/clouds-lg.jpg');
     }
 }
 
@@ -236,8 +259,13 @@ h1 {
     // }
 }
 
+.hidden {
+    display: none;
+}
+
 .location-intro {
     text-align: center;
+    background-color: white;
     @include small-screen {
         text-align: left;
     }
@@ -254,9 +282,6 @@ h1 {
     // border: solid black 1px;
     border-radius: 10px;
     margin-top: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     @include medium-screen {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
