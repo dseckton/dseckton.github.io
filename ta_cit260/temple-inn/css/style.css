@@ -1,0 +1,120 @@
+@import url(normalize.min.css);
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: rgba(123, 23, 13, 0.05);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.padding-container {
+  padding: 0 0.6em;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+}
+
+.nav-menu-toggle {
+  font-size: 2em;
+  line-height: 0.6em;
+}
+
+li {
+  list-style: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu-arrow {
+  border: 0.6em solid transparent;
+  border-bottom: 0;
+  border-top: 0.6em solid black;
+  display: inline-block;
+  height: 1em;
+  width: 0.5em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+nav {
+  width: 100%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+nav ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 1em 2em;
+}
+nav li {
+  flex: 1 1 auto;
+  position: relative;
+}
+nav li ul {
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.home-reserve {
+  width: 100%;
+  position: relative;
+}
+.home-reserve:hover img {
+  transform: scale(1.15);
+  -webkit-filter: blur(1px) grayscale(40%);
+  filter: blur(1px) grayscale(40%);
+}
+.home-reserve .title-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-reserve h1 {
+  text-align: center;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3), -2px 2px 3px rgba(0, 0, 0, 0.3), 2px -2px 3px rgba(0, 0, 0, 0.3), -2px -2px 3px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+.home-reserve .img-container {
+  overflow: hidden;
+}
+.home-reserve .img-container img {
+  width: 100%;
+  transition: 0.6s;
+}
+
+/*# sourceMappingURL=style.css.map */
