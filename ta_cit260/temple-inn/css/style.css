@@ -20,20 +20,32 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 0.6em;
 }
 
+body {
+  position: relative;
+}
+
 header {
   display: flex;
   width: 100%;
   flex-direction: column;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   font-size: 1.75em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .nav-menu-toggle {
   font-size: 2em;
+  line-height: 0.6em;
 }
 
 li {
@@ -87,16 +99,17 @@ nav li ul {
 
 .home-reserve {
   width: 100%;
+  height: calc(100vh - 61px);
   position: relative;
 }
-.home-reserve:hover img {
+.home-reserve:hover .hero-home {
   transform: scale(1.15);
   -webkit-filter: blur(1px) grayscale(40%);
-  filter: blur(1px) grayscale(40%);
+  filter: blur(1px) grayscale(50%);
 }
 .home-reserve .title-container {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 61px);
   position: absolute;
   z-index: 3;
   display: flex;
@@ -110,14 +123,12 @@ nav li ul {
   font-weight: 500;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3), -2px 2px 3px rgba(0, 0, 0, 0.3), 2px -2px 3px rgba(0, 0, 0, 0.3), -2px -2px 3px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
+  font-size: 2.2em;
 }
 .home-reserve .img-container {
   overflow: hidden;
-  height: 100%;
+  height: calc(100vh - 61px);
   width: 100%;
-}
-.home-reserve .img-container img {
-  transition: 0.6s;
 }
 .home-reserve .img-container .hero-home {
   background-image: url(../img/cedarTemple.jpg);
@@ -128,23 +139,33 @@ nav li ul {
   -o-background-size: cover;
   background-position: center;
   background-origin: center;
+  -webkit-background-origin: center;
+  -moz-background-origin: center;
+  -o-background-origin: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  transition: 0.6s;
 }
 
-@media screen and (min-width: 739px) {
+@media screen and (min-width: 900px) {
   main {
     display: flex;
   }
 
   .home-reserve {
-    width: 50%;
+    width: 60%;
   }
 
   .home-secondary {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
+    height: calc(100vh - 61px);
+    overflow: auto;
+  }
+
+  .home-temple img {
+    padding-left: 0.6em;
   }
 }
 
