@@ -116,8 +116,35 @@ nav {
     }
     .img-container {
         overflow: hidden;
+        height: 100%;
+        width: 100%;
         img {
             transition: .6s;
         }
+        .hero-home {
+            background-image: url(../img/cedarTemple.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-origin: center;
+            width: 100%;
+            height: 100vh;
+        }
+    }
+}
+
+@media screen and (min-width: 739px) {
+    main {
+        display: flex;
+
+    }
+    .home-reserve {
+        width: 50%;
+    }
+    
+    .home-secondary {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
     }
 }
