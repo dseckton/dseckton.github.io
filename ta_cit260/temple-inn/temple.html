@@ -7,18 +7,23 @@
     <meta name="author" content="Daniel Eckton">
     <title>Temple Inn & Suites | Temples</title>
 
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="" alt="Temple Inn Suites Logo">
+        <div class="header-container">
+            <img class="page-logo" src="img/logo.png" alt="Temple Inn Suites Logo">
+            <span class="nav-menu-toggle">&#8801;</span>
+        </div>
         <nav>
-            <ul>
+            <ul class="hidden padding-container">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="temple.html">Temples</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="services.html">Services</a>
-                    <ul>
+                <li class="menu"><a href="services.html">Services</a><div class="menu-arrow"></div>
+                    <ul class="hidden">
                         <li><a href="reception.html">Reception</a></li>
                         <li><a href="missionary.html">Full-time Temple Missionary</a></li>
                     </ul>
@@ -28,44 +33,194 @@
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>Temple Preview</h1>
-        </section>
-        <section>
-            <h2>San Antonio, Texas</h2>
-            <ul>
-                <li>Address: 20080 Stone Oak Pkwy San Antonio TX 78258-6920 United States</li>
-                <li>Telephone: (1) 210-538-0034</li>
-                <li>Email sanantonio@temples.org</li>
-                <li>Services
+    <main id="temple-main">
+        <div class="padding-container">
+                <h1>Temple Preview</h1>
+        </div>
+        <article>
+            <div class="padding-container temple-name">
+                <h2>San Antonio, Texas</h2>
+            </div>
+            <div class="temple-img">
+                <img src="img/sanantonioTemple.jpg" alt="">
+            </div>
+            <div class="padding-container temple-info">
+                <section class="contact-info">
+                    <p>20080 Stone Oak Pkwy <br>San Antonio TX 78258-6920 <br>United States</p>
                     <ul>
-                        <li>Clothing Rental <input type="checkbox" name="" id=""></li>
-                        <li>Cafeteria <input type="checkbox" name="" id=""></li>
-                        <li>Patron Housing <input type="checkbox" name="" id=""></li>
-                        <li>Distribution Center <input type="checkbox" name="" id=""></li>
+                        <li>(1) 210-538-0034</li>
+                        <li>sanantonio@temples.org</li>
                     </ul>
-                </li>
-                <li>History
+                </section>
+
+                <section class="services">
+                    <h3>Services</h3>
+                    <ul>
+                        <li class="cross"> Clothing Rental </li>
+                        <li class="cross"> Cafeteria</li>
+                        <li class="cross"> Patron Housing</li>
+                        <li class="check"> Distribution Center</li>
+                    </ul>
+                </section>
+
+                <section class="history">
+                    <h3>History</h3>
                     <ul>
                         <li>24 June 2001: Announced</li>
                         <li>29 March 2003: Groundbreaking</li>
                         <li>22 May 2005: Dedicated</li>
                     </ul>
-                </li>
-                <li>Ordinance Schedule
+                </section>
+
+                <section class="ordinances">     
+                    <h3>Ordiance Schedule</h3>
                     <ul>
                         <li>Baptisms</li>
                         <li>Endowments</li>
                         <li>Initiatories</li>
                     </ul>
-                    
-                </li>
-                <li>Session Schedule</li>
-                <li>Closure Schedule</li>
-                <li><a href="">Weather Info</a></li>
-            </ul>
-        </section>
+                </section>
+
+                <section class="session">
+                    <h3>Session Schedule</h3>       
+                </section>
+
+                <section class="closure">
+                    <h3>Closure Schedule</h3>
+                </section>
+            </div>
+        </article>
+
+        <section class="hidden">
+                <div class="padding-container">
+                    <h2>Belview, Washington</h2>
+                </div>
+                <div>
+                    <img src="img/seattleTemple.jpg" alt="">
+                </div>
+                <div class="padding-container">
+                    <ul>
+                        <li>Address: 22808 148th Ave SE
+                                Bellevue WA 98007-6453
+                                United States</li>
+                        <li>Telephone: (1) 425-643-5144</li>
+                        <li>Email seattle@temples.org</li>
+                        <li>Services
+                            <ul>
+                                <li>Clothing Rental <input type="checkbox" name="" id=""></li>
+                                <li>Cafeteria <input type="checkbox" name="" id=""></li>
+                                <li>Patron Housing <input type="checkbox" name="" id=""></li>
+                                <li>Distribution Center <input type="checkbox" name="" id=""></li>
+                            </ul>
+                        </li>
+                        <li>History
+                            <ul>
+                                <li>15 November 1975: Announced</li>
+                                <li>27 May 1978: Groundbreaking</li>
+                                <li>14 November 1980: Dedicated</li>
+                            </ul>
+                        </li>
+                        <li>Ordinance Schedule
+                            <ul>
+                                <li>Baptisms</li>
+                                <li>Endowments</li>
+                                <li>Initiatories</li>
+                            </ul>
+                            
+                        </li>
+                        <li>Session Schedule</li>
+                        <li>Closure Schedule</li>
+                        <li><a href="">Weather Info</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="hidden">
+                    <div class="padding-container">
+                        <h2>Oakland, California</h2>
+                    </div>
+                    <div>
+                        <img src="img/oaklandTemple.jpeg" alt="">
+                    </div>
+                    <div class="padding-container">
+                        <ul>
+                            <li>Address: 4770 Lincoln Ave
+                                    Oakland CA 94602-2535
+                                    United States</li>
+                            <li>Telephone: (1) 510-531-3200</li>
+                            <li>Email oakland@temples.org</li>
+                            <li>Services
+                                <ul>
+                                    <li>Clothing Rental <input type="checkbox" name="" id=""></li>
+                                    <li>Cafeteria <input type="checkbox" name="" id=""></li>
+                                    <li>Patron Housing <input type="checkbox" name="" id=""></li>
+                                    <li>Distribution Center <input type="checkbox" name="" id=""></li>
+                                </ul>
+                            </li>
+                            <li>History
+                                <ul>
+                                    <li>23 January 1961: Announced</li>
+                                    <li>26 May 1962: Groundbreaking</li>
+                                    <li>17 November 1964: Dedicated</li>
+                                    <li>16 June 2019: Rededicated</li>
+                                </ul>
+                            </li>
+                            <li>Ordinance Schedule
+                                <ul>
+                                    <li>Baptisms</li>
+                                    <li>Endowments</li>
+                                    <li>Initiatories</li>
+                                </ul>
+                                
+                            </li>
+                            <li>Session Schedule</li>
+                            <li>Closure Schedule</li>
+                            <li><a href="">Weather Info</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="hidden">
+                        <div class="padding-container">
+                            <h2>Mexico City, Mexico</h2>
+                        </div>
+                        <div>
+                            <img src="img/mexicoTemple.jpg" alt="">
+                        </div>
+                        <div class="padding-container">
+                            <ul>
+                                <li>Address: 20080 Stone Oak Pkwy San Antonio TX 78258-6920 United States</li>
+                                <li>Telephone: (1) 210-538-0034</li>
+                                <li>Email sanantonio@temples.org</li>
+                                <li>Services
+                                    <ul>
+                                        <li>Clothing Rental <input type="checkbox" name="" id=""></li>
+                                        <li>Cafeteria <input type="checkbox" name="" id=""></li>
+                                        <li>Patron Housing <input type="checkbox" name="" id=""></li>
+                                        <li>Distribution Center <input type="checkbox" name="" id=""></li>
+                                    </ul>
+                                </li>
+                                <li>History
+                                    <ul>
+                                        <li>24 June 2001: Announced</li>
+                                        <li>29 March 2003: Groundbreaking</li>
+                                        <li>22 May 2005: Dedicated</li>
+                                    </ul>
+                                </li>
+                                <li>Ordinance Schedule
+                                    <ul>
+                                        <li>Baptisms</li>
+                                        <li>Endowments</li>
+                                        <li>Initiatories</li>
+                                    </ul>
+                                    
+                                </li>
+                                <li>Session Schedule</li>
+                                <li>Closure Schedule</li>
+                                <li><a href="">Weather Info</a></li>
+                            </ul>
+                        </div>
+                    </section>
     </main>
 
     <footer>

@@ -7,18 +7,23 @@
     <meta name="author" content="Daniel Eckton">
     <title>Temple Inn & Suites | Reception</title>
 
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <img src="" alt="Temple Inn Suites Logo">
+        <div class="header-container">
+            <img class="page-logo" src="img/logo.png" alt="Temple Inn Suites Logo">
+            <span class="nav-menu-toggle">&#8801;</span>
+        </div>
         <nav>
-            <ul>
+            <ul class="hidden padding-container">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="temple.html">Temples</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="services.html">Services</a>
-                    <ul>
+                <li class="menu"><a href="services.html">Services</a><div class="menu-arrow"></div>
+                    <ul class="hidden">
                         <li><a href="reception.html">Reception</a></li>
                         <li><a href="missionary.html">Full-time Temple Missionary</a></li>
                     </ul>

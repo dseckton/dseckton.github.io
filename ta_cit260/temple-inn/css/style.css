@@ -5,6 +5,27 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.check::before {
+  background-image: url(../img/check.png);
+}
+
+.cross::before {
+  background-image: url(../img/x.png);
 }
 
 img {
@@ -38,9 +59,8 @@ header {
 .header-container {
   display: flex;
   justify-content: space-between;
-  font-size: 1.75em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  font-size: 1.75rem;
+  padding: 0.2em 0.6em;
 }
 
 .nav-menu-toggle {
@@ -70,6 +90,10 @@ li {
 
 nav {
   width: 100%;
+  position: absolute;
+  top: 51px;
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 nav ul {
   display: flex;
@@ -97,9 +121,28 @@ nav li ul {
   display: none;
 }
 
+.contact-info li {
+  border: solid black 1px;
+  padding: 0.5em;
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+
+.services li {
+  margin: 0.4em auto;
+}
+.services li::before {
+  background-size: cover;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  content: "";
+  margin: auto 0.6em;
+}
+
 .home-reserve {
   width: 100%;
-  height: calc(100vh - 61px);
+  height: calc(100vh - 51px);
   position: relative;
 }
 .home-reserve:hover .hero-home {
@@ -109,7 +152,7 @@ nav li ul {
 }
 .home-reserve .title-container {
   width: 100%;
-  height: calc(100vh - 61px);
+  height: calc(100vh - 51px);
   position: absolute;
   z-index: 3;
   display: flex;
@@ -127,7 +170,7 @@ nav li ul {
 }
 .home-reserve .img-container {
   overflow: hidden;
-  height: calc(100vh - 61px);
+  height: calc(100vh - 51px);
   width: 100%;
 }
 .home-reserve .img-container .hero-home {
@@ -147,8 +190,20 @@ nav li ul {
   transition: 0.6s;
 }
 
+form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+form input, form textarea {
+  padding: 0.5em;
+}
+
+.page-logo {
+  max-height: 40px;
+}
+
 @media screen and (min-width: 900px) {
-  main {
+  #home-main {
     display: flex;
   }
 
@@ -160,12 +215,34 @@ nav li ul {
     display: flex;
     flex-direction: column;
     width: 40%;
-    height: calc(100vh - 61px);
-    overflow: auto;
+    height: calc(100vh - 51px);
   }
 
   .home-temple img {
     padding-left: 0.6em;
+  }
+
+  header {
+    flex-direction: row;
+  }
+  header .header-container {
+    width: 40px;
+    box-sizing: content-box;
+  }
+  header .header-container .nav-menu-toggle {
+    display: none;
+  }
+
+  nav {
+    position: relative;
+    top: 0;
+    box-shadow: none;
+  }
+  nav > .hidden {
+    display: flex;
+  }
+  nav ul {
+    flex-flow: row nowrap;
   }
 }
 
